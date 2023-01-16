@@ -1,0 +1,263 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: $font-display;
+  src: url('../assets/fonts/eot/IRANSansWeb_Bold.eot');
+  src: url('../assets/fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('../assets/fonts/woff/IRANSansWeb_Bold.woff') format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('../assets/fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  font-display: $font-display;
+  src: url('../assets/fonts/eot/IRANSansWeb_Medium.eot');
+  src: url('../assets/fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('../assets/fonts/woff/IRANSansWeb_Medium.woff') format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('../assets/fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: $font-display;
+  src: url('../assets/fonts/eot/IRANSansWeb.eot');
+  src: url('../assets/fonts/woff2/IRANSansWeb.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/ url('../assets/fonts/woff/IRANSansWeb.woff')
+      format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('../assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  font-display: $font-display;
+  src: url('../assets/fonts/eot/IRANSansWeb_Light.eot');
+  src: url('../assets/fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+      url('../assets/fonts/woff/IRANSansWeb_Light.woff') format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('../assets/fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+/**/
+
+%caption {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-caption;
+  line-height: $line-height-tall;
+
+  &--sm {
+    font-size: $font-size-caption-sm;
+  }
+  &--xs {
+    font-size: $font-size-caption-xs;
+  }
+}
+%title {
+  font-weight: $font-weight-normal;
+  line-height: $line-height-short;
+  font-size: $font-size-title;
+
+  &--lg {
+    font-size: $font-size-title-lg;
+  }
+  &--sm {
+    font-size: $font-size-title-sm;
+  }
+  &--xs {
+    font-size: $font-size-body;
+  }
+}
+%hero {
+  font-size: $font-size-hero;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-short;
+
+  &--sm {
+    font-size: $font-size-hero-sm;
+  }
+}
+%body {
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-tall;
+
+  &--stable {
+    font-size: $font-size-body !important;
+  }
+  &--sm {
+    font-size: $font-size-body-sm;
+  }
+}
+
+@include down(md) {
+  %body {
+    font-size: $font-size-body-sm;
+  }
+
+  %title {
+    font-size: $font-size-title-sm;
+
+    &--lg {
+      font-size: $font-size-title;
+    }
+    &--sm {
+      font-size: $font-size-body;
+    }
+  }
+
+  %hero {
+    font-size: $font-size-hero-sm;
+    font-weight: $font-weight-normal;
+
+    &.text-regular {
+      font-weight: $font-weight-normal;
+    }
+    &.text-light {
+      font-weight: $font-weight-regular;
+    }
+    &--sm {
+      font-size: $font-size-title-sm;
+    }
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-body;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+span,
+input,
+textarea,
+button {
+  font-family: $font-family-base;
+}
+
+h1,
+h2 {
+  @extend %hero;
+}
+h2 {
+  @extend %hero--sm;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @extend %title;
+}
+
+h3 {
+  @extend %title--lg;
+}
+h4 {
+  @extend %title;
+}
+h5 {
+  @extend %title--sm;
+}
+h6 {
+  @extend %title--xs;
+}
+
+p {
+  @extend %body;
+}
+
+.kt-text {
+  &-bold {
+    font-weight: $font-weight-bold !important;
+  }
+  &-medium {
+    font-weight: $font-weight-normal !important;
+  }
+  &-regular {
+    font-weight: $font-weight-regular !important;
+  }
+  &-light {
+    font-weight: $font-weight-light !important;
+  }
+
+  &-tall {
+    line-height: $line-height-tall !important;
+  }
+  &-short {
+    line-height: $line-height-short !important;
+  }
+
+  &-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.kt-caption {
+  @extend %caption;
+
+  &--sm {
+    @extend %caption--sm;
+  }
+  &--xs {
+    @extend %caption--xs;
+  }
+}
+
+.kt-body {
+  @extend %body;
+
+  &--sm {
+    @extend %body--sm;
+  }
+  &--stable {
+    @extend %body--stable;
+  }
+}
+
+.kt-title {
+  @extend %title;
+
+  &--lg {
+    @extend %title--lg;
+  }
+  &--sm {
+    @extend %title--sm;
+  }
+  &--xs {
+    @extend %title--xs;
+  }
+}
+
+.kt-hero {
+  @extend %hero;
+
+  &--sm {
+    @extend %hero--sm;
+  }
+}
+
+.kt-link {
+  @include link;
+}

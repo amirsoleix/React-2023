@@ -1,0 +1,115 @@
+@import '../../styles/main.scss';
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  z-index: $zindex-navbar;
+  width: 100%;
+  height: $nav-height;
+  background-color: $white-nav;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(2px);
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    max-width: 1440px;
+    padding: 12px 16px;
+    width: 100%;
+  }
+
+  &__button {
+    font-size: 0.75rem;
+
+    & .navbar__link {
+      font-size: 1rem;
+    }
+  }
+
+  &__searchbar {
+    flex-grow: 1;
+    display: none;
+    margin: 0;
+
+    &--show {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    display: none;
+    color: rgb(166, 38, 38);
+  }
+
+  &__back-button {
+    display: none;
+    min-width: 40px;
+    height: 40px;
+    margin: 0 -10px 0 10px;
+
+    &--show {
+      display: flex;
+    }
+  }
+
+  &__title {
+    display: none;
+    line-height: 28px;
+
+    &--show {
+      display: inline-block;
+    }
+  }
+
+  &__right-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left-section {
+    display: none;
+  }
+
+  &__link {
+    margin-right: 16px;
+  }
+}
+
+@include up(lg) {
+  .navbar {
+    &__logo {
+      display: inline-block;
+    }
+
+    &__back-button {
+      display: none;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__searchbar {
+      display: flex;
+      width: 480px;
+      max-width: 480px;
+      margin: 0 50px 0 0;
+    }
+
+    &__left-section {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

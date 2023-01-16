@@ -1,0 +1,36 @@
+// Make viewport of .showroom to 100vh
+
+.showroom {
+  height: 100vh;
+
+  background-image: url('../../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__title {
+    padding: 100px 0;
+    margin: 0;
+    text-align: center;
+
+    color: goldenrod;
+    font-weight: bold;
+  }
+}
+
+.logo {
+  &__container {
+    padding-top: 50px;
+  }
+
+  &__icon {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    background-image: url('../../assets/images/react-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
