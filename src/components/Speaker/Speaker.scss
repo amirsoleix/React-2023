@@ -1,0 +1,118 @@
+.post-card {
+  min-width: 200px;
+  max-width: 100%;
+  height: 168px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .hide-overflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4px;
+    padding: 16px;
+  }
+
+  &__image {
+    &-container {
+      min-width: 100px;
+      width: 136px;
+      height: 136px;
+      border-radius: 4px;
+      background-color: #c4c4c4;
+      overflow: hidden;
+    }
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__status {
+    position: absolute;
+    top: calc(136px - 32px);
+    left: 0;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 50px;
+    display: flex;
+    padding-left: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &__title {
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    h2 {
+      line-height: 29px;
+
+      font: {
+        size: 20px;
+        family: IRANSans;
+        weight: 800;
+      }
+
+      @supports (-webkit-line-clamp: 2) {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  &__detail {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.56);
+  }
+
+  &__subtitle {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-left: 2.5px;
+  }
+
+  &__caption {
+    flex: 1;
+    font-size: 12px;
+
+    &--red {
+      color: #a62626;
+    }
+  }
+
+  &__chat {
+    width: 20px;
+    height: 20px;
+  }
+}

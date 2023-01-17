@@ -1,0 +1,28 @@
+.timeline {
+  &-item {
+    padding: 1em 0;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    &__content {
+      &-left {
+        position: relative;
+        width: 300px;
+        float: left;
+        text-align: right;
+      }
+
+      &-right {
+        position: relative;
+        width: 300px;
+        float: right;
+      }
+    }
+  }
+}

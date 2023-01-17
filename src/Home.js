@@ -1,19 +1,14 @@
 import React from 'react';
 
-import Navbar from './components/Navbar';
-import Showroom from './components/Showroom';
+import Navbar from 'src/components/Navbar';
+import Showroom from 'src/components/Showroom';
+import SpeakerPanel from 'src/components/SpeakerPanel';
+import StaffPanel from 'src/components/StaffPanel';
+import Footer from 'src/components/Footer';
 
-import './styles/main.scss';
+import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
+import 'src/styles/main.scss';
 import './Home.scss';
-
-let BUTTONS = [
-  ['Home', 'home-outline', 'default'],
-  ['Timeline', 'remaining-time-o', 'default'],
-  ['Speakers', 'mic-f', 'default'],
-  ['Registration', 'check-circle', 'default'],
-  ['Staff', 'social-sonnat-thin', 'default'],
-  ['Sponsors', 'gift-o', 'default'],
-];
 
 class Home extends React.Component {
   handleClick(i) {
@@ -27,12 +22,11 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Helmet />
         <Navbar buttons={BUTTONS} onClick={(i) => this.handleClick(i)} />
         <div className='home'>
+          <Showroom />
           <div className='home__container'>
             <div className='home__content'>
-              <Showroom />
               <div className='home__content__inside'>
                 <div id='home'>
                   <h1>Home</h1>
@@ -43,20 +37,33 @@ class Home extends React.Component {
                 <div id='contact'>
                   <h1>Contact</h1>
                 </div>
+                <Speakers />
+                <StaffList />
               </div>
             </div>
           </div>
         </div>
         <BottomNav />
+        <Footer hasBottomNav />
       </>
     );
   }
 }
 
-function Helmet() {
+function Speakers() {
   return (
-    <div>
-      <title>ReAct</title>
+    <div id='mic-f'>
+      <h2>Previous Speakers</h2>
+      <SpeakerPanel posts={SPEAKERS} className='speaker__main' />
+    </div>
+  );
+}
+
+function StaffList() {
+  return (
+    <div id='social-sonnat-thin'>
+      <h2>Staff</h2>
+      <StaffPanel posts={STAFF} className='staff__main' />
     </div>
   );
 }

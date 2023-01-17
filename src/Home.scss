@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@import 'src/styles//_variables';
+@import 'src/styles/_variables';
 @import 'src/styles/_mixins.scss';
 
 $main-margin-top: 0px;
@@ -30,31 +30,49 @@ $main-margin-top: 0px;
   }
 
   &__container {
-    padding: $main-margin-top 16px 56px;
-    width: 1440px;
+    padding: $main-margin-top 0px 56px;
     max-width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-  }
-
-  &__main {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    align-items: flex-start;
-    gap: $grid-gutter-width;
+    margin: 0px 32px;
   }
 
   &__content {
     width: 100%;
   }
+}
 
-  &__content__inside {
-    width: 80%;
-    margin: auto;
+.speaker {
+  &__main {
+    max-width: 100%;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    gap: $grid-gutter-width;
+  }
+}
+
+.staff {
+  &__main {
+    max-width: 100%;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $grid-gutter-width;
+  }
+}
+
+@include up(sm) {
+  .staff {
+    &__main {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -64,12 +82,24 @@ $main-margin-top: 0px;
       padding: $main-margin-top 16px 56px;
     }
   }
+
+  .speaker {
+    &__main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .staff {
+    &__main {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 @include up(lg) {
   .home {
     &__container {
-      padding: $main-margin-top 16px 0px;
+      padding: $main-margin-top 0px 0px;
     }
     &__header {
       display: none;
@@ -78,9 +108,18 @@ $main-margin-top: 0px;
     &__aside {
       display: block;
     }
+  }
 
+  .speaker {
     &__main {
-      margin-right: 48px;
+      max-width: 1080px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .staff {
+    &___main {
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 }
