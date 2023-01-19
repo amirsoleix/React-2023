@@ -5,6 +5,7 @@ import Showroom from 'src/components/Showroom';
 import SpeakerPanel from 'src/components/SpeakerPanel';
 import StaffPanel from 'src/components/StaffPanel';
 import Footer from 'src/components/Footer';
+import ReActTimeline from './components/Timeline';
 
 import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
@@ -28,6 +29,9 @@ class Home extends React.Component {
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
+                <div>
+                  <ReActTimeline />
+                </div>
                 <div id='home'>
                   <h1>Home</h1>
                 </div>
