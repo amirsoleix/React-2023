@@ -21,24 +21,20 @@
 
   &__content {
     padding: 0;
-    text-align: left;
-    color: rgb(24, 35, 89);;
+    text-align: justify;
+    color: rgb(24, 35, 89);
   }
 
   &__readMoreButton {
     width: fit-content;
-    float: right;
-    margin-right: 44px;
-    margin-bottom: 27px;
-    margin-top: 6px;
+    border: 1px solid black;
     border-radius: 4px;
+    padding: 8px;
+    color: rgb(24, 35, 89);
+    margin: auto;
     font: {
       weight: bold;
       size: 20px;
-      family: IRANSans;
     }
-
-    color: rgb(24, 35, 89);
-    text-decoration: underline;
   }
 }
