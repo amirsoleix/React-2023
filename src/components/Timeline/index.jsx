@@ -8,6 +8,8 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 
+import './Timeline.scss';
+
 import events from './constants';
 import { blue, green, yellow, orange, red } from '@mui/material/colors';
 import { createTheme } from '@mui/system';
