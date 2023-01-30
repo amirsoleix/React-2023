@@ -1,0 +1,222 @@
+@function set-alpha($base-color, $alpha: 1) {
+  @return change-color($base-color, $alpha: $alpha);
+}
+@function set-lightness($base-color, $lightness: 1%) {
+  @return change-color($base-color, $lightness: $lightness);
+}
+
+// Color palette
+$black: hsla(0, 0%, 0%, 1) !default;
+$brand: hsla(230, 76%, 45%, 1) !default;
+$white: hsla(0, 0%, 100%, 1) !default;
+$gray: hsla(0, 0%, 1%, 1) !default;
+$message: hsla(200, 100%, 97%, 1) !default;
+$error: hsla(199, 94%, 67%, 1) !default;
+
+$success-primary: hsla(123, 46%, 34%, 1) !default;
+$success-secondary: hsla(89, 46%, 48%, 1) !default;
+
+$warning: hsla(21, 100%, 45%, 1) !default;
+$warning-secondary: hsla(43, 96%, 58%, 1) !default;
+
+// Derived colors
+$warning-primary: $warning !default;
+$warning-divider: set-alpha($warning, 0.12) !default;
+
+$message-primary: $message !default;
+$message-hint: set-alpha($message, 0.24) !default;
+
+$error-primary: $error !default;
+$error-hint: set-alpha($error, 0.12) !default;
+
+$white-primary: $white !default;
+$white-nav: set-alpha($white, 0.98) !default;
+$white-secondary: set-alpha($white, 0.7) !default;
+$white-hint: set-alpha($white, 0.5) !default;
+$white-divider: set-alpha($white, 0.12) !default;
+$transparent: set-alpha($white, 0) !default;
+
+$black-hint-alpha: 0.32 !default;
+$black-secondary-alpha: 0.56 !default;
+$black: $black !default;
+$black-primary: set-alpha($black, 0.87) !default;
+$black-secondary: set-alpha($black, $black-secondary-alpha) !default;
+$black-dark-100: set-alpha($black, 0.48) !default;
+$black-hint: set-alpha($black, $black-hint-alpha) !default;
+$black-medium-200: set-alpha($black, 0.24) !default;
+$black-medium-100: set-alpha($black, 0.16) !default;
+$black-divider: set-alpha($black, 0.12) !default;
+$black-light-200: set-alpha($black, 0.08) !default;
+$black-light-100: set-alpha($black, 0.04) !default;
+$black-press: set-alpha($black, 0.6) !default;
+$black-tooltip: change-color($black, $lightness: +16%, $alpha: 0.96) !default;
+$black-hover: adjust-color($black-secondary, $lightness: +12%) !default;
+
+$gray-900: set-lightness($gray, 13%) !default;
+$gray-850: set-lightness($gray, 19%) !default;
+$gray-800: set-lightness($gray, 26%) !default;
+$gray-400: set-lightness($gray, 74%) !default;
+$gray-200: set-lightness($gray, 93%) !default;
+$gray-100: set-lightness($gray, 96%) !default;
+$gray-50: set-lightness($gray, 98%) !default;
+
+$brand-primary: $brand !default;
+$brand-secondary: set-alpha($brand, 0.56) !default;
+$brand-hint: set-alpha($brand, 0.32) !default;
+$brand-medium-200: set-alpha($brand, 0.24) !default;
+$brand-medium-100: set-alpha($brand, 0.14) !default;
+$brand-divider: set-alpha($brand, 0.12) !default;
+$brand-light-200: set-alpha($brand, 0.08) !default;
+$brand-light-100: set-alpha($brand, 0.04) !default;
+$brand-hover: adjust-color(
+  $brand-primary,
+  $saturation: -8%,
+  $lightness: +8%
+) !default;
+$brand-press: adjust-color(
+  $brand-primary,
+  $saturation: +8%,
+  $lightness: -4%
+) !default;
+
+// Border Radius
+$border-radius-xs: 2px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-lg-responsive-desktop: 16px;
+$border-radius-lg-responsive-mobile: 14px;
+$border-radius-full: 50%;
+
+// Spacing
+$space-1: 2px !default;
+$space-2: 4px !default;
+$space-3: 6px !default;
+$space-4: 8px !default;
+$space-5: 10px !default;
+$space-6: 12px !default;
+$space-7: 14px !default;
+$space-8: 16px !default;
+$spaces: (
+  $space-1,
+  $space-2,
+  $space-3,
+  $space-4,
+  $space-5,
+  $space-6,
+  $space-7,
+  $space-8
+);
+
+$space-between-1: 4px !default;
+$space-between-2: 8px !default;
+$space-between-3: 16px !default;
+$space-between-4: 24px !default;
+$space-between-5: 32px !default;
+$space-between-6: 48px !default;
+$space-between-7: 64px !default;
+$space-between-8: 128px !default;
+$space-betweens: (
+  $space-between-1,
+  $space-between-2,
+  $space-between-3,
+  $space-between-4,
+  $space-between-5,
+  $space-between-6,
+  $space-between-7,
+  $space-between-8
+);
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 520px,
+  md: 768px,
+  lg: 960px,
+  xl: 1024px,
+  xxl: 1366px,
+) !default;
+
+// Grid containers
+
+//Post-view container
+$container-max-widths: (
+  xs: 768px,
+  lg: 960px,
+  xl: 1024px,
+) !default;
+
+//Form-view container
+$container-max-widths--form-view: (
+  xs: 768px,
+  md: 520px,
+) !default;
+
+//Landing-view container
+$container-max-widths--landing-view: (
+  xs: 768px,
+  xl: 960px,
+  xxl: 1180px,
+) !default;
+
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: 16px !default;
+
+// Typography
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: IRANSans, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-monospace: IRANSans, SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+$font-size-caption-xs: 0.5rem !default;
+$font-size-caption-sm: 0.625rem !default;
+$font-size-caption: 0.75rem !default;
+$font-size-body-sm: 0.875rem !default;
+$font-size-body: 1rem !default;
+$font-size-title-sm: 1.125rem !default;
+$font-size-title: 1.25rem !default;
+$font-size-title-lg: 1.5rem !default;
+$font-size-hero-sm: 2rem !default;
+$font-size-hero: 3rem !default;
+
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-normal: 500 !default;
+$font-weight-bold: 700 !default;
+
+$font-display: auto !default;
+$line-height-short: 1.5 !default;
+$line-height-medium: 1.75 !default;
+$line-height-tall: 2 !default;
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1010 !default;
+$zindex-fixed: 1020 !default;
+$zindex-content-overlay: 1030 !default;
+$zindex-navbar: 1040 !default;
+$zindex-toolbar: 1045 !default;
+$zindex-overlay: 1050 !default;
+$zindex-modal-backdrop: 1060 !default;
+$zindex-popover: 1070 !default;
+$zindex-modal: 1080 !default;
+$zindex-tooltip: 1090 !default;
+
+$clearfield-size-sm: 1rem;
+$clearfield-size-md: 1.125rem;
+$clearfield-size-lg: 1.25rem;
+
+$tooltip-max-width: 12rem;
+
+// SidebarView
+// specify sidebar-view sidebar width
+
+$sidebar-width: 256px;
+
+//Navbar height
+$nav-height: 64px;

@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+
+.status {
+  height: 32px;
+  width: 100%;
+  color: $white;
+  font-size: $font-size-body-sm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,1135 @@
+@import '../../styles/variables';
+@import '../../styles/utils';
+
+@font-face {
+  font-family: 'sonnat';
+  src: url('../../assets/fonts/eot/sonnat-icons.eot?uel7uk');
+  src: url('~../../assets/fonts/eot/sonnat-icons.eot?uel7uk#iefix')
+      format('embedded-opentype'),
+    url('~../../assets/fonts/woff2/sonnat-icons.woff2?uel7uk') format('woff2'),
+    url('~../../assets/fonts/woff/sonnat-icons.woff?uel7uk') format('woff'),
+    url('~../../assets/fonts/ttf/sonnat-icons.ttf?uel7uk') format('truetype'),
+    url('~../../assets/fonts/svg/sonnat-icons.svg?uel7uk#sonnat') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.kt-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sonnat' !important;
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: $font-size-title;
+  width: $space-2 * 5;
+  height: $space-2 * 5;
+
+  background-size: contain;
+  background-position: center;
+
+  &--xxl {
+    font-size: $font-size-hero;
+    width: $space-8 * 3;
+    height: $space-8 * 3;
+  }
+
+  &--xl {
+    font-size: $font-size-hero-sm;
+    width: $space-8 * 2;
+    height: $space-8 * 2;
+  }
+
+  &--lg {
+    font-size: $font-size-title-lg;
+    width: $space-4 * 3;
+    height: $space-4 * 3;
+  }
+
+  &--sm {
+    font-size: $font-size-title-sm;
+    width: $space-1 * 9;
+    height: $space-1 * 9;
+  }
+
+  &--xs {
+    font-size: $font-size-body;
+    width: $space-8;
+    height: $space-8;
+  }
+
+  &-binder-outline:before {
+    content: unicode('ea2f');
+  }
+  &-binder:before {
+    content: unicode('ea30');
+  }
+  &-car-safety:before {
+    content: unicode('ea31');
+  }
+  &-car-amenity:before {
+    content: unicode('ea32');
+  }
+  &-car-equipment:before {
+    content: unicode('ea33');
+  }
+  &-camera-loading-o:before {
+    content: unicode('e9fe');
+  }
+  &-camera-off-o:before {
+    content: unicode('ea28');
+  }
+  &-social-virgool:before {
+    content: unicode('ea29');
+  }
+  &-binder-o:before {
+    content: unicode('ea2a');
+  }
+  &-binder-f:before {
+    content: unicode('ea2b');
+  }
+  &-car-safety-f:before {
+    content: unicode('ea2c');
+  }
+  &-car-amenity-f:before {
+    content: unicode('ea2d');
+  }
+  &-car-equipment-f:before {
+    content: unicode('ea2e');
+  }
+  &-call-o:before {
+    content: unicode('e961');
+  }
+  &-backward-15-o:before {
+    content: unicode('ea17');
+  }
+  &-balcony-o:before {
+    content: unicode('ea18');
+  }
+  &-balcony:before {
+    content: unicode('ea18');
+  }
+  &-cabinet-o:before {
+    content: unicode('ea19');
+  }
+  &-cabinet:before {
+    content: unicode('ea19');
+  }
+  &-doc-o:before {
+    content: unicode('ea1a');
+  }
+  &-forward-15-o:before {
+    content: unicode('ea1b');
+  }
+  &-parking-o:before {
+    content: unicode('ea1c');
+  }
+  &-parking:before {
+    content: unicode('ea1c');
+  }
+  &-snowflake-o:before {
+    content: unicode('ea1d');
+  }
+  &-snowflake:before {
+    content: unicode('ea1d');
+  }
+  &-store-o:before {
+    content: unicode('ea1e');
+  }
+  &-sunny-o:before {
+    content: unicode('ea1f');
+  }
+  &-sunny:before {
+    content: unicode('ea1f');
+  }
+  &-texture-o:before {
+    content: unicode('ea20');
+  }
+  &-texture:before {
+    content: unicode('ea20');
+  }
+  &-thermometer-o:before {
+    content: unicode('ea21');
+  }
+  &-thermometer:before {
+    content: unicode('ea21');
+  }
+  &-thumb-down-f:before {
+    content: unicode('ea22');
+  }
+  &-thumb-down-o:before {
+    content: unicode('ea23');
+  }
+  &-thumb-up-f:before {
+    content: unicode('ea24');
+  }
+  &-thumb-up-o:before {
+    content: unicode('ea25');
+  }
+  &-virus-o:before {
+    content: unicode('ea26');
+  }
+  &-wc-o:before {
+    content: unicode('ea27');
+  }
+  &-wc:before {
+    content: unicode('ea27');
+  }
+  &-telephone:before {
+    content: unicode('e900');
+  }
+  &-ladder-collection-f:before {
+    content: unicode('e901');
+  }
+  &-ladder-collection:before {
+    content: unicode('e902');
+  }
+  &-assignment-ind:before {
+    content: unicode('e903');
+  }
+  &-house-inspection:before {
+    content: unicode('e904');
+  }
+  &-help:before {
+    content: unicode('e905');
+  }
+  &-vr:before {
+    content: unicode('e906');
+  }
+  &-carousel_indicator-f:before {
+    content: unicode('e907');
+  }
+  &-more-place-f:before {
+    content: unicode('e908');
+  }
+  &-add-place-f:before {
+    content: unicode('e909');
+  }
+  &-voip-f:before {
+    content: unicode('e90a');
+  }
+  &-gear-f:before {
+    content: unicode('e90b');
+  }
+  &-indicator-f:before {
+    content: unicode('e90c');
+  }
+  &-inspect:before {
+    content: unicode('e90d');
+  }
+  &-karnameh-f:before {
+    content: unicode('e90e');
+  }
+  &-terms-f:before {
+    content: unicode('e90f');
+  }
+  &-pin-map-f:before {
+    content: unicode('e910');
+  }
+  &-play-f:before {
+    content: unicode('e911');
+  }
+  &-cart-f:before {
+    content: unicode('e912');
+  }
+  &-skull-f:before {
+    content: unicode('e913');
+  }
+  &-car-body-f:before {
+    content: unicode('e914');
+  }
+  &-nearby-f:before {
+    content: unicode('e915');
+  }
+  &-send-f:before {
+    content: unicode('e916');
+  }
+  &-bell-f:before {
+    content: unicode('e917');
+  }
+  &-cloud-f:before {
+    content: unicode('e918');
+  }
+  &-role-brush-f:before {
+    content: unicode('e919');
+  }
+  &-map-f:before {
+    content: unicode('e91a');
+  }
+  &-share-2-f:before {
+    content: unicode('e91b');
+  }
+  &-headphone-f:before {
+    content: unicode('e91c');
+  }
+  &-verified:before {
+    content: unicode('e91d');
+  }
+  &-verified-badge-f:before {
+    content: unicode('e91d');
+  }
+  &-file-f:before {
+    content: unicode('e91e');
+  }
+  &-files-f:before {
+    content: unicode('e91f');
+  }
+  &-car-documents-f:before {
+    content: unicode('e920');
+  }
+  &-car-options-f:before {
+    content: unicode('e921');
+  }
+  &-car-tires-f:before {
+    content: unicode('e922');
+  }
+  &-car-hydraulics-f:before {
+    content: unicode('e923');
+  }
+  &-car-electronics-f:before {
+    content: unicode('e924');
+  }
+  &-car-engine-f:before {
+    content: unicode('e925');
+  }
+  &-chair-office-f:before {
+    content: unicode('e926');
+  }
+  &-chat-bubble-f:before {
+    content: unicode('e927');
+  }
+  &-delete-f:before {
+    content: unicode('e928');
+  }
+  &-block-f:before {
+    content: unicode('e929');
+  }
+  &-mail-f:before {
+    content: unicode('e92a');
+  }
+  &-edit-f:before {
+    content: unicode('e92b');
+  }
+  &-car-inspection-f:before {
+    content: unicode('e92c');
+  }
+  &-car-inspected:before {
+    content: unicode('e92d');
+  }
+  &-sms-f:before {
+    content: unicode('e92e');
+  }
+  &-text-message-f:before {
+    content: unicode('e92f');
+  }
+  &-tooltip-text-f:before {
+    content: unicode('e930');
+  }
+  &-tooltip-image-f:before {
+    content: unicode('e931');
+  }
+  &-lock-f:before {
+    content: unicode('e932');
+  }
+  &-circle-night-mode-f:before {
+    content: unicode('e933');
+  }
+  &-night-mode-f:before {
+    content: unicode('e934');
+  }
+  &-report-f:before {
+    content: unicode('e935');
+  }
+  &-verified-f:before {
+    content: unicode('e936');
+  }
+  &-verified-user:before {
+    content: unicode('e936');
+  }
+  &-flag-f:before {
+    content: unicode('e937');
+  }
+  &-payment-f:before {
+    content: unicode('e938');
+  }
+  &-contact-phone:before {
+    content: unicode('e939');
+  }
+  &-star-f:before {
+    content: unicode('e93a');
+  }
+  &-place-f:before {
+    content: unicode('e93b');
+  }
+  &-pin-tilt-f:before {
+    content: unicode('e93c');
+  }
+  &-pin-f:before {
+    content: unicode('e93d');
+  }
+  &-photo-library-f:before {
+    content: unicode('e93e');
+  }
+  &-add-person-f:before {
+    content: unicode('e93f');
+  }
+  &-person-f:before {
+    content: unicode('e940');
+  }
+  &-mic-f:before {
+    content: unicode('e941');
+  }
+  &-photo-f:before {
+    content: unicode('e942');
+  }
+  &-help-f:before {
+    content: unicode('e943');
+  }
+  &-gavel-f:before {
+    content: unicode('e944');
+  }
+  &-trash-f:before {
+    content: unicode('e945');
+  }
+  &-call-end-f:before {
+    content: unicode('e946');
+  }
+  &-brush-f:before {
+    content: unicode('e947');
+  }
+  &-warning-f:before {
+    content: unicode('e948');
+  }
+  &-error-circle-f:before {
+    content: unicode('e949');
+  }
+  &-info-circle-f:before {
+    content: unicode('e94a');
+  }
+  &-access-time-circle-f:before {
+    content: unicode('e94b');
+  }
+  &-add-circle-f:before {
+    content: unicode('e94c');
+  }
+  &-check-circle-f:before {
+    content: unicode('e94d');
+  }
+  &-remove-circle-f:before {
+    content: unicode('e94e');
+  }
+  &-car-f:before {
+    content: unicode('e94f');
+  }
+  &-info-f:before {
+    content: unicode('e950');
+  }
+  &-added-f:before {
+    content: unicode('e951');
+  }
+  &-access-time-f:before {
+    content: unicode('e952');
+  }
+  &-visibility-f:before {
+    content: unicode('e953');
+  }
+  &-dialog-f:before {
+    content: unicode('e954');
+  }
+  &-bookmark-f:before {
+    content: unicode('e955');
+  }
+  &-bookmark:before {
+    content: unicode('e955');
+  }
+  &-call-f:before {
+    content: unicode('e956');
+  }
+  &-favourite-f:before {
+    content: unicode('e957');
+  }
+  &-cancel-f:before {
+    content: unicode('e958');
+  }
+  &-checked-f:before {
+    content: unicode('e959');
+  }
+  &-carousel_indicator-o:before {
+    content: unicode('e95a');
+  }
+  &-mouse-thin-o:before {
+    content: unicode('e95b');
+  }
+  &-mouse-thick-o:before {
+    content: unicode('e95c');
+  }
+  &-event-note:before {
+    content: unicode('e95d');
+  }
+  &-more-place-o:before {
+    content: unicode('e95e');
+  }
+  &-add-place-o:before {
+    content: unicode('e95f');
+  }
+  &-voip-o:before {
+    content: unicode('e960');
+  }
+  &-elevator-o:before {
+    content: unicode('e962');
+  }
+  &-elevator:before {
+    content: unicode('e962');
+  }
+  &-social-linkedin-inverted:before {
+    content: unicode('e963');
+  }
+  &-social-linkedin:before {
+    content: unicode('e964');
+  }
+  &-call-received-o:before {
+    content: unicode('e965');
+  }
+  &-call-made-o:before {
+    content: unicode('e966');
+  }
+  &-report:before {
+    content: unicode('e967');
+  }
+  &-gear-o:before {
+    content: unicode('e968');
+  }
+  &-remaining-time-o:before {
+    content: unicode('e969');
+  }
+  &-support:before {
+    content: unicode('e96a');
+  }
+  &-money:before {
+    content: unicode('e96b');
+  }
+  &-circle-o:before {
+    content: unicode('e96c');
+  }
+  &-info-outline:before {
+    content: unicode('e96d');
+  }
+  &-cat-vehicles:before {
+    content: unicode('e96e');
+  }
+  &-cat-electronic-devices:before {
+    content: unicode('e96f');
+  }
+  &-terms:before {
+    content: unicode('e970');
+  }
+  &-social-karnameh:before {
+    content: unicode('e971');
+  }
+  &-social-karnameh-badge:before {
+    content: unicode('e972');
+  }
+  &-social-karnameh-check:before {
+    content: unicode('e973');
+  }
+  &-social-github-head:before {
+    content: unicode('e974');
+  }
+  &-social-instagram-fill:before {
+    content: unicode('e975');
+  }
+  &-social-facebook-f:before {
+    content: unicode('e976');
+  }
+  &-social-aparat:before {
+    content: unicode('ea34');
+  }
+  &-minus-o:before {
+    content: unicode('e977');
+  }
+  &-flip-o:before {
+    content: unicode('e978');
+  }
+  &-play-o:before {
+    content: unicode('e979');
+  }
+  &-cart-o:before {
+    content: unicode('e97a');
+  }
+  &-skull-o:before {
+    content: unicode('e97b');
+  }
+  &-finger-print-o:before {
+    content: unicode('e97c');
+  }
+  &-keyboard-arrow-right-large-o:before {
+    content: unicode('e97d');
+  }
+  &-keyboard-arrow-left-large-o:before {
+    content: unicode('e97e');
+  }
+  &-car-body:before {
+    content: unicode('e97f');
+  }
+  &-nearby-o:before {
+    content: unicode('e980');
+  }
+  &-send:before {
+    content: unicode('e981');
+  }
+  &-bell-o:before {
+    content: unicode('e982');
+  }
+  &-cloud-o:before {
+    content: unicode('e983');
+  }
+  &-cloud-upload-o:before {
+    content: unicode('e984');
+  }
+  &-add-photo-o:before {
+    content: unicode('e985');
+  }
+  &-map-o:before {
+    content: unicode('e986');
+  }
+  &-headphone-o:before {
+    content: unicode('e987');
+  }
+  &-file-o:before {
+    content: unicode('e988');
+  }
+  &-files-o:before {
+    content: unicode('e989');
+  }
+  &-car-documents:before {
+    content: unicode('e98a');
+  }
+  &-car-tires:before {
+    content: unicode('e98b');
+  }
+  &-car-options:before {
+    content: unicode('e98c');
+  }
+  &-car-hydraulics:before {
+    content: unicode('e98d');
+  }
+  &-car-electronics:before {
+    content: unicode('e98e');
+  }
+  &-car-engine:before {
+    content: unicode('e98f');
+  }
+  &-share-2-o:before {
+    content: unicode('e990');
+  }
+  &-link-o:before {
+    content: unicode('e991');
+  }
+  &-chair-office-o:before {
+    content: unicode('e992');
+  }
+  &-social-apple:before {
+    content: unicode('e993');
+  }
+  &-social-cafebazaar-type:before {
+    content: unicode('e994');
+  }
+  &-log-in-o:before {
+    content: unicode('e995');
+  }
+  &-log-out-o:before {
+    content: unicode('e996');
+  }
+  &-logout:before {
+    content: unicode('e996');
+  }
+  &-chat-bubble:before {
+    content: unicode('e997');
+  }
+  &-paint-brush-o:before {
+    content: unicode('e998');
+  }
+  &-gift-o:before {
+    content: unicode('e999');
+  }
+  &-arrow-downward-large-o:before {
+    content: unicode('e99a');
+  }
+  &-arrow-upward-large-o:before {
+    content: unicode('e99b');
+  }
+  &-arrow-forward-large-o:before {
+    content: unicode('e99c');
+  }
+  &-arrow-backward-large-o:before {
+    content: unicode('e99d');
+  }
+  &-show-chart:before {
+    content: unicode('e99e');
+  }
+  &-delete:before {
+    content: unicode('e99f');
+  }
+  &-social-sonnat-thin:before {
+    content: unicode('e9a0');
+  }
+  &-social-sonnat-medium:before {
+    content: unicode('e9a1');
+  }
+  &-social-sonnat-thick:before {
+    content: unicode('e9a2');
+  }
+  &-social-facebook:before {
+    content: unicode('e9a3');
+  }
+  &-social-medium:before {
+    content: unicode('e9a4');
+  }
+  &-social-gitlab:before {
+    content: unicode('e9a5');
+  }
+  &-social-twitter:before {
+    content: unicode('e9a6');
+  }
+  &-social-instagram:before {
+    content: unicode('e9a7');
+  }
+  &-toc:before {
+    content: unicode('e9a8');
+  }
+  &-social-divar:before {
+    content: unicode('e9a9');
+  }
+  &-sms-o:before {
+    content: unicode('e9aa');
+  }
+  &-text-message-o:before {
+    content: unicode('e9ab');
+  }
+  &-tooltip-text-o:before {
+    content: unicode('e9ac');
+  }
+  &-tooltip-image-o:before {
+    content: unicode('e9ad');
+  }
+  &-ladder-group:before {
+    content: unicode('e9ae');
+  }
+  &-ladder-o:before {
+    content: unicode('e9af');
+  }
+  &-lock:before {
+    content: unicode('e9b0');
+  }
+  &-circle-night-mode-o:before {
+    content: unicode('e9b1');
+  }
+  &-night-mode-o:before {
+    content: unicode('e9b2');
+  }
+  &-my-location-o:before {
+    content: unicode('e9b3');
+  }
+  &-more-horizontal-o:before {
+    content: unicode('e9b4');
+  }
+  &-more-vertical-o:before {
+    content: unicode('e9b5');
+  }
+  &-mobile-friendly-o:before {
+    content: unicode('e9b6');
+  }
+  &-trending-up:before {
+    content: unicode('e9b7');
+  }
+  &-verified-o:before {
+    content: unicode('e9b8');
+  }
+  &-share-o:before {
+    content: unicode('e9b9');
+  }
+  &-flag-o:before {
+    content: unicode('e9ba');
+  }
+  &-flag-wave-o:before {
+    content: unicode('e9bb');
+  }
+  &-crop-square-o:before {
+    content: unicode('e9bc');
+  }
+  &-crop-4-3-o:before {
+    content: unicode('e9bd');
+  }
+  &-crop-o:before {
+    content: unicode('e9be');
+  }
+  &-payment:before {
+    content: unicode('e938');
+  }
+  &-payment-outline:before {
+    content: unicode('e9bf');
+  }
+  &-star-half-right-o:before {
+    content: unicode('e9c0');
+  }
+  &-star-half-left-o:before {
+    content: unicode('e9c1');
+  }
+  &-star-o:before {
+    content: unicode('e9c2');
+  }
+  &-read-o:before {
+    content: unicode('e9c3');
+  }
+  &-place:before {
+    content: unicode('e9c4');
+  }
+  &-pin-tilt-o:before {
+    content: unicode('e9c5');
+  }
+  &-pin-o:before {
+    content: unicode('e9c6');
+  }
+  &-photo-library:before {
+    content: unicode('e9c7');
+  }
+  &-add-person-o:before {
+    content: unicode('e9c8');
+  }
+  &-person:before {
+    content: unicode('e9c9');
+  }
+  &-mic-o:before {
+    content: unicode('e9ca');
+  }
+  &-photo-o:before {
+    content: unicode('e9cb');
+  }
+  &-help-outline:before {
+    content: unicode('e9cc');
+  }
+  &-gavel:before {
+    content: unicode('e9cd');
+  }
+  &-full-screen-o:before {
+    content: unicode('e9ce');
+  }
+  &-trash-o:before {
+    content: unicode('e9cf');
+  }
+  &-eraser-o:before {
+    content: unicode('e9d0');
+  }
+  &-call-end-o:before {
+    content: unicode('e9d1');
+  }
+  &-brush-o:before {
+    content: unicode('e9d2');
+  }
+  &-dollor-o:before {
+    content: unicode('e9d3');
+  }
+  &-rotate-90-o:before {
+    content: unicode('e9d4');
+  }
+  &-cached-o:before {
+    content: unicode('e9d5');
+  }
+  &-renew-o:before {
+    content: unicode('e9d6');
+  }
+  &-rotate-left-o:before {
+    content: unicode('e9d7');
+  }
+  &-rotate-right-o:before {
+    content: unicode('e9d8');
+  }
+  &-refresh:before {
+    content: unicode('e9d9');
+  }
+  &-warning:before {
+    content: unicode('e9da');
+  }
+  &-error-circle-o:before {
+    content: unicode('e9db');
+  }
+  &-info-circle-o:before {
+    content: unicode('e9dc');
+  }
+  &-access-time-circle-o:before {
+    content: unicode('e9dd');
+  }
+  &-add-circle:before {
+    content: unicode('e9de');
+  }
+  &-check-circle:before {
+    content: unicode('e9df');
+  }
+  &-remove-circle-o:before {
+    content: unicode('e9e0');
+  }
+  &-info-o:before {
+    content: unicode('e9e1');
+  }
+  &-block:before {
+    content: unicode('e9e2');
+  }
+  &-add-camera-o:before {
+    content: unicode('e9e3');
+  }
+  &-timer:before {
+    content: unicode('e9e4');
+  }
+  &-history:before {
+    content: unicode('e9e5');
+  }
+  &-added-o:before {
+    content: unicode('e9e6');
+  }
+  &-add:before {
+    content: unicode('e9e7');
+  }
+  &-remove:before {
+    content: unicode('e9e8');
+  }
+  &-check-o:before {
+    content: unicode('e9e9');
+  }
+  &-arrow-downward-o:before {
+    content: unicode('e9ea');
+  }
+  &-arrow-upward-o:before {
+    content: unicode('e9eb');
+  }
+  &-arrow-forward:before {
+    content: unicode('e9ec');
+  }
+  &-arrow-backward-o:before {
+    content: unicode('e9ed');
+  }
+  &-search-large-o:before {
+    content: unicode('e9ee');
+  }
+  &-suitcase-o:before {
+    content: unicode('e9ef');
+  }
+  &-apartment-o:before {
+    content: unicode('e9f0');
+  }
+  &-real-estate:before {
+    content: unicode('e9f1');
+  }
+  &-burger-menu-o:before {
+    content: unicode('e9f2');
+  }
+  &-add-note-o:before {
+    content: unicode('e9f3');
+  }
+  &-add-note-detailed-o:before {
+    content: unicode('e9f4');
+  }
+  &-car-o:before {
+    content: unicode('e9f5');
+  }
+  &-close:before {
+    content: unicode('e9f6');
+  }
+  &-access-time:before {
+    content: unicode('e952');
+  }
+  &-access-time-outline:before {
+    content: unicode('e9f7');
+  }
+  &-wrest-watch-o:before {
+    content: unicode('e9f8');
+  }
+  &-visibility:before {
+    content: unicode('e9f9');
+  }
+  &-tablet-o:before {
+    content: unicode('e9fa');
+  }
+  &-setting-o:before {
+    content: unicode('e9fb');
+  }
+  &-search-o:before {
+    content: unicode('e9fc');
+  }
+  &-role-brush-o:before {
+    content: unicode('e9fd');
+  }
+  &-call:before {
+    content: unicode('e956');
+  }
+  &-paperclip-thin-o:before {
+    content: unicode('e9ff');
+  }
+  &-paperclip-thick-o:before {
+    content: unicode('ea00');
+  }
+  &-note-o:before {
+    content: unicode('ea01');
+  }
+  &-note-outline:before {
+    content: unicode('ea01');
+  }
+  &-mobile-o:before {
+    content: unicode('ea02');
+  }
+  &-email-outline:before {
+    content: unicode('ea03');
+  }
+  &-lamp-o:before {
+    content: unicode('ea04');
+  }
+  &-funnel-o:before {
+    content: unicode('ea05');
+  }
+  &-filter-o:before {
+    content: unicode('ea06');
+  }
+  &-favourite-o:before {
+    content: unicode('ea07');
+  }
+  &-edit:before {
+    content: unicode('ea08');
+  }
+  &-dice-o:before {
+    content: unicode('ea09');
+  }
+  &-dialog-o:before {
+    content: unicode('ea0a');
+  }
+  &-cancel:before {
+    content: unicode('ea0b');
+  }
+  &-content-copy:before {
+    content: unicode('ea0c');
+  }
+  &-community:before {
+    content: unicode('ea0d');
+  }
+  &-checked:before {
+    content: unicode('ea0e');
+  }
+  &-camera-o:before {
+    content: unicode('ea0f');
+  }
+  &-bookmark-o:before {
+    content: unicode('ea10');
+  }
+  &-bookmark-border:before {
+    content: unicode('ea10');
+  }
+  &-keyboard-arrow-up-o:before {
+    content: unicode('ea11');
+  }
+  &-keyboard-arrow-right:before {
+    content: unicode('ea12');
+  }
+  &-keyboard-arrow-left:before {
+    content: unicode('ea13');
+  }
+  &-keyboard-arrow-down-o:before {
+    content: unicode('ea14');
+  }
+  &-advert-o:before {
+    content: unicode('ea15');
+  }
+  &-advert-outline:before {
+    content: unicode('ea15');
+  }
+  &-share:before {
+    content: unicode('ea16');
+  }
+  &-car-inspection:before {
+    content: unicode('e92c');
+  }
+  &-triangle-top-f:before {
+    content: unicode('ea41');
+  }
+  &-credit-account:before {
+    content: unicode('ea3b');
+  }
+  &-local-shipping:before {
+    content: unicode('ea3d');
+  }
+  &-moped:before {
+    content: unicode('ea3f');
+  }
+  &-feedback-f:before {
+    content: unicode('ea44');
+  }
+  &-feedback-o:before {
+    content: unicode('ea45');
+  }
+  &-social-android:before {
+    content: unicode('ea46');
+  }
+  &-image-outline-o:before {
+    content: unicode('ea48');
+  }
+  &-image-outline:before {
+    content: unicode('ea48');
+  }
+  &-download-o:before {
+    content: unicode('ea4c');
+  }
+  &-store-f:before {
+    content: unicode('ea4d');
+  }
+  &-real-estate-f:before {
+    content: unicode('ea4e');
+  }
+  &-article:before {
+    content: unicode('ea52');
+  }
+  &-article-o:before {
+    content: unicode('ea53');
+  }
+  &-article-outline:before {
+    content: unicode('ea57');
+  }
+  &-article-outline-o:before {
+    content: unicode('ea54');
+  }
+  &-analytics:before {
+    content: unicode('ea4a');
+  }
+  &-analytics-outline:before {
+    content: unicode('ea4b');
+  }
+  &-tag:before {
+    content: unicode('ea60');
+  }
+  &-tag-outline:before {
+    content: unicode('ea6c');
+  }
+  &-wrench:before {
+    content: unicode('ea61');
+  }
+  &-wrench-outline:before {
+    content: unicode('ea6d');
+  }
+  &-home:before {
+    content: unicode('ea55');
+  }
+  &-home-outline:before {
+    content: unicode('ea56');
+  }
+  &-cat-businesses:before {
+    content: unicode('ea5b');
+  }
+  &-support-agent:before {
+    content: unicode('ea67');
+  }
+  &-assignment-ind-o:before {
+    content: unicode('ea5a');
+  }
+  &-assignment-ind-outline:before {
+    content: unicode('ea5a');
+  }
+}
