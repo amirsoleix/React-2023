@@ -12,6 +12,7 @@ import img5 from 'src/assets/slideshow/img-05.jpg';
 import img6 from 'src/assets/slideshow/img-06.jpg';
 import img7 from 'src/assets/slideshow/img-07.jpg';
 import img8 from 'src/assets/slideshow/img-08.jpg';
+import reactLogo from 'src/assets/images/react-logo-black.png';
 
 const properties = {
   duration: 5000,
@@ -138,7 +139,7 @@ class Showroom extends React.Component {
               ))}
             </Slide>
             <div className='showroom__content__inside'>
-              <h1 className='showroom__title'>ReAct</h1>
+              <img className='showroom__title' src={reactLogo} alt='react-logo'></img>
               <p className='showroom__title_discription'>Resana's   Annual   Conference   on   Technology</p>
               {this.countdown()}
             </div>

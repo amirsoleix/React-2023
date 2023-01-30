@@ -11,6 +11,7 @@ import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
 import './Home.scss';
 import ResponsiveAppBar from 'src/components/Navbar';
+import PresentationTimeline from './components/PresentationsTimeline';
 
 class Home extends React.Component {
   handleClick(i) {
@@ -51,6 +52,15 @@ class Home extends React.Component {
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
+                <Presentations />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <div className='home__content__inside'>
                 <HistoryPreview />
               </div>
             </div>
@@ -79,6 +89,22 @@ class Home extends React.Component {
       </>
     );
   }
+}
+
+function Presentations() {
+  return (
+    <PresentationTimeline
+    title='Presentation Timeline'
+      titleColor=''
+      content=''
+      contentColor=''
+      btnText=''
+      btnColor=''
+      btnBackgroundColor=''
+      backgroundUrl=''
+      className=''
+    />
+  )
 }
 
 function HistoryPreview() {

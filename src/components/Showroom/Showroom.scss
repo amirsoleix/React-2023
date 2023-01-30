@@ -12,15 +12,16 @@
   &__title {
     padding: 0;
     margin: 0;
-    text-align: center;
+    // text-align: center;
 
-    font-weight: bold;
-    font-family: cursive;
-    font-size: 6rem;
+    // font-weight: bold;
+    // font-family: cursive;
+    // font-size: 6rem;
     // Make text color a gradient from blue to black
-    background: linear-gradient(90deg, blue, black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(90deg, blue, black);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    align-self: center;
   }
 
   &__title_discription {
@@ -37,6 +38,9 @@
 
   &__content {
     &__inside {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       position: absolute;
       width: 80%;
       margin-top: -90vh;
@@ -61,6 +65,10 @@
   }
 }
 
+ul.indicators {
+  padding: 0;
+}
+
 .logo {
   &__container {
     padding-top: 50px;
@@ -78,8 +86,9 @@
 }
 
 .countdown {
+  width: min(100%, 800px);
   &__container {
-    width: max(350px, 75%);
+    width: 90%;
     margin: auto;
   }
 
@@ -162,8 +171,9 @@
   }
 
   .countdown {
+    width: 100%;
     &__container {
-      width: 100%;
+      width: 90%;
     }
     &__content {
       &__item {
