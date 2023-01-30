@@ -47,14 +47,28 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div id='social-sonnat-thin'>
-          <HistoryPreview />
+        <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <div className='home__content__inside'>
+                <HistoryPreview />
+              </div>
+            </div>
+          </div>
         </div>
         <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
                 <Speakers />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <div className='home__content__inside'>
                 <StaffList />
               </div>
             </div>
@@ -65,28 +79,6 @@ class Home extends React.Component {
       </>
     );
   }
-}
-
-function Speakers() {
-  return (
-    <div id='mic-f'>
-      <h2>Previous Speakers</h2>
-      <SpeakerPanel posts={SPEAKERS} className='speaker__main' />
-    </div>
-  );
-}
-
-function StaffList() {
-  return (
-    <div id='social-sonnat-thin'>
-      <h2>Staff</h2>
-      <StaffPanel posts={STAFF} className='staff__main' />
-    </div>
-  );
-}
-
-function BottomNav() {
-  return <div className='bottom-nav'></div>;
 }
 
 function HistoryPreview() {
@@ -113,6 +105,28 @@ function HistoryPreview() {
       className=''
     />
   );
+}
+
+function Speakers() {
+  return (
+    <div id='mic-f'>
+      <h2>Previous Speakers</h2>
+      <SpeakerPanel posts={SPEAKERS} className='speaker__main' />
+    </div>
+  );
+}
+
+function StaffList() {
+  return (
+    <div id='social-sonnat-thin'>
+      <h2>Staff</h2>
+      <StaffPanel posts={STAFF} className='staff__main' />
+    </div>
+  );
+}
+
+function BottomNav() {
+  return <div className='bottom-nav'></div>;
 }
 
 export default Home;

@@ -7,6 +7,7 @@ $main-margin-top: 0px;
 
 .home {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -32,6 +33,7 @@ $main-margin-top: 0px;
   &__container {
     padding: $main-margin-top 0px 56px;
     max-width: 100%;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -39,7 +41,12 @@ $main-margin-top: 0px;
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    &__inside {
+      padding: 10px min(4%, 50px) 20px min(4%, 50px);
+    }
   }
 }
 
@@ -47,6 +54,7 @@ $main-margin-top: 0px;
   &__main {
     max-width: 100%;
     display: grid;
+    align-self: center;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -59,6 +67,7 @@ $main-margin-top: 0px;
   &__main {
     max-width: 100%;
     display: grid;
+    align-self: center;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -66,6 +75,18 @@ $main-margin-top: 0px;
     grid-template-columns: repeat(2, 1fr);
     gap: $grid-gutter-width;
   }
+}
+
+#remaining-time-o {
+  text-align: center;
+}
+
+#mic-f {
+  text-align: center;
+}
+
+#social-sonnat-thin {
+  text-align: center;
 }
 
 @include up(sm) {
@@ -112,7 +133,7 @@ $main-margin-top: 0px;
 
   .speaker {
     &__main {
-      max-width: 1080px;
+      // max-width: 1080px;
       grid-template-columns: repeat(3, 1fr);
     }
   }

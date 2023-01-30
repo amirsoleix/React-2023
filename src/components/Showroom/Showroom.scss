@@ -10,7 +10,7 @@
   margin-bottom: 2rem;
 
   &__title {
-    padding: 2rem 0 0 0;
+    padding: 0;
     margin: 0;
     text-align: center;
 
@@ -29,6 +29,7 @@
     font-family: cursive;
     font-size: 2rem;
     margin-top: 0;
+    margin-bottom: 4rem;
     background: linear-gradient(90deg, blue, black);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -4,33 +4,25 @@
   overflow: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-image: url('../../assets/images/historyPreview-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url('../../assets/images/historyPreview-background.jpg');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 
   h2 {
-    margin-left: 20px;
-    margin-bottom: 0px;
-    color: rgb(24, 35, 89);
-    font: {
-      size: 30px;
-      family: IRANSans;
-      weight: 800;
-    }
+    margin: 0;
+    text-align: center;
   }
 
   &__title {
-    padding-top: 15px;
-    padding-left: 30px;
+    padding: 0;
   }
 
   &__content {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 0;
     text-align: left;
-    color: rgb(256, 256, 256);
+    color: rgb(24, 35, 89);;
   }
 
   &__readMoreButton {
