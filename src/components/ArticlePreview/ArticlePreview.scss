@@ -1,0 +1,52 @@
+.articlePreview {
+  max-width: 100%;
+  height: auto;
+  overflow: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url('../../assets/images/historyPreview-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  h2 {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    color: rgb(24, 35, 89);
+    font: {
+      size: 30px;
+      family: IRANSans;
+      weight: 800;
+    }
+  }
+
+  &__title {
+    padding-top: 15px;
+    padding-left: 30px;
+  }
+
+  &__content {
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: left;
+    color: rgb(256, 256, 256);
+  }
+
+  &__readMoreButton {
+    width: fit-content;
+    float: right;
+    margin-right: 44px;
+    margin-bottom: 27px;
+    margin-top: 6px;
+    border-radius: 4px;
+    font: {
+      weight: bold;
+      size: 20px;
+      family: IRANSans;
+    }
+
+    color: rgb(24, 35, 89);
+    text-decoration: underline;
+  }
+}

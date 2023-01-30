@@ -104,11 +104,19 @@ let TEAM = [
 let BUTTONS = [
   ['Home', 'home-outline', 'default'],
   ['Timeline', 'remaining-time-o', 'default'],
-  ['Speakers', 'mic-f', 'default'],
+  ['History', 'social-sonnat-thin', 'default'],
   ['Registration', 'check-circle', 'default'],
-  ['Staff', 'social-sonnat-thin', 'default'],
-  ['Sponsors', 'gift-o', 'default'],
+  ['Speakers', 'mic-f', 'default'],
 ];
+
+// let BUTTONS = [
+//   ['Home', 'home-outline', 'default'],
+//   ['Timeline', 'remaining-time-o', 'default'],
+//   ['Speakers', 'mic-f', 'default'],
+//   ['Registration', 'check-circle', 'default'],
+//   ['Staff', 'social-sonnat-thin', 'default'],
+//   ['Sponsors', 'gift-o', 'default'],
+// ];
 
 let SPEAKERS = FOLDERS.map((speaker) => ({
   imgUrl: speaker['figure'],

@@ -17,8 +17,6 @@
   backdrop-filter: blur(2px);
 
   &-logo {
-    height: 40px;
-
     filter: invert(0.7);
   }
 
@@ -83,6 +81,11 @@
   }
 }
 
+.logo {
+  height: 40px;
+  margin: 0 10px;
+}
+
 @include up(lg) {
   .navbar {
     &__container {
@@ -100,6 +103,14 @@
     &__left-section {
       display: flex;
       align-items: center;
+    }
+  }
+}
+
+@include down(lg) {
+  .navbar {
+    &__button {
+      width: 100%;
     }
   }
 }
