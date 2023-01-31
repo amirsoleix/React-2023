@@ -16,7 +16,7 @@
   border: 0;
   border-radius: 4px;
 
-  font-size: 16px;
+  font-size: 20px;
   line-height: 32px;
   font-weight: 400;
 
@@ -27,7 +27,8 @@
   }
 
   &__text {
-    margin-top: 4px;
+    margin-top: 2px;
+    font-size: 14px;
   }
 
   &--brand {
@@ -38,6 +39,7 @@
     }
     &:hover {
       background-color: $brand-button-bgc-hover;
+      transition: background-color 0.3s;
     }
     &:active {
       background-color: $brand-button-bgc;
@@ -47,6 +49,8 @@
       color: $disabled-brand-button-text;
       background-color: $disabled-brand-button-bgc;
       &:hover {
+        transition: background-color 0.3s;
+
         color: $disabled-brand-button-text;
         background-color: $disabled-brand-button-bgc;
       }
@@ -60,6 +64,8 @@
       color: $default-button-icon;
     }
     &:hover {
+      transition: background-color 0.3s;
+
       color: $default-button-text-hover;
       background-color: $default-button-bgc-hover;
       & > i {
