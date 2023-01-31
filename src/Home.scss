@@ -30,7 +30,7 @@ html, body {
     background-color: $white-nav;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(2px);
-    overflow-x: auto;
+    // overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -43,7 +43,7 @@ html, body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin: 0px 32px;
+    // margin: 0px 32px;
   }
 
   &__content {
@@ -133,7 +133,7 @@ html, body {
 
   .speaker {
     &__main {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -142,40 +142,40 @@ html, body {
       max-width: 1080px;
       margin: auto;
 
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-}
-
-@include up(lg) {
-  .home {
-    // &__container {
-    //   // padding: $main-margin-top 0px 0px;
-    // }
-    &__header {
-      display: none;
-    }
-
-    &__aside {
-      display: block;
-    }
-  }
-
-  .speaker {
-    &__main {
-      max-width: 1080px;
-      margin: auto;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .staff {
-    &___main {
-      max-width: 1080px;
       grid-template-columns: repeat(4, 1fr);
     }
   }
 }
 
-@include up(xxl) {
-}
+// @include up(lg) {
+//   .home {
+//     // &__container {
+//     //   // padding: $main-margin-top 0px 0px;
+//     // }
+//     &__header {
+//       display: none;
+//     }
+
+//     &__aside {
+//       display: block;
+//     }
+//   }
+
+//   .speaker {
+//     &__main {
+//       max-width: 1080px;
+//       margin: auto;
+//       grid-template-columns: repeat(3, 1fr);
+//     }
+//   }
+
+//   .staff {
+//     &___main {
+//       max-width: 1080px;
+//       grid-template-columns: repeat(4, 1fr);
+//     }
+//   }
+// }
+
+// @include up(xxl) {
+// }

@@ -49,7 +49,7 @@ function Speaker({
   function renderSubtitle(subtitle) {
     return (
       subtitle && (
-        <p className='post-card__subtitle hide-overflow'>{subtitle}</p>
+        <p className='post-card__subtitle'>{subtitle}</p>
       )
     );
   }
