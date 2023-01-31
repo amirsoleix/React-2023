@@ -106,7 +106,7 @@ let TEAM = [
   {
     name: 'nourian-ali',
     imgUrl: nourian_ali,
-    title: 'Technical Manager',
+    title: 'Tech. Manager',
   },
   {
     name: 'mostaghis-amirali',
@@ -131,7 +131,7 @@ let TEAM = [
   {
     name: 'toumari-parisa',
     img: toumari_parisa,
-    title: 'Advertising Manager',
+    title: 'Adv. Manager',
   },
   {
     name: 'mehrtash-shervin',
@@ -141,7 +141,7 @@ let TEAM = [
   {
     name: 'taji-mehrshad',
     img: taji_mehrshad,
-    title: 'Research Manager',
+    title: 'Dev. Manager',
   },
   {
     name: 'soleimanifar-amir',
