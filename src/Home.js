@@ -37,6 +37,15 @@ class Home extends React.Component {
         />
         <div className='home'>
           <Showroom />
+          <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <div className='home__content__inside'>
+                <HistoryPreview />
+              </div>
+            </div>
+          </div>
+        </div>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -48,7 +57,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className='home'>
+        {/* <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -56,16 +65,7 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className='home'>
-          <div className='home__container'>
-            <div className='home__content'>
-              <div className='home__content__inside'>
-                <HistoryPreview />
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> */}
         <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
@@ -110,7 +110,7 @@ function Presentations() {
 function HistoryPreview() {
   return (
     <ArticlePreview
-      title='History'
+      title="Resana's Annual Conference on Technology"
       titleColor=''
       content='ReACT is an annual scientific confrence on
       technology held by the students of Electrical

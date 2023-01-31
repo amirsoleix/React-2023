@@ -1,7 +1,14 @@
+@import 'src/styles/_variables.scss';
+
 .MuiSvgIcon-root {
     width: 40px !important;
     height: 40px !important;
     padding: 2px;
+}
+
+.css-1d9ye53-MuiTypography-root {
+    font-family: $font-family-base !important;
+    font-size: medium !important;
 }
 
 .css-4uqsnu-MuiTypography-root-MuiTimelineContent-root {
@@ -14,12 +21,14 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     align-self: center;
+    font-family: $font-family-base !important;
 }
 
 .css-l4x062-MuiTypography-root-MuiTimelineOppositeContent-root {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     align-self: center;
+    font-family: $font-family-base !important;
 }
 
 .css-1sohoek-MuiTimelineItem-root {

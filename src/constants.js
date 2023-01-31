@@ -11,11 +11,18 @@ import karbasi_amin from 'src/assets/speakers/karbasi-amin/profile.png';
 import minaee_shervin from 'src/assets/speakers/minaee-shervin/profile.png';
 import tefagh_mojtaba from 'src/assets/speakers/tefagh-mojtaba/profile.jpg';
 
-import nourian_ali from 'src/assets/staff/nourian-ali.jpg';
-import soleimanifar_amir from 'src/assets/staff/soleimanifar-amir.jpg';
-import chitsaz_amirhossein from 'src/assets/staff/chitsaz-amirhossein.jpg';
-import unknown_yasin from 'src/assets/staff/unknown-yasin.jpg';
-import rafiei_ainaz from 'src/assets/staff/rafiei-ainaz.jpg';
+import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
+import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
+import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
+import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
+import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
+import mousavi_yasin from 'src/assets/staff/yasin-mousavi.jpg';
+import eghlimi_mohammadamin from 'src/assets/staff/mohammadamin-eghlimi.jpg';
+import heidari_mahdi from 'src/assets/staff/mahdi-heidari.jpg';
+import toumari_parisa from 'src/assets/staff/parisa-toumari.jpg';
+import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
+import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
+import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
 
 let FOLDERS = [
   {
@@ -82,15 +89,66 @@ let FOLDERS = [
 
 let TEAM = [
   {
+    name: 'dehghan-niloufar',
+    imgUrl: dehghan_niloufar,
+    title: 'Event Head',
+  },
+  {
+    name: 'asemi-parsa',
+    imgUrl: asemi_parsa,
+    title: 'Event Head',
+  },
+  {
+    name: 'shahbazian-hasan',
+    imgUrl: shahbazian_mohammadhasan,
+    title: 'HR Manager',
+  },
+  {
     name: 'nourian-ali',
     imgUrl: nourian_ali,
-    title: 'Technical Head',
+    title: 'Technical Manager',
+  },
+  {
+    name: 'mostaghis-amirali',
+    imgUrl: mostaghis_amirali,
+    title: 'Executive Manager',
+  },
+  {
+    name: 'mousavi-yasin',
+    img: mousavi_yasin,
+    title: 'Sponsoring Manager',
+  },
+  {
+    name: 'eghlimi-amin',
+    img: eghlimi_mohammadamin,
+    title: 'Financial Manager',
+  },
+  {
+    name: 'heidari-mahdi',
+    img: heidari_mahdi,
+    title: 'Content Manager',
+  },
+  {
+    name: 'toumari-parisa',
+    img: toumari_parisa,
+    title: 'Advertising Manager',
+  },
+  {
+    name: 'mehrtash-shervin',
+    img: mehtash_shervin,
+    title: 'Relations Manager',
+  },
+  {
+    name: 'taji-mehrshad',
+    img: taji_mehrshad,
+    title: 'Research Manager',
   },
   {
     name: 'soleimanifar-amir',
     imgUrl: soleimanifar_amir,
     title: 'Web Developer',
   },
+<<<<<<< HEAD
 
   {
     name: 'unknown-yasin',
@@ -107,6 +165,8 @@ let TEAM = [
     img: rafiei_ainaz,
     title: 'Sponsoring',
   },
+=======
+>>>>>>> f1dc729704f3b1cef580dae9bd7fff893d8f9b93
 ];
 
 // For each folder import the profile picture
