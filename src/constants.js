@@ -148,25 +148,6 @@ let TEAM = [
     imgUrl: soleimanifar_amir,
     title: 'Web Developer',
   },
-<<<<<<< HEAD
-
-  {
-    name: 'unknown-yasin',
-    img: unknown_yasin,
-    title: 'Sponsoring Head',
-  },
-  {
-    name: 'chitsaz-amirhossein',
-    img: chitsaz_amirhossein,
-    title: 'Sponsoring',
-  },
-  {
-    name: 'rafiei-ainaz',
-    img: rafiei_ainaz,
-    title: 'Sponsoring',
-  },
-=======
->>>>>>> f1dc729704f3b1cef580dae9bd7fff893d8f9b93
 ];
 
 // For each folder import the profile picture
