@@ -1,5 +1,6 @@
 @import 'src/styles/_variables';
 @import 'src/styles/_mixins.scss';
+@import '../../styles/main.scss';
 
 .post-card {
   height: 256px;
@@ -75,8 +76,7 @@
 
   &__image {
     &-container {
-      min-width: 100px;
-      width: 196px;
+      width: 100px;
       height: 196px;
       border-radius: 16px;
       background-color: #c4c4c4;
@@ -101,12 +101,10 @@
 
   &__content {
     flex: 1;
-    min-width: 50px;
     display: flex;
     padding-left: 8px;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
     text-align: left;
   }
 

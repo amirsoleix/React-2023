@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
 @function set-alpha($base-color, $alpha: 1) {
   @return change-color($base-color, $alpha: $alpha);
 }
@@ -168,9 +170,9 @@ $grid-gutter-width: 32px !default;
 // Typography
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: cursive, IRANSans, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-sans-serif: 'Lato', IRANSans, -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 $font-family-monospace: IRANSans, SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;

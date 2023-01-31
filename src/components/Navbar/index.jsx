@@ -29,6 +29,11 @@ import Container from '@mui/material/Container';
 import Button from '../Button';
 import Tooltip from '@mui/material/Tooltip';
 import { createTheme } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 import './Navbar.scss';
 
@@ -57,6 +62,15 @@ function ResponsiveAppBar(props) {
   const pages = props.buttons;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -160,16 +174,37 @@ function ResponsiveAppBar(props) {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title='Register Now'>
+            <div>
               <Button
                 key={'check-circle'}
                 children={'Registration'}
                 iconName={'check-circle'}
                 buttonType={'brand'}
                 className='navbar__button'
-                onClick={() => handleClick(2)}
+                onClick={handleClickOpen}
               />
-            </Tooltip>
+              <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby='alert-dialog-title'
+                aria-describedby='alert-dialog-description'
+              >
+                <DialogTitle id='alert-dialog-title'>
+                  {'Registration will be available soon!'}
+                </DialogTitle>
+                <DialogContent>
+                  <DialogContentText id='alert-dialog-description'>
+                    ReACT 2023 has not yet opened registration. The process will
+                    begin on 9th February 2023. Please check back then!
+                  </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                  <Button onClick={handleClose} autofocus buttonType='brand'>
+                    Okay
+                  </Button>
+                </DialogActions>
+              </Dialog>
+            </div>
           </Box>
         </Toolbar>
       </Container>

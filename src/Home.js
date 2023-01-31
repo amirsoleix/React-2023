@@ -15,7 +15,6 @@ import PresentationTimeline from './components/PresentationsTimeline';
 
 class Home extends React.Component {
   handleClick(i) {
-    console.log('Click by' + i);
     for (let j = 0; j < BUTTONS.length; j++) {
       if (BUTTONS[j][1] === i) {
         console.log('Got Match');
@@ -37,15 +36,6 @@ class Home extends React.Component {
         />
         <div className='home'>
           <Showroom />
-          <div className='home'>
-          <div className='home__container'>
-            <div className='home__content'>
-              <div className='home__content__inside'>
-                <HistoryPreview />
-              </div>
-            </div>
-          </div>
-        </div>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -57,7 +47,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        {/* <div className='home'>
+        <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -65,7 +55,16 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+        <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <div className='home__content__inside'>
+                <HistoryPreview />
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
@@ -94,7 +93,7 @@ class Home extends React.Component {
 function Presentations() {
   return (
     <PresentationTimeline
-    title='Presentation Timeline'
+      title='Presentation Timeline'
       titleColor=''
       content=''
       contentColor=''
@@ -104,13 +103,13 @@ function Presentations() {
       backgroundUrl=''
       className=''
     />
-  )
+  );
 }
 
 function HistoryPreview() {
   return (
     <ArticlePreview
-      title="Resana's Annual Conference on Technology"
+      title='History'
       titleColor=''
       content='ReACT is an annual scientific confrence on
       technology held by the students of Electrical
