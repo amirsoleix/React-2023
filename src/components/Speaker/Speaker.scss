@@ -1,5 +1,11 @@
+@import 'src/styles/_variables';
+@import 'src/styles/_mixins.scss';
+
 .post-card {
   height: 256px;
+  width: 200px;
+  align-self: center;
+  justify-self: center;
 
   border-radius: 16px;
 
@@ -34,7 +40,9 @@
     flex-direction: row;
     gap: 4px;
     padding: 16px;
-    padding-top: 55%;
+    // padding-top: 55%;
+    height: 100%;
+    max-height: -webkit-fill-available;
 
     align-items: flex-end;
 
@@ -104,7 +112,7 @@
 
   &__title {
     width: 100%;
-    height: 48px;
+    height: fit-content;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -158,5 +166,56 @@
   &__chat {
     width: 20px;
     height: 20px;
+  }
+}
+
+@include down(md) {
+  .post-card {
+    width: 25.4vw;
+    height: 33.3vw;
+    &__title {
+      h2 {
+        font-size: 18px;
+      }
+    }
+    &__detail p:first-child {
+      display: none;
+    }
+  }
+}
+
+@include down(sm) {
+  .post-card {
+    width: 160px;
+    height: 200px;
+    &__title {
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include down(xsm) {
+  .post-card {
+    width: 39vw;
+    height: 50vw;
+    &__title {
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include down(xxsm) {
+  .post-card {
+    width: 60vw;
+    height: 75vw;
+    &__title {
+      h2 {
+        font-size: 16px;
+      }
+    }
   }
 }

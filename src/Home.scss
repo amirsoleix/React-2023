@@ -5,6 +5,12 @@
 
 $main-margin-top: 0px;
 
+html, body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 .home {
   display: flex;
   width: 100%;
@@ -31,7 +37,7 @@ $main-margin-top: 0px;
   }
 
   &__container {
-    padding: $main-margin-top 0px 56px;
+    // padding: $main-margin-top 0px 56px;
     max-width: 100%;
     width: 100%;
     display: flex;
@@ -53,12 +59,14 @@ $main-margin-top: 0px;
 .speaker {
   &__main {
     max-width: 100%;
+    width: 100%;
     display: grid;
     align-self: center;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     gap: $grid-gutter-width;
   }
 }
@@ -89,20 +97,39 @@ $main-margin-top: 0px;
   text-align: center;
 }
 
-@include up(sm) {
+@include down(xxsm) {
+  .speaker {
+    &__main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
   .staff {
     &__main {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@include up(sm) {
+  .speaker {
+    &__main {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .staff {
+    &__main {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 @include up(md) {
-  .home {
-    &__container {
-      padding: $main-margin-top 16px 56px;
-    }
-  }
+  // .home {
+  //   &__container {
+  //     padding: $main-margin-top 16px 56px;
+  //   }
+  // }
 
   .speaker {
     &__main {
@@ -122,9 +149,9 @@ $main-margin-top: 0px;
 
 @include up(lg) {
   .home {
-    &__container {
-      padding: $main-margin-top 0px 0px;
-    }
+    // &__container {
+    //   // padding: $main-margin-top 0px 0px;
+    // }
     &__header {
       display: none;
     }
