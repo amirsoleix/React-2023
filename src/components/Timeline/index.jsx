@@ -52,10 +52,10 @@ function ReActTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '30px', px: 2 }}>
-          <Typography fontSize={'16px'} component='span'>
+          <Typography variant='h6' component='span'>
             {event.title}
           </Typography>
-          <Typography fontSize={'18px'}>{event.text}</Typography>
+          <Typography fontSize={'14px'}>{event.text}</Typography>
         </TimelineContent>
       </TimelineItem>
     );
