@@ -25,7 +25,7 @@ function ArticlePreview({
       <div className='articlePreview__content'>
         <p>{content}</p>
       </div>
-      <div className='articlePreview__readMoreButton'>{btnText}</div>
+      {/* <div className='articlePreview__readMoreButton'>{btnText}</div> */}
     </div>
   );
 }
