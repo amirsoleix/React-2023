@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import placeholder from 'src/assets/images/placeholder.png';
+// import placeholder from 'src/assets/images/placeholder.png';
 
 import './Speaker.scss';
-import Status from './components/Status';
+// import Status from './components/Status';
 
 function Speaker({
   mainTitle,
@@ -19,32 +19,32 @@ function Speaker({
   statusColor,
   className: classNameProp,
 }) {
-  const renderImage = () => {
-    const url = imgUrl || placeholder;
+  // const renderImage = () => {
+  //   const url = imgUrl || placeholder;
 
-    return (
-      <div className='post-card__image-container'>
-        <div className='post-card__image'>
-          <img src={url} alt={imgAlt} />
-          {status && (
-            <Status className='post-card__status' color={statusColor}>
-              {status}
-            </Status>
-          )}
-        </div>
-      </div>
-    );
-  };
+  //   return (
+  //     <div className='post-card__image-container'>
+  //       <div className='post-card__image'>
+  //         <img src={url} alt={imgAlt} />
+  //         {status && (
+  //           <Status className='post-card__status' color={statusColor}>
+  //             {status}
+  //           </Status>
+  //         )}
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
-  const renderCaption = () => {
-    if (!captionRed) return caption;
+  // const renderCaption = () => {
+  //   if (!captionRed) return caption;
 
-    return (
-      <>
-        <span className='post-card__caption--red'>{captionRed}</span> {caption}
-      </>
-    );
-  };
+  //   return (
+  //     <>
+  //       <span className='post-card__caption--red'>{captionRed}</span> {caption}
+  //     </>
+  //   );
+  // };
 
   function renderSubtitle(subtitle) {
     return (
@@ -57,23 +57,25 @@ function Speaker({
   const className = classNames('post-card', classNameProp);
 
   return (
-    <div className={className}>
-      <div className='post-card__container'>
-        <div className='post-card__content'>
-          <div className='post-card__title'>
-            <h2>{mainTitle}</h2>
-          </div>
-          <div className='post-card__detail'>
-            {renderSubtitle(subtitle1)}
-            {renderSubtitle(subtitle2)}
-            <div className='post-card__footer'>
-              <p className='post-card__caption hide-overflow'>
-                {renderCaption()}
-              </p>
+    <div
+      className={className}
+      style={{
+        backgroundImage: `url(${imgUrl})`,
+      }}
+    >
+      <div className='post-card__shadow'>
+        <div className='post-card__container'>
+          <div className='post-card__content'>
+            <div className='post-card__title'>
+              <h2>{mainTitle}</h2>
+            </div>
+            <div className='post-card__detail'>
+              {renderSubtitle(subtitle1)}
+              {renderSubtitle(subtitle2)}
+              <div className='post-card__footer'></div>
             </div>
           </div>
         </div>
-        {renderImage()}
       </div>
     </div>
   );

@@ -25,7 +25,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-left: 0 !important;
     max-width: 1440px;
     padding: 12px 0px;
     width: 100%;
@@ -84,21 +83,11 @@
   margin: 0 10px;
 }
 
-.MuiBox-root {
-  margin: 0;
-  width: fit-content;
-  max-width: fit-content;
-}
-
-.MuiToolbar-root > .MuiTypography-root {
-  margin-right: 68px;
-  justify-content: center;
-}
-
 @include up(lg) {
   .navbar {
     &__container {
       max-width: 1080px;
+      margin: auto;
     }
 
     &__logo {

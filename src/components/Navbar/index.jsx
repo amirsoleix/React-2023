@@ -27,6 +27,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '../Button';
+import Tooltip from '@mui/material/Tooltip';
 import { createTheme } from '@mui/material/styles';
 
 import './Navbar.scss';
@@ -157,6 +158,18 @@ function ResponsiveAppBar(props) {
                 onClick={() => handleClick(index)}
               />
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title='Register Now'>
+              <Button
+                key={'check-circle'}
+                children={'Registration'}
+                iconName={'check-circle'}
+                buttonType={'brand'}
+                className='navbar__button'
+                onClick={() => handleClick(2)}
+              />
+            </Tooltip>
           </Box>
         </Toolbar>
       </Container>

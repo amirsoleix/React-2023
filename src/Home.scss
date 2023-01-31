@@ -58,7 +58,7 @@ $main-margin-top: 0px;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: $grid-gutter-width;
   }
 }
@@ -71,7 +71,7 @@ $main-margin-top: 0px;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: space-between !important;
     grid-template-columns: repeat(2, 1fr);
     gap: $grid-gutter-width;
   }
@@ -106,12 +106,15 @@ $main-margin-top: 0px;
 
   .speaker {
     &__main {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .staff {
     &__main {
+      max-width: 1080px;
+      margin: auto;
+
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -133,13 +136,15 @@ $main-margin-top: 0px;
 
   .speaker {
     &__main {
-      // max-width: 1080px;
-      grid-template-columns: repeat(3, 1fr);
+      max-width: 1080px;
+      margin: auto;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
   .staff {
     &___main {
+      max-width: 1080px;
       grid-template-columns: repeat(6, 1fr);
     }
   }

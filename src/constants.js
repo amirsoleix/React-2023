@@ -1,13 +1,15 @@
 import 'src/profiles';
 
-import abdali_iman from 'src/assets/speakers/abdali-iman/profile.jpg';
-import akbar_fatemeh from 'src/assets/speakers/akbar-fatemeh/profile.jpg';
-import amini_arash from 'src/assets/speakers/amini-arash/profile.jpg';
 import amirparviz_babak from 'src/assets/speakers/amirparviz-babak/profile.jpg';
-import ashtiani_farid from 'src/assets/speakers/ashtiani-farshid/profile.jpg';
 import azimian_kooshiar from 'src/assets/speakers/azimian-kooshiar/profile.jpg';
+import jarrahi_mona from 'src/assets/speakers/jarrahi-mona/profile.jpg';
+import talasaz_amirali from 'src/assets/speakers/talasaz-amirali/profile.jpg';
+import bayati_mohsen from 'src/assets/speakers/bayati-mohsen/profile.jpg';
+import valaee_shahrokh from 'src/assets/speakers/valaee-shahrokh/profile.jpg';
 import babadi_behtash from 'src/assets/speakers/babadi-behtash/profile.jpg';
-import babashah_hossein from 'src/assets/speakers/babashah-hossein/profile.jpg';
+import karbasi_amin from 'src/assets/speakers/karbasi-amin/profile.png';
+import minaee_shervin from 'src/assets/speakers/minaee-shervin/profile.png';
+import tefagh_mojtaba from 'src/assets/speakers/tefagh-mojtaba/profile.jpg';
 
 import nourian_ali from 'src/assets/staff/nourian-ali.jpg';
 import soleimanifar_amir from 'src/assets/staff/soleimanifar-amir.jpg';
@@ -17,52 +19,64 @@ import rafiei_ainaz from 'src/assets/staff/rafiei-ainaz.jpg';
 
 let FOLDERS = [
   {
-    name: 'abdali-iman',
-    figure: abdali_iman,
-    location: 'GaN Systems Inc.',
-    field: 'Age-Related Macular Degeneration',
-  },
-  {
-    name: 'akbar-fatemeh',
-    figure: akbar_fatemeh,
-    location: 'Sharif University of Technology',
-    field: 'Driver Assistance Systems',
-  },
-  {
-    name: 'amini-arash',
-    figure: amini_arash,
-    location: 'Sharif University of Technology',
-    field: 'Signals and Systems',
-  },
-  {
     name: 'amirparviz-babak',
     figure: amirparviz_babak,
     location: 'Amazon',
     field: 'Grand Challenge Project',
   },
   {
-    name: 'ashtiani-farshid',
-    figure: ashtiani_farid,
-    location: 'University of Pennsylvania',
-    field: 'Information Technology',
-  },
-  {
     name: 'azimian-kooshiar',
     figure: azimian_kooshiar,
-    location: 'Facebook Inc.',
+    location: 'FaceBook Inc.',
     field: 'Disruptive Technologies',
+  },
+  {
+    name: 'jarrahi-mona',
+    figure: jarrahi_mona,
+    location: 'UCLA',
+    field: 'Terahertz Technology',
+  },
+  {
+    name: 'talasaz-amirali',
+    figure: talasaz_amirali,
+    location: 'Guardant Health',
+    field: 'Cancer Therapeutics',
+  },
+  {
+    name: 'bayati-mohsen',
+    figure: bayati_mohsen,
+    location: 'Stanford',
+    field: 'Machine-learning in Healthcare',
+  },
+  {
+    name: 'valaee-shahrokh',
+    figure: valaee_shahrokh,
+    location: 'University of Toronto',
+    field: 'Wireless Systems',
   },
   {
     name: 'babadi-behtash',
     figure: babadi_behtash,
     location: 'University of Maryland',
-    field: 'Brain Functionality',
+    field: 'Neural Functional Networks',
   },
   {
-    name: 'babashah-hossein',
-    figure: babashah_hossein,
-    location: 'EPFL',
-    field: 'Quantum Sensing',
+    name: 'karbasi-amin',
+    figure: karbasi_amin,
+    location: 'Yale University',
+    field: 'Adaptive Stochastic Optimization',
+  },
+  {
+    name: 'minaee-shervin',
+    figure: minaee_shervin,
+    location: 'Ericsson Inc.',
+    field: 'Wireless Communications',
+  },
+  {
+    name: 'tefagh-mojtaba',
+    figure: tefagh_mojtaba,
+    location: 'Sharif University of Technology',
+    field: 'Genome Network Construction',
   },
 ];
 
@@ -77,11 +91,7 @@ let TEAM = [
     imgUrl: soleimanifar_amir,
     title: 'Web Developer',
   },
-  {
-    name: 'amini-arash',
-    imgUrl: amini_arash,
-    title: 'Supervisor',
-  },
+
   {
     name: 'unknown-yasin',
     img: unknown_yasin,
