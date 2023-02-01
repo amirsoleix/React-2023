@@ -8,11 +8,15 @@ export const SOCIAL_LINKS = [
     iconName: 'social-instagram-fill',
   },
   {
-    link: 'https://www.linkedin.com/in/resana-association/',
+    link: 'https://www.linkedin.com/company/eereact/',
     iconName: 'social-linkedin',
   },
-  {
-    link: 'https://www.youtube.com/@SharifEE',
-    iconName: 'social-aparat',
-  },
+  // {
+  //   link: 'https://www.aparat.com/eesharif',
+  //   iconName: 'social-aparat',
+  // },
+  // {
+  //   link: 'https://www.aparat.com/eesharif',
+  //   iconName: 'social-telegram',
+  // },
 ];

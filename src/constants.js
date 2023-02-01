@@ -91,13 +91,13 @@ let FOLDERS = [
     name: 'tavafoghi-hamidreza',
     figure: tavafoghi_hamidreza,
     location: 'Google',
-    field: '',
+    field: 'Ads. Market Modeling & Optimization',
   },
   {
     name: 'haghi-Benyamin',
     figure: haghi_benyamin,
     location: 'Caltech',
-    field: '',
+    field: 'Brain Machine Interface Alghorithms',
   },
 ];
 

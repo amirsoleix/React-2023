@@ -52,13 +52,18 @@ html, body {
     width: 100%;
     &__inside {
       padding: 10px min(2%, 50px) 20px min(2%, 50px);
+      &__background {
+        object-fit: cover;
+      }
     }
   }
 }
 
 .speaker {
   &__main {
-    max-width: 100%;
+    // max-width: 100%;
+    max-width: 1080px;
+    margin: auto;
     width: 100%;
     display: grid;
     align-self: center;

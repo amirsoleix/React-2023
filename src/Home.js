@@ -12,6 +12,7 @@ import 'src/styles/main.scss';
 import './Home.scss';
 import ResponsiveAppBar from 'src/components/Navbar';
 import PresentationTimeline from './components/PresentationsTimeline';
+import small_background from 'src/assets/images/small-background.png';
 
 class Home extends React.Component {
   handleClick(i) {
@@ -36,7 +37,8 @@ class Home extends React.Component {
         />
         <div className='home'>
           <Showroom />
-          <div className='home'>
+        </div>
+        <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -45,11 +47,19 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <div className='home'>
+          <div className='home__container'>
+            <div className='home__content'>
+              <img className='home_content_inside_backgroud' src={small_background} alt='background'></img>
+            </div>
+          </div>
+        </div>
+        <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
                 <div id='remaining-time-o'>
-                  <h2>Event Timeline</h2>
+                  <h2>ReACT 2023 Timeline</h2>
                   <ReActTimeline />
                 </div>
               </div>

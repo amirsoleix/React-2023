@@ -84,10 +84,6 @@ function ResponsiveAppBar(props) {
     props.onClick(pages[index][1]);
   };
 
-  // const rememberme = (index) => {
-    
-  // }
-
   return (
     <AppBar className='navbar' theme={theme}>
       <Container maxWidth='xl' className='navbar__container'>
@@ -206,9 +202,11 @@ function ResponsiveAppBar(props) {
                   <Button onClick={handleClose} autofocus buttonType='brand'>
                     Okay
                   </Button>
-                  <Button href="google.com" autofocus buttonType='brand'>
-                    Remember Me!
-                  </Button>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2wK0jIpQhgDmzsAVgdB-ui3sc5YB0SGltbimuQ-HIgnSz1A/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+                    <Button autofocus buttonType='brand'>
+                      Remember Me!
+                    </Button>
+                  </a>
                 </DialogActions>
               </Dialog>
             </div>
