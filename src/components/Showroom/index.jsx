@@ -140,7 +140,7 @@ class Showroom extends React.Component {
             </Slide>
             <div className='showroom__content__inside'>
               <img className='showroom__title' src={reactLogo} alt='react-logo'></img>
-              <p className='showroom__title_discription'>Resana's   Annual   Conference   on   Technology</p>
+              <p className='showroom__title_discription'></p>
               {this.countdown()}
             </div>
           </div>

@@ -10,6 +10,8 @@ import babadi_behtash from 'src/assets/speakers/babadi-behtash/profile.jpg';
 import karbasi_amin from 'src/assets/speakers/karbasi-amin/profile.png';
 import minaee_shervin from 'src/assets/speakers/minaee-shervin/profile.png';
 import tefagh_mojtaba from 'src/assets/speakers/tefagh-mojtaba/profile.jpg';
+import tavafoghi_hamidreza from 'src/assets/speakers/tavafoghi-hamidreza/profile.jfif';
+import haghi_benyamin from 'src/assets/speakers/haghi-benyamin/profile.jpg'
 
 import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
@@ -85,6 +87,18 @@ let FOLDERS = [
     location: 'Sharif University of Technology',
     field: 'Genome Network Construction',
   },
+  {
+    name: 'tavafoghi-hamidreza',
+    figure: tavafoghi_hamidreza,
+    location: 'Google',
+    field: '',
+  },
+  {
+    name: 'haghi-Benyamin',
+    figure: haghi_benyamin,
+    location: 'Caltech',
+    field: '',
+  },
 ];
 
 let TEAM = [
@@ -156,7 +170,7 @@ let BUTTONS = [
   ['Home', 'home-outline', 'default'],
   ['Timeline', 'remaining-time-o', 'default'],
   ['History', 'social-sonnat-thin', 'default'],
-  ['Registration', 'check-circle', 'default'],
+  // ['Registration', 'check-circle', 'default'],
   ['Speakers', 'mic-f', 'default'],
 ];
 

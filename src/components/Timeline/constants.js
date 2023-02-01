@@ -22,7 +22,7 @@ let events = [
   {
     name: 'Opening',
     date: 'February 22nd, 2023',
-    text: 'The conference will officially open.',
+    text: 'The conference will be officially opened.',
     icon: <FlagCircleIcon />,
     color: 'success',
   },
@@ -36,7 +36,7 @@ let events = [
   {
     name: 'Closing',
     date: 'February 24th, 2023',
-    text: 'The conference will officially close.',
+    text: 'The conference will be officially closed.',
     icon: <PauseCircleFilledIcon />,
     color: 'error',
   },

@@ -51,7 +51,7 @@ html, body {
     flex-direction: column;
     width: 100%;
     &__inside {
-      padding: 10px min(4%, 50px) 20px min(4%, 50px);
+      padding: 10px min(2%, 50px) 20px min(2%, 50px);
     }
   }
 }
@@ -67,7 +67,7 @@ html, body {
     flex-grow: 1;
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
-    gap: $grid-gutter-width;
+    gap: 4vw;//$grid-gutter-width;
   }
 }
 
@@ -87,6 +87,8 @@ html, body {
 
 #remaining-time-o {
   text-align: center;
+  // background-color: $primary-color;
+  // color: $secondary-color;
 }
 
 #mic-f {
@@ -133,7 +135,7 @@ html, body {
 
   .speaker {
     &__main {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -142,6 +144,14 @@ html, body {
       max-width: 1080px;
       margin: auto;
 
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@include up(lg) {
+  .speaker {
+    &__main {
       grid-template-columns: repeat(4, 1fr);
     }
   }

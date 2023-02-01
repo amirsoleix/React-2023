@@ -84,6 +84,10 @@ function ResponsiveAppBar(props) {
     props.onClick(pages[index][1]);
   };
 
+  // const rememberme = (index) => {
+    
+  // }
+
   return (
     <AppBar className='navbar' theme={theme}>
       <Container maxWidth='xl' className='navbar__container'>
@@ -195,12 +199,15 @@ function ResponsiveAppBar(props) {
                 <DialogContent>
                   <DialogContentText id='alert-dialog-description'>
                     ReACT 2023 has not yet opened registration. The process will
-                    begin on 9th February 2023. Please check back then!
+                    begin on February 6th 2023. Please check back then!
                   </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                   <Button onClick={handleClose} autofocus buttonType='brand'>
                     Okay
+                  </Button>
+                  <Button href="google.com" autofocus buttonType='brand'>
+                    Remember Me!
                   </Button>
                 </DialogActions>
               </Dialog>
