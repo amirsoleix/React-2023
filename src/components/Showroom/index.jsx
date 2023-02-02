@@ -13,6 +13,7 @@ import img6 from 'src/assets/slideshow/img-06.jpg';
 import img7 from 'src/assets/slideshow/img-07.jpg';
 import img8 from 'src/assets/slideshow/img-08.jpg';
 import reactLogo from 'src/assets/images/react-logo-black.png';
+// import reactLogoWhite from 'src/assets/images/react-logo.png';
 
 const properties = {
   duration: 5000,

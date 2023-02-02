@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import ReadMoreButton from 'src/components/ReadMoreButton';
+
 import './ArticlePreview.scss';
 
 function ArticlePreview({
@@ -25,6 +27,7 @@ function ArticlePreview({
       <div className='articlePreview__content'>
         <p>{content}</p>
       </div>
+      <ReadMore />
       {/* <div className='articlePreview__readMoreButton'>{btnText}</div> */}
     </div>
   );
@@ -53,5 +56,17 @@ ArticlePreview.propTypes = {
   backgroundUrl: PropTypes.string,
   className: undefined,
 };
+
+function ReadMore() {
+  return (
+    <ReadMoreButton
+      btnText='Read More'
+      btnColor=''
+      btnBackgroundColor=''
+      backgroundUrl=''
+      className='readMore__main'
+    />
+  )
+}
 
 export default ArticlePreview;

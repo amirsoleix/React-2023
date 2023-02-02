@@ -13,6 +13,7 @@ import './Home.scss';
 import ResponsiveAppBar from 'src/components/Navbar';
 import PresentationTimeline from './components/PresentationsTimeline';
 import small_background from 'src/assets/images/small-background.png';
+// import background from 'src/assets/images/background.jpg';
 
 class Home extends React.Component {
   handleClick(i) {
