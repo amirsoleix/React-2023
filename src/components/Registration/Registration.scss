@@ -1,12 +1,17 @@
 @import '../../styles/main.scss';
 
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
 .registration {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: fit-content;
     overflow: auto;
+    color: $bg;
 
     h2 {
         text-align: center;
@@ -24,45 +29,94 @@
         justify-items: center;
         flex-direction: row;
         justify-content: space-around;
-        
-        div {
-            display: flex;
-            flex-direction: column;
-            width: min(25vw, 270px);
-            height: min(35vw, 378px);
-            // border: 1px solid black;
-            border-radius: 15px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-            // box-shadow: 0;
-            transition: box-shadow 0.3s;
-            // transition: all 0.3s ease-in-out;
-            margin: 10px 0 20px 0;
-            padding: 10px;
-            // opacity: 1;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+        min-width: 240px;
+        max-width: 300px;
+        height: 375px;//min(35vw, 378px);
+        min-height: fit-content;
+        // border: 1px solid black;
+        border-radius: 15px;
+        margin: 10px 0 30px 0;
+        padding-bottom: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        transition: box-shadow 0.3s;
+        background-color: $bg;
+        color: $black;
+        // padding: 10px;
+        // opacity: 1;
+        &__title {
+            width: 100%;
+            align-self: center;
+            text-align: center;
+            margin: 0;
         }
 
-        div:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            // opacity: 0;
-            // transition: opacity 0.5s ease-in-out;
-            // transform: scale(1.2, 1.2);
-            // box-shadow: 0 0 3px #515151;
+        img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
         }
+        &__discription {
+            // font-family: cursive;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            padding: 5px 10px;
+            img {
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+                align-self: center;
+            }
+            p {
+                margin: 0;
+            }
+        }
+
+        button {
+            width: 50%;
+            margin: 10px 15px 15px 15px;
+            align-self: center;
+            height: 45px;
+            border: 1px solid #2655a6;
+            border-radius: 5px;
+            color:$white;
+            background: #2655a6;
+        }
+
+        button:hover {
+            // color:$black;
+            background: rgba($color: #2655a6, $alpha: 0.7);
+            border: 1px rgba($color: #2655a6, $alpha: 0.7);;
+        }
+    }
+
+    &__item:hover {
+        scale: 1.05;
+        transition: scale 0.5s;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+    }
 
         // div:hover::after {
         //     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         //     opacity: 0;
         // }
-    }
 }
 
 @include down(sm) {
     .registration {
         &__content {
             flex-direction: column;
-            div {
-                width: 50vw;
-            }
+        }
+        &__item {
+            width: 45vw;
+            padding-bottom: 0;
         }
     }
 }

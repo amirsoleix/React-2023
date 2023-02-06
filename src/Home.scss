@@ -17,6 +17,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: $bg;
 
   &__header {
     display: flex;
@@ -50,7 +51,11 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: fit-content;
     &__inside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       padding: 10px min(2%, 50px) 20px min(2%, 50px);
       &__background {
         object-fit: cover;
@@ -102,6 +107,10 @@ html, body {
 
 #social-sonnat-thin {
   text-align: center;
+}
+
+.set-background-color {
+  background-color: rgba(55, 115, 126, $alpha: 1.0);
 }
 
 @include down(xxsm) {

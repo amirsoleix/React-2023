@@ -78,7 +78,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div> */}
-        <div className='home'>
+        {/* <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
               <div className='home__content__inside'>
@@ -86,11 +86,11 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className='home'>
           <div className='home__container'>
             <div className='home__content'>
-              <div className='home__content__inside'>
+              <div className='home__content__inside set-background-color'>
                 <RegistrationPart />
               </div>
             </div>
