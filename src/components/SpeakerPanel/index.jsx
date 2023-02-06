@@ -28,7 +28,12 @@ function SpeakerPanel({ posts, className }) {
       );
     });
 
-  return <div className={className}>{renderPosts()}</div>;
+  return (
+    <div>
+      <h2>Previous Speakers</h2>
+      <div className={className}>{renderPosts()}</div>
+    </div>
+  );
 }
 
 SpeakerPanel.defaultProps = {
