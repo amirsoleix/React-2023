@@ -173,6 +173,7 @@ let BUTTONS = [
   // ['History', 'social-sonnat-thin', 'default'],
   // ['Registration', 'check-circle', 'default'],
   ['Speakers', 'mic-f', 'default', 'speakerPanel', '/', 'inPage'],
+  ['History', 'history', 'default', 'history', '/history', 'route'],
 ];
 
 // let BUTTONS = [

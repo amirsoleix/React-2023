@@ -9,7 +9,8 @@
   justify-self: center;
 
   border-radius: 16px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-position: center;
   background-size: cover;
 
@@ -122,7 +123,8 @@
       color: rgba(255, 255, 255, 0.76);
 
       font: {
-        size: 20px;
+        size: 1.1rem;
+        text-align: left;
         family: IRANSans;
         weight: 800;
       }

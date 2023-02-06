@@ -6,10 +6,10 @@ import SpeakerPanel from 'src/components/SpeakerPanel';
 import StaffPanel from 'src/components/StaffPanel';
 import Footer from 'src/components/Footer';
 import Timeline from './components/Timeline';
-import ReActTimeline from 'src/components/Timeline';
 import ArticlePreview from 'src/components/ArticlePreview';
 import AboutEvent from 'src/components/AboutEvent';
 import Registration from 'src/components/Registration';
+import History from 'src/components/History';
 
 import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
@@ -37,14 +37,6 @@ class Home extends React.Component {
         }
       }
     }
-  }
-
-  StaffList() {
-    return (
-      <div>
-        <StaffPanel posts={STAFF} className='staff__main' />
-      </div>
-    );
   }
 
   BottomNav() {
@@ -128,7 +120,11 @@ class Home extends React.Component {
         />
         <Routes>
           <Route path='/' exact element={this.Home()} />
-          <Route path='/staff' element={this.StaffList()} />
+          <Route
+            path='/staff'
+            element={<StaffPanel posts={STAFF} className='staff__main' />}
+          />
+          <Route path='/history' element={<History />} />
         </Routes>
         <Footer hasBottomNav />
       </Router>
@@ -137,19 +133,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-//  <div className='home'>
-//       <div className='home__container'>
-//         <div className='home__content'>
-//           <div className='home__content__inside'>
-//             <Presentations />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-//  <Routes>
-//       <Route path='/' exact component={this.Speakers()} />
-//       <Route path='/staff' exact component={this.StaffList()} />
-//       <Route path='' element={<Navigate to='/' />} />
-//     </Routes>
