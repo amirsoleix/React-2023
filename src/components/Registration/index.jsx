@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import ReadMoreButton from 'src/components/ReadMoreButton';
+import './Registration.scss';
 
-import './ArticlePreview.scss';
-
-function ArticlePreview({
+function Registration({
   title,
   titleColor,
   content,
@@ -17,23 +15,22 @@ function ArticlePreview({
   backgroundUrl,
   className: classNameProp,
 }) {
-  const className = classNames('articlePreview', classNameProp);
+  const className = classNames('registration', classNameProp);
 
   return (
     <div className={className}>
-      <div className='articlePreview__title'>
+      <div className='registration__title'>
         <h2>{title}</h2>
       </div>
-      <div className='articlePreview__content'>
-        <p>{content}</p>
+      <div className='registration__content'>
+        <div> حضوری </div>
+        <div> مجازی </div>
       </div>
-      <ReadMore />
-      {/* <div className='articlePreview__readMoreButton'>{btnText}</div> */}
     </div>
   );
 }
 
-ArticlePreview.defaultProps = {
+Registration.defaultProps = {
   title: '',
   titleColor: '',
   content: '',
@@ -45,7 +42,7 @@ ArticlePreview.defaultProps = {
   className: undefined,
 };
 
-ArticlePreview.propTypes = {
+Registration.propTypes = {
   title: PropTypes.string,
   titleColor: PropTypes.string,
   content: PropTypes.string,
@@ -57,16 +54,4 @@ ArticlePreview.propTypes = {
   className: undefined,
 };
 
-function ReadMore() {
-  return (
-    <ReadMoreButton
-      btnText='Read More'
-      btnColor=''
-      btnBackgroundColor=''
-      backgroundUrl=''
-      className='readMore__main'
-    />
-  )
-}
-
-export default ArticlePreview;
+export default Registration;

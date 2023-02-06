@@ -6,7 +6,10 @@ import SpeakerPanel from 'src/components/SpeakerPanel';
 import StaffPanel from 'src/components/StaffPanel';
 import Footer from 'src/components/Footer';
 import Timeline from './components/Timeline';
+import ReActTimeline from 'src/components/Timeline';
 import ArticlePreview from 'src/components/ArticlePreview';
+import AboutEvent from 'src/components/AboutEvent';
+import Registration from 'src/components/Registration';
 
 import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
@@ -15,6 +18,7 @@ import ResponsiveAppBar from 'src/components/Navbar';
 import PresentationTimeline from './components/PresentationsTimeline';
 import small_background from 'src/assets/images/small-background.png';
 import routes from 'src/configs/routes';
+// import background from 'src/assets/images/background.jpg';
 
 class Home extends React.Component {
   handleClick(i) {

@@ -1,8 +1,11 @@
+@import 'src/styles/_variables';
+@import 'src/styles/_mixins.scss';
+
 .articlePreview {
   max-width: 100%;
   height: auto;
   overflow: auto;
-  margin-top: 20px;
+  // margin-top: 20px;
   margin-bottom: 20px;
   padding: 0 10px;
   // background-image: url('../../assets/images/historyPreview-background.jpg');
@@ -37,6 +40,23 @@
     font: {
       weight: bold;
       size: 20px;
+    }
+  }
+}
+
+.readMore {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+  }
+}
+
+@include down(md) {
+  .readMore {
+    &__main {
+      align-items: center;
     }
   }
 }
