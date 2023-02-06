@@ -83,6 +83,10 @@
   margin: 0;
 }
 
+#mg-top {
+  margin-top: 6px;
+}
+
 @include down(xsm) {
   .navbar {
     .button--brand {

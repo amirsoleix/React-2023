@@ -119,6 +119,32 @@ function ResponsiveAppBar(props) {
     );
   };
 
+  const renderButton = () => {
+    if (cutUrl === '/') {
+      return (
+        <Button
+          key={'check-circle'}
+          children={'Registration'}
+          iconName={'check-circle'}
+          buttonType={'brand'}
+          className='navbar__button'
+          onClick={() => handleClick('registration')}
+        />
+      );
+    } else {
+      return (
+        <Link to={'/'}>
+          <Button
+            key={'check-circle'}
+            children={'Registration'}
+            iconName={'check-circle'}
+            buttonType={'brand'}
+          />
+        </Link>
+      );
+    }
+  };
+
   return (
     <AppBar className='navbar' theme={theme}>
       <Container maxWidth='xl' className='navbar__container'>
@@ -177,10 +203,10 @@ function ResponsiveAppBar(props) {
             </Menu>
           </Box>
           <Typography
+            onClick={handleChangeUrl}
             variant='h5'
             noWrap
             component='a'
-            href=''
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -189,7 +215,9 @@ function ResponsiveAppBar(props) {
               textDecoration: 'none',
             }}
           >
-            <img src={react} className='logo' alt='react-logo' />
+            <Link id='mg-top' to='/'>
+              <img src={react} className='logo' alt='react-logo' />
+            </Link>
           </Typography>
           <Box
             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
@@ -220,16 +248,9 @@ function ResponsiveAppBar(props) {
                 />
               ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }} onClick={handleChangeUrl}>
             <div>
-              <Button
-                key={'check-circle'}
-                children={'Registration'}
-                iconName={'check-circle'}
-                buttonType={'brand'}
-                className='navbar__button'
-                onClick={() => handleClick('registration')}
-              />
+              {renderButton()}
               <Dialog
                 open={open}
                 onClose={handleClose}
