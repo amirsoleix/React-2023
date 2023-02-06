@@ -3,7 +3,7 @@ import Proptypes from 'prop-types';
 
 import Staff from '../Staff';
 
-function SpeakerPanel({ posts, className }) {
+function StaffPanel({ posts, className }) {
   const renderPosts = () =>
     posts.map((data) => {
       const { title, imgUrl, subtitle } = data;
@@ -18,15 +18,20 @@ function SpeakerPanel({ posts, className }) {
       );
     });
 
-  return <div className={className}>{renderPosts()}</div>;
+  return (
+    <div>
+      <h2>Staff</h2>
+      <div className={className}>{renderPosts()}</div>
+    </div>
+  );
 }
 
-SpeakerPanel.defaultProps = {
+StaffPanel.defaultProps = {
   posts: [],
 };
 
-SpeakerPanel.propTypes = {
+StaffPanel.propTypes = {
   posts: Proptypes.instanceOf(Array),
 };
 
-export default SpeakerPanel;
+export default StaffPanel;

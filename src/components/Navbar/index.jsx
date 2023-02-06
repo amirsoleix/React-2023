@@ -34,10 +34,12 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { Link } from 'react-router-dom';
 
 import './Navbar.scss';
 
 import react from 'src/assets/images/react-logo-black.png';
+import scrollToTop from 'src/utils/scrollToTop';
 
 let theme = createTheme({
   palette: {
@@ -59,10 +61,14 @@ theme = createTheme(theme, {
 });
 
 function ResponsiveAppBar(props) {
-  const pages = props.buttons;
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [open, setOpen] = React.useState(false);
+  const [cutUrl, setUrl] = React.useState('\\');
+  const [pages] = React.useState(props.buttons);
+
+  React.useEffect(() => {
+    setUrl(window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/'));
+  }, []);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -81,7 +87,51 @@ function ResponsiveAppBar(props) {
   };
 
   const handleClick = (index) => {
-    props.onClick(pages[index][1]);
+    let currentPages = pages.filter(
+      (page) => page[5] === 'inPage' && page[4] === cutUrl
+    );
+    props.onClick(currentPages[index][3]);
+  };
+
+  const handleChangeUrl = () => {
+    let prevCutUrl = cutUrl;
+    if (
+      prevCutUrl !== window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/')
+    ) {
+      scrollToTop(0, 0);
+    }
+    setUrl(window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/'));
+  };
+
+  const createElements = () => {
+    let routePages = pages.filter((page) => page[5] === 'route');
+    let currentPages = pages.filter(
+      (page) => page[5] === 'inPage' && page[4] === cutUrl
+    );
+
+    return (
+      <div>
+        {routePages.map((page, index) => (
+          <Link to={page[4]}>
+            <Button
+              key={page[1]}
+              children={page[0]}
+              iconName={page[1]}
+              buttonType={page[2]}
+            />
+          </Link>
+        ))}
+        {currentPages.map((page, index) => (
+          <Button
+            key={page[1]}
+            children={page[0]}
+            iconName={page[1]}
+            buttonType={page[2]}
+            onClick={() => handleClick(index)}
+          />
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -106,7 +156,10 @@ function ResponsiveAppBar(props) {
             <img src={react} className='logo' alt='react-logo' />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            onClick={handleChangeUrl}
+          >
             <IconButton
               size='large'
               aria-label='account of current user'
@@ -135,15 +188,7 @@ function ResponsiveAppBar(props) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page, index) => (
-                <Button
-                  key={page[1]}
-                  children={page[0]}
-                  iconName={page[1]}
-                  buttonType={page[2]}
-                  onClick={() => handleClick(index)}
-                />
-              ))}
+              {createElements()}
             </Menu>
           </Box>
           <Typography
@@ -161,17 +206,34 @@ function ResponsiveAppBar(props) {
           >
             <img src={react} className='logo' alt='react-logo' />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page, index) => (
-              <Button
-                key={page[1]}
-                children={page[0]}
-                iconName={page[1]}
-                buttonType={page[2]}
-                className='navbar__button'
-                onClick={() => handleClick(index)}
-              />
-            ))}
+          <Box
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+            onClick={handleChangeUrl}
+          >
+            {pages
+              .filter((page) => page[5] === 'route')
+              .map((page, index) => (
+                <Link to={page[4]}>
+                  <Button
+                    key={page[1]}
+                    children={page[0]}
+                    iconName={page[1]}
+                    buttonType={page[2]}
+                    onclick={() => handleClick(index)}
+                  />
+                </Link>
+              ))}
+            {pages
+              .filter((page) => page[5] === 'inPage' && page[4] === cutUrl)
+              .map((page, index) => (
+                <Button
+                  key={page[1]}
+                  children={page[0]}
+                  iconName={page[1]}
+                  buttonType={page[2]}
+                  onClick={() => handleClick(index)}
+                />
+              ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <div>
@@ -202,7 +264,11 @@ function ResponsiveAppBar(props) {
                   <Button onClick={handleClose} autofocus buttonType='brand'>
                     Okay
                   </Button>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2wK0jIpQhgDmzsAVgdB-ui3sc5YB0SGltbimuQ-HIgnSz1A/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href='https://docs.google.com/forms/d/e/1FAIpQLSf2wK0jIpQhgDmzsAVgdB-ui3sc5YB0SGltbimuQ-HIgnSz1A/viewform?usp=sf_link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
                     <Button autofocus buttonType='brand'>
                       Remide Me!
                     </Button>

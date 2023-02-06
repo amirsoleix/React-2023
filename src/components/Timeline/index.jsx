@@ -61,9 +61,12 @@ function ReActTimeline() {
     );
   });
   return (
-    <Timeline position='alternate' theme={theme}>
-      {items}
-    </Timeline>
+    <>
+      <h2>ReACT 2023 Timeline</h2>
+      <Timeline position='alternate' theme={theme}>
+        {items}
+      </Timeline>
+    </>
   );
 }
 

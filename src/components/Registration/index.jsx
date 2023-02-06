@@ -10,13 +10,6 @@ import calenderIcon from 'src/assets/images/calender-icon.png'
 
 function Registration({
   title,
-  titleColor,
-  content,
-  contentColor,
-  btnText,
-  btnColor,
-  btnBackgroundColor,
-  backgroundUrl,
   className: classNameProp,
 }) {
   const className = classNames('registration', classNameProp);
@@ -52,25 +45,11 @@ function Registration({
 
 Registration.defaultProps = {
   title: '',
-  titleColor: '',
-  content: '',
-  contentColor: '',
-  btnText: '',
-  btnColor: '',
-  btnBackgroundColor: '',
-  backgroundUrl: '',
   className: undefined,
 };
 
 Registration.propTypes = {
   title: PropTypes.string,
-  titleColor: PropTypes.string,
-  content: PropTypes.string,
-  contentColor: PropTypes.string,
-  btnText: PropTypes.string,
-  btnColor: PropTypes.string,
-  btnBackgroundColor: PropTypes.string,
-  backgroundUrl: PropTypes.string,
   className: undefined,
 };
 

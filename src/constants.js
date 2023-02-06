@@ -11,7 +11,7 @@ import karbasi_amin from 'src/assets/speakers/karbasi-amin/profile.png';
 import minaee_shervin from 'src/assets/speakers/minaee-shervin/profile.png';
 import tefagh_mojtaba from 'src/assets/speakers/tefagh-mojtaba/profile.jpg';
 import tavafoghi_hamidreza from 'src/assets/speakers/tavafoghi-hamidreza/profile.jfif';
-import haghi_benyamin from 'src/assets/speakers/haghi-benyamin/profile.jpg'
+import haghi_benyamin from 'src/assets/speakers/haghi-benyamin/profile.jpg';
 
 import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
@@ -167,11 +167,12 @@ let TEAM = [
 // For each folder import the profile picture
 
 let BUTTONS = [
-  ['Home', 'home-outline', 'default'],
-  ['Timeline', 'remaining-time-o', 'default'],
-  ['History', 'social-sonnat-thin', 'default'],
+  ['Home', 'home-outline', 'default', 'home', '/', 'route'],
+  ['Timeline', 'remaining-time-o', 'default', 'timeline', '/', 'inPage'],
+  ['Staff', 'social-sonnat-thin', 'default', 'staff', '/staff', 'route'],
+  // ['History', 'social-sonnat-thin', 'default'],
   // ['Registration', 'check-circle', 'default'],
-  ['Speakers', 'mic-f', 'default'],
+  ['Speakers', 'mic-f', 'default', 'speakerPanel', '/', 'inPage'],
 ];
 
 // let BUTTONS = [
