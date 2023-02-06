@@ -8,8 +8,8 @@ import Footer from 'src/components/Footer';
 import Timeline from './components/Timeline';
 // import ReActTimeline from 'src/components/Timeline';
 import ArticlePreview from 'src/components/ArticlePreview';
-// import AboutEvent from 'src/components/AboutEvent';
 import Registration from 'src/components/Registration';
+import History from 'src/components/History';
 
 import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
@@ -23,6 +23,24 @@ import routes from 'src/configs/routes';
 class Home extends React.Component {
   handleClick(i) {
     for (let j = 0; j < BUTTONS.length; j++) {
+      if (i === 'registration') {
+        console.log('hi');
+        let url = window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/');
+        if (url === '/') {
+          window.scroll({
+            top: document.getElementById('registration').offsetTop - 75,
+            left: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          window.location.href = '/';
+          window.scroll({
+            top: document.getElementById('registration').offsetTop - 75,
+            left: 0,
+            behavior: 'smooth',
+          });
+        }
+      }
       if (BUTTONS[j][3] === i) {
         for (let k = 0; k < routes.length; k++) {
           if (routes[k].id === i) {
@@ -37,14 +55,6 @@ class Home extends React.Component {
         }
       }
     }
-  }
-
-  StaffList() {
-    return (
-      <div>
-        <StaffPanel posts={STAFF} className='staff__main' />
-      </div>
-    );
   }
 
   BottomNav() {
@@ -68,11 +78,7 @@ class Home extends React.Component {
   }
 
   RegistrationPanel() {
-    return (
-      <Registration 
-        title='Registration'
-      />
-    )
+    return <Registration title='Registration' />;
   }
 
   HistoryPreview() {
@@ -107,9 +113,7 @@ class Home extends React.Component {
         <Showroom />
         <div className='home__container'>
           <div className='home__content'>
-            <div className='home__content__inside'>
-              {this.HistoryPreview()}
-            </div>
+            <div className='home__content__inside'>{this.HistoryPreview()}</div>
             <img
               className='home_content_inside_background'
               src={small_background}
@@ -121,7 +125,7 @@ class Home extends React.Component {
               </div>
             </div>
             <div id='registration'>
-              <this.RegistrationPanel/>
+              <this.RegistrationPanel />
             </div>
             <div className='home__content__inside'>
               <div id='speakerPanel'>
@@ -143,7 +147,11 @@ class Home extends React.Component {
         />
         <Routes>
           <Route path='/' exact element={this.Home()} />
-          <Route path='/staff' element={this.StaffList()} />
+          <Route
+            path='/staff'
+            element={<StaffPanel posts={STAFF} className='staff__main' />}
+          />
+          <Route path='/history' element={<History />} />
         </Routes>
         <Footer hasBottomNav />
       </Router>
@@ -152,19 +160,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-//  <div className='home'>
-//       <div className='home__container'>
-//         <div className='home__content'>
-//           <div className='home__content__inside'>
-//             <Presentations />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-//  <Routes>
-//       <Route path='/' exact component={this.Speakers()} />
-//       <Route path='/staff' exact component={this.StaffList()} />
-//       <Route path='' element={<Navigate to='/' />} />
-//     </Routes>

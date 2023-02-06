@@ -3,7 +3,7 @@ import Proptypes from 'prop-types';
 
 import Speaker from '../Speaker';
 
-function SpeakerPanel({ posts, className }) {
+function SpeakerPanel({ posts, className, title = 'Previous Speakers' }) {
   const renderPosts = () =>
     posts.map((data) => {
       const {
@@ -30,7 +30,7 @@ function SpeakerPanel({ posts, className }) {
 
   return (
     <div>
-      <h2>Previous Speakers</h2>
+      <h2>{title}</h2>
       <div className={className}>{renderPosts()}</div>
     </div>
   );

@@ -1,22 +1,3 @@
-//   render() {
-//     let list = this.props.buttons;
-//     let buttons = list.map((row) => {
-//       return this.renderButton(row);
-//     });
-
-//     return (
-//       <div className='navbar'>
-//         <div className='navbar__container'>
-//           <div className='navbar__right-section'>{buttons}</div>
-//           <div className='navbar__left-section'>
-//             <img src={logo} className='navbar-logo' alt={'Resana Logo'} />
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -87,10 +68,14 @@ function ResponsiveAppBar(props) {
   };
 
   const handleClick = (index) => {
-    let currentPages = pages.filter(
-      (page) => page[5] === 'inPage' && page[4] === cutUrl
-    );
-    props.onClick(currentPages[index][3]);
+    if (index === 'registration') {
+      props.onClick('registration');
+    } else {
+      let currentPages = pages.filter(
+        (page) => page[5] === 'inPage' && page[4] === cutUrl
+      );
+      props.onClick(currentPages[index][3]);
+    }
   };
 
   const handleChangeUrl = () => {
@@ -243,7 +228,7 @@ function ResponsiveAppBar(props) {
                 iconName={'check-circle'}
                 buttonType={'brand'}
                 className='navbar__button'
-                onClick={handleClickOpen}
+                onClick={() => handleClick('registration')}
               />
               <Dialog
                 open={open}

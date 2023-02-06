@@ -1,0 +1,25 @@
+.popup-register {
+    display: flex;
+    flex-direction: column;
+    // height: 90vh;
+}
+
+.first-p {
+    color: red;
+}
+
+.sec-p {
+    color: black;
+}
+
+.dialog-action {
+    padding: 15px !important;
+}
+
+.cancel-button {
+    margin-right: 10px;
+}
+
+.register-button {
+    width: 150px;
+}
