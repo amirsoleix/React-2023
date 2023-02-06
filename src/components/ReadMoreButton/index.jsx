@@ -12,7 +12,7 @@ function ReadMoreButton({
   }) {
     const className = classNameProp;
     return (
-      <a className={className} href="https://docs.google.com" target="_blank" rel="noopener noreferrer">
+      <a className={className} href="https://react.ee.sharif.edu//history" target="_blank" rel="noopener noreferrer">
         <button className="read-more-button">
             <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
