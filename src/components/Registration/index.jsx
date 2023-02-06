@@ -4,15 +4,12 @@ import classNames from 'classnames';
 
 import './Registration.scss';
 
+import inpersonImage from 'src/assets/images/inperson.jpg'
+import onlineImage from 'src/assets/images/online.jpg'
+import calenderIcon from 'src/assets/images/calender-icon.png'
+
 function Registration({
   title,
-  titleColor,
-  content,
-  contentColor,
-  btnText,
-  btnColor,
-  btnBackgroundColor,
-  backgroundUrl,
   className: classNameProp,
 }) {
   const className = classNames('registration', classNameProp);
@@ -23,8 +20,24 @@ function Registration({
         <h2>{title}</h2>
       </div>
       <div className='registration__content'>
-        <div> حضوری </div>
-        <div> مجازی </div>
+        <div className='registration__item'>
+          <img className='registration_item__inperson-img' src={inpersonImage} alt='inperson'></img>
+          <h3 className='registration__item__title'> In person </h3>
+          <div className='registration__item__discription'>
+            <img src={calenderIcon} alt='calender'></img>
+            <p> From Feb 6-17th 2013 </p>
+          </div>
+          <button> Rigister Now! </button>
+        </div>
+        <div className='registration__item'>
+          <img className='registration_item__online-img' src={onlineImage} alt='online'></img>
+          <h3 className='registration__item__title'> Online </h3>
+          <div className='registration__item__discription'>
+            <img src={calenderIcon} alt='calender'></img>
+            <p> From Feb 6-17th 2013 </p>
+          </div>
+          <button> Rigister Now! </button>
+        </div>
       </div>
     </div>
   );
@@ -32,25 +45,11 @@ function Registration({
 
 Registration.defaultProps = {
   title: '',
-  titleColor: '',
-  content: '',
-  contentColor: '',
-  btnText: '',
-  btnColor: '',
-  btnBackgroundColor: '',
-  backgroundUrl: '',
   className: undefined,
 };
 
 Registration.propTypes = {
   title: PropTypes.string,
-  titleColor: PropTypes.string,
-  content: PropTypes.string,
-  contentColor: PropTypes.string,
-  btnText: PropTypes.string,
-  btnColor: PropTypes.string,
-  btnBackgroundColor: PropTypes.string,
-  backgroundUrl: PropTypes.string,
   className: undefined,
 };
 

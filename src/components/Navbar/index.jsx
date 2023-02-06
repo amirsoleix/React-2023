@@ -243,7 +243,7 @@ function ResponsiveAppBar(props) {
                 iconName={'check-circle'}
                 buttonType={'brand'}
                 className='navbar__button'
-                onClick={handleClickOpen}
+                onClick={() => handleClick('registration')}
               />
               <Dialog
                 open={open}
@@ -270,7 +270,7 @@ function ResponsiveAppBar(props) {
                     rel='noopener noreferrer'
                   >
                     <Button autofocus buttonType='brand'>
-                      Remember Me!
+                      Remide Me!
                     </Button>
                   </a>
                 </DialogActions>

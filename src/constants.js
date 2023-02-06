@@ -174,6 +174,7 @@ let BUTTONS = [
   // ['Registration', 'check-circle', 'default'],
   ['Speakers', 'mic-f', 'default', 'speakerPanel', '/', 'inPage'],
   ['History', 'history', 'default', 'history', '/history', 'route'],
+  ['Registration', 'check-circle', 'brand', '/', 'route'],
 ];
 
 // let BUTTONS = [

@@ -6,8 +6,8 @@ import SpeakerPanel from 'src/components/SpeakerPanel';
 import StaffPanel from 'src/components/StaffPanel';
 import Footer from 'src/components/Footer';
 import Timeline from './components/Timeline';
+// import ReActTimeline from 'src/components/Timeline';
 import ArticlePreview from 'src/components/ArticlePreview';
-import AboutEvent from 'src/components/AboutEvent';
 import Registration from 'src/components/Registration';
 import History from 'src/components/History';
 
@@ -59,6 +59,10 @@ class Home extends React.Component {
     );
   }
 
+  RegistrationPanel() {
+    return <Registration title='Registration' />;
+  }
+
   HistoryPreview() {
     return (
       <ArticlePreview
@@ -101,6 +105,11 @@ class Home extends React.Component {
               <div id='timeline'>
                 <Timeline />
               </div>
+            </div>
+            <div id='registration'>
+              <this.RegistrationPanel />
+            </div>
+            <div className='home__content__inside'>
               <div id='speakerPanel'>
                 <SpeakerPanel posts={SPEAKERS} className='speaker__main' />
               </div>
