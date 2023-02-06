@@ -18,21 +18,24 @@ function PopupRegister({
             aria-describedby='alert-dialog-description'
             >
             <DialogTitle>
-                {'Registration will be available soon!'}
+                {'Registration for In-Persion Event'}
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    ReACT 2023 has not yet opened registration. The process will
-                    begin on February 6th 2023. Please check back then!
+                    ReACT 2023 will be held in-person as Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th.
+
+                    Note that you can reserve your lunch for these two days!
                 </DialogContentText>
+                
+                Reserve luanch for Wed
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose} autofocus buttonType='brand'>
-                    Okay
+                    Cancel
                 </Button>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2wK0jIpQhgDmzsAVgdB-ui3sc5YB0SGltbimuQ-HIgnSz1A/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/" target="_blank" rel="noopener noreferrer">
                     <Button autofocus buttonType='brand'>
-                        Remide Me!
+                        Register
                     </Button>
                 </a>
             </DialogActions>

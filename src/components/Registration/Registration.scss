@@ -68,6 +68,7 @@ $black: #282936;
             margin: 0;
             width: 100%;
             display: flex;
+            text-align: center;
             padding: 5px 10px;
             img {
                 width: 25px;
@@ -76,11 +77,13 @@ $black: #282936;
                 align-self: center;
             }
             p {
+                width: 100%;
                 margin: 0;
+                text-align: center;
             }
         }
 
-        button {
+        &__button {
             width: 50%;
             margin: 10px 15px 15px 15px;
             align-self: center;
@@ -91,7 +94,7 @@ $black: #282936;
             background: #2655a6;
         }
 
-        button:hover {
+        &__button:hover {
             // color:$black;
             background: rgba($color: #2655a6, $alpha: 0.7);
             border: 1px rgba($color: #2655a6, $alpha: 0.7);;
