@@ -23,6 +23,24 @@ import routes from 'src/configs/routes';
 class Home extends React.Component {
   handleClick(i) {
     for (let j = 0; j < BUTTONS.length; j++) {
+      if (i === 'registration') {
+        console.log('hi');
+        let url = window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/');
+        if (url === '/') {
+          window.scroll({
+            top: document.getElementById('registration').offsetTop - 75,
+            left: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          window.location.href = '/';
+          window.scroll({
+            top: document.getElementById('registration').offsetTop - 75,
+            left: 0,
+            behavior: 'smooth',
+          });
+        }
+      }
       if (BUTTONS[j][3] === i) {
         for (let k = 0; k < routes.length; k++) {
           if (routes[k].id === i) {
