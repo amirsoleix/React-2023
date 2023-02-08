@@ -54,7 +54,7 @@ ArticlePreview.propTypes = {
   btnColor: PropTypes.string,
   btnBackgroundColor: PropTypes.string,
   backgroundUrl: PropTypes.string,
-  className: undefined,
+  className: PropTypes.string,
 };
 
 function ReadMore() {

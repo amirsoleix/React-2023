@@ -99,7 +99,7 @@ function ResponsiveAppBar(props) {
         {routePages.map((page, index) => (
           <Link to={page[4]}>
             <Button
-              key={page[1]}
+              key={index}
               children={page[0]}
               iconName={page[1]}
               buttonType={page[2]}
@@ -108,7 +108,7 @@ function ResponsiveAppBar(props) {
         ))}
         {currentPages.map((page, index) => (
           <Button
-            key={page[1]}
+            key={index}
             children={page[0]}
             iconName={page[1]}
             buttonType={page[2]}
@@ -123,7 +123,7 @@ function ResponsiveAppBar(props) {
     if (cutUrl === '/') {
       return (
         <Button
-          key={'check-circle'}
+          key={1234}
           children={'Registration'}
           iconName={'check-circle'}
           buttonType={'brand'}
@@ -135,7 +135,7 @@ function ResponsiveAppBar(props) {
       return (
         <Link to={'/'}>
           <Button
-            key={'check-circle'}
+            key={1235}
             children={'Registration'}
             iconName={'check-circle'}
             buttonType={'brand'}
@@ -228,7 +228,7 @@ function ResponsiveAppBar(props) {
               .map((page, index) => (
                 <Link to={page[4]}>
                   <Button
-                    key={page[1]}
+                    key={index}
                     children={page[0]}
                     iconName={page[1]}
                     buttonType={page[2]}
@@ -240,7 +240,7 @@ function ResponsiveAppBar(props) {
               .filter((page) => page[5] === 'inPage' && page[4] === cutUrl)
               .map((page, index) => (
                 <Button
-                  key={page[1]}
+                  key={index}
                   children={page[0]}
                   iconName={page[1]}
                   buttonType={page[2]}

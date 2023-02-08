@@ -17,9 +17,16 @@ function Registration({ title, className: classNameProp }) {
   const className = classNames('registration', classNameProp);
 
   const [open, setOpen] = React.useState(false);
+  const [online, setOnline] = React.useState(false);
+  // const online = true;
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (state) => {
     setOpen(true);
+    if (state === 'online') {
+      setOnline(true);
+    } else {
+      setOnline(false);
+    }
   };
 
   const handleClose = () => {
@@ -44,7 +51,7 @@ function Registration({ title, className: classNameProp }) {
             <p> From Feb 6-17th 2013 </p> */}
             <p> Join the Event in-person </p>
           </div>
-          <button className='registration__item__button' onClick={handleClickOpen}> Rigister Now! </button>
+          <button className='registration__item__button' onClick={() => handleClickOpen('in-person')}> Register Now! </button>
           <Dialog
             open={open}
             onClose={handleClose}
@@ -66,14 +73,14 @@ function Registration({ title, className: classNameProp }) {
             <p> From Feb 6-17th 2013 </p> */}
             <p> Watch the Event Online </p>
           </div>
-          <button className='registration__item__button' onClick={handleClickOpen}> Rigister Now! </button>
+          <button className='registration__item__button' onClick={() => handleClickOpen('online')}> Register Now! </button>
           <Dialog
             open={open}
             onClose={handleClose}
             aria-labelledby='alert-dialog-title'
             aria-describedby='alert-dialog-description'
           >
-            <PopupRegister onClose={handleClose} className={'test'} />
+            <PopupRegister onClose={handleClose} online={online} className={'test'} />
           </Dialog>
         </div>
       </div>
@@ -88,7 +95,8 @@ Registration.defaultProps = {
 
 Registration.propTypes = {
   title: PropTypes.string,
-  className: undefined,
+  className: PropTypes.string,
 };
 
 export default Registration;
+    

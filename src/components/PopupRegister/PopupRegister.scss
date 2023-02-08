@@ -14,18 +14,23 @@
 }
 
 .sec-p {
-    margin: 0;
+    margin: 0 0 10px 0;
     // color: black;
     color: black;
 }
 
 .dialog-title {
-    box-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 8px;
+}
+
+.dialog-content-main {
+    background-color: lightblue;
 }
 
 .dialog-content {
     padding-top: 15px !important;
     overflow-y: hidden !important;
+    // background-color: lightblue;
 }
 
 .dialog-action {

@@ -37,7 +37,7 @@ const theme = createTheme({
 function ReActTimeline() {
   const items = events.map((event, index) => {
     return (
-      <TimelineItem key={event.title}>
+      <TimelineItem key={index}>
         <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
           align={index % 2 === 0 ? 'right' : 'left'}

@@ -13,27 +13,25 @@ import RegisterForm from 'src/components/RegisterForm'
 import './PopupRegister.scss';
 
 function PopupRegister(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className={'popup-register'}>
       <DialogTitle className='dialog-title'>{'Registration'}</DialogTitle>
-      <DialogContent>
+      <DialogContent className='dialog-content-main'>
         <DialogContentText className='dialog-content'>
-        <p className='first-p'> ReACT 2023 will be held in-person as Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. </p>
+          <p className='first-p' style={props.online ? {display: 'none'}: {}}> ReACT 2023 will be held in-person at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. </p>
+          <p className='sec-p' style={props.online ? {display: 'none'}: {}}> Note that you can reserve your lunch for these two days! </p>
 
-        <p className='sec-p'> Note that you can reserve your lunch for these two days! </p>
-
-        {/* <p className='first-p'>We're sorry for making you wait, the registration opening has been delayed to Feb 7th due to some technical issues,</p> */}
-
-        {/* <p className='sec-p'>Thank you for your patience.</p> */}
-          <RegisterForm title='registerForm' className=''/>
+          <p className='first-p' style={props.online ? {}: {display: 'none'}}> ReACT 2023 will be held at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. You can follow the evnet online. </p>
+          <p className='sec-p' style={props.online ? {}: {display: 'none'}}> Enjoy your moment with ReACT! </p>
+          <RegisterForm title='registerForm' online={props.online} className=''/>
         </DialogContentText>
       </DialogContent>
       <DialogActions className='dialog-action'>
         <Button className='cancel-button' onClick={props.onClose} autofocus buttonType='brand'>
           Cancel
         </Button>
-        <a
+        {/* <a
           href='https://docs.google.com/'
           target='_blank'
           rel='noopener noreferrer'
@@ -41,7 +39,7 @@ function PopupRegister(props) {
           <Button className='register-button' autofocus buttonType='brand'>
             Register
           </Button>
-        </a>
+        </a> */}
       </DialogActions>
     </div>
   );
@@ -49,11 +47,13 @@ function PopupRegister(props) {
 
 PopupRegister.defaultProps = {
   className: undefined,
+  online: undefined,
   onClose: undefined,
 };
 
 PopupRegister.propTypes = {
   className: PropTypes.string,
+  online: PropTypes.bool,
   onClose: PropTypes.func,
 };
 

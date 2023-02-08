@@ -12,12 +12,20 @@
     }
 }
 
+.field-gender {
+    display: flex;
+
+}
+
 .field {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    // padding: 10px 0;
+    position: relative;
+    // height: 80px;
+    // width: 100%;
+    padding: 12px 20px 15px 20px;
     gap: 5px;
+    border: none;
     background-color: aliceblue;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -27,18 +35,69 @@
         color: black;
     }
 
+    label {
+        // position: absolute;
+        // top: 0;
+        // display: block;
+        // transition: 0.2s;
+        font-size: 1.1rem;
+        color: black;
+      }
+
     input {
-        height: 40px;
-        border-radius: 5px;
-        border: none;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+        height: 35px;
+        // border-radius: 5px;
+        // border: none;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
         padding: 0 5px;
+        border: 0;
+        border-bottom: 1px solid black;
+        outline: 0;
+        font-size: 1.2rem;
+        background: transparent;
+        transition: border-color 0.2s;
+
+        // &::placeholder {
+        //     color: transparent;
+        //   }
+        
+        //   &:placeholder-shown ~ input {
+        //     font-size: 1.3rem;
+        //     cursor: text;
+        //     top: 20px;
+        // }
     }
+    input:focus {
+        // ~ label {
+        // //   position: absolute;
+        // //   top: 0;
+        // //   display: block;
+        //   transition: 0.2s;
+        //   font-size: 1rem;
+        // //   color: $primary;
+        // //   font-weight:600;    
+        // }
+        padding-bottom: 6px;  
+        // font-weight: 600;
+        border-width: 2px;
+        // border-image: linear-gradient(to right, $primary,$secondary);
+        // border-image-slice: 1;
+    }
+      /* reset input */
+    // .input {
+    //     &:required,&:invalid { box-shadow:none; }
+    // }
 }
+
+// .force-flex-row {
+//     display: flex;
+//     flex-direction: row !important;
+// }
 
 .div-flex-row {
     width: 100%;
     display: flex;
+    flex-direction: row !important;
 }
 
 .div-flex-row > label > .radio-input {
@@ -51,4 +110,41 @@
 
 .btn {
     border: 1px solid black;
+}
+
+.submit-button {
+    width: 25%;
+    margin-left: 74.5%;
+    border: 0;
+    border-radius: 5px;
+    background-color: #2655a6;
+    color: #ffff;
+    height: 40px;
+}
+
+.submit-button:hover {
+    background-color: rgba($color: #2655a6, $alpha: 0.5);
+}
+
+.radio-input {
+    width: 16px;
+    height: auto !important;
+    margin: 0 10px !important;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-radio-button {
+    display: flex;
+    // border: 1px solid black;
+    width: fit-content;
+    height: 36px;
+    cursor: pointer;
+}
+
+.align-items-center {
+    align-items: center;
 }
