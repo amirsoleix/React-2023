@@ -21,6 +21,7 @@ const Form = ({online}) => {
   };
   // const [inperson_lunch_state, setLunch]  = useState('None');
   const [submit, setSubmit] = useState(false);
+  const [counter, count] = useState(0);
   const [formData, setFormData] = useState({
     "entry.720494294": "",  // 1
     "entry.2125451900": "",
@@ -92,7 +93,7 @@ const Form = ({online}) => {
     }));
   };
 
-  function go2payment() {
+  function go2payment(online, submit) {
     // console.log(inperson_lunch_state);
     let local_var = 'None';
     let radios = document.querySelectorAll('input[type=radio][name="lunch"]');
@@ -102,7 +103,10 @@ const Form = ({online}) => {
         local_var = radios[i].value;
       }
     }
+    console.log(submit);
+
     if (submit) {
+      // console.log(onl)
       let link = '';
       if (online) {
         link = 'https://zarinp.al/477251';
@@ -121,9 +125,11 @@ const Form = ({online}) => {
   }
 
   async function handleSubmit(e) {
+    // setSubmit(true);
     e.preventDefault();
 
     setSubmit(true);
+    go2payment(online, true);
 
     let url = `https://docs.google.com/forms/d/e/1FAIpQLSdijMVTyvE8BXtdVhOpOvOZS63NdccO3FSdqzMWgAlpUxBVHQ/formResponse?entry.720494294=${formData["entry.720494294"]}&entry.2125451900=${formData[elementIds.gender]}&entry.577684671=${formData[elementIds.birth]}&entry.1196606997=${formData["entry.1196606997"]}&entry.1846349181=${formData["entry.1846349181"]}&entry.1750121672=${formData["entry.1750121672"]}&entry.142384631=${formData["entry.142384631"]}&entry.67847481=${formData["entry.67847481"]}&entry.959275089=${formData["entry.959275089"]}&entry.170935389=${formData["entry.170935389"]}&entry.1362772143=${formData["entry.1362772143"]}&entry.1201361250=${formData["entry.1201361250"]}`;
 
@@ -147,6 +153,7 @@ const Form = ({online}) => {
             <fieldset className="field">
               <label htmlFor={elementIds.name}> Full Name*: </label>
               <input
+                id='name-r'
                 required
                 type="text"
                 name={elementIds.name}
@@ -199,6 +206,7 @@ const Form = ({online}) => {
               <label htmlFor={elementIds.birth}>Birth Year*:</label>
               <p style={{margin: 0, color: 'black'}}> for example: 1380 </p>
               <input
+                id='birth-r'
                 required
                 type="text"
                 name={elementIds.birth}
@@ -211,6 +219,7 @@ const Form = ({online}) => {
             <fieldset className="field">
               <label htmlFor={elementIds.phone}>Phone Number*:</label>
               <input
+                id='phone-r'
                 required
                 type="text"
                 name={elementIds.phone}
@@ -223,6 +232,7 @@ const Form = ({online}) => {
             <fieldset className="field">
               <label htmlFor={elementIds.email}>E-mail*:</label>
               <input
+                email='email-r'
                 required
                 type="email"
                 name={elementIds.email}
@@ -237,7 +247,7 @@ const Form = ({online}) => {
               <p style={{margin: 0, color: 'red'}}> - If you are student at Sharif University, Enter your student ID. </p>
               <p style={{margin: 0, color: 'black'}}> - Needed for Entering the University. </p>
               <input
-                required={!online}
+                // required={!online}
                 type="text"
                 name={elementIds.nationalId}
                 onChange={handleInputData(elementIds.nationalId)}
@@ -249,6 +259,7 @@ const Form = ({online}) => {
             <fieldset className="field">
               <label htmlFor={elementIds.uni}>University/Company*:</label>
               <input
+                id='uni-r'
                 required
                 type="text"
                 name={elementIds.uni}
@@ -271,7 +282,7 @@ const Form = ({online}) => {
             </fieldset>
 
             <fieldset className="field">
-              <label htmlFor={elementIds.degree}>Acadamic Status:</label>
+              <label htmlFor={elementIds.degree}>Academic Status:</label>
               <p style={{margin: 0, color: 'black'}}> For example: Bachelor's student, Master, PhD. </p>
               
               <input
@@ -285,7 +296,7 @@ const Form = ({online}) => {
             </fieldset>
 
             <fieldset className="field">
-              <label htmlFor={elementIds.FOE}>Acadamic Field:</label>
+              <label htmlFor={elementIds.FOE}>Academic Field:</label>
               <input
                 // required
                 type="text"
@@ -313,7 +324,7 @@ const Form = ({online}) => {
               <label htmlFor={elementIds.lunch}>Would you link to have lunch on the event days?*:</label>
               <input
                 id='lunchInputId'
-                required={!online}
+                // required={!online}
                 type="text"
                 name={elementIds.lunch}
                 onChange={handleInputData(elementIds.lunch)}
@@ -357,7 +368,7 @@ const Form = ({online}) => {
               If the payment gateway confirms your payment, your registration has been completed successfully!
               Also confirmation email will be sent to the participants in the next few days. </p>
 
-            <button className="submit-button" type="submit" onClick={go2payment}> Submit </button>
+            <button className="submit-button" type="submit"> Submit </button>
           </form>
         )}
       </div>

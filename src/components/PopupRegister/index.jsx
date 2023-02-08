@@ -30,6 +30,8 @@ function PopupRegister(props) {
 
           <p className='first-p' style={props.online ? {}: {display: 'none'}}> ReACT 2023 will be held at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. You can follow the evnet online. </p>
           <p className='sec-p' style={props.online ? {}: {display: 'none'}}> Enjoy your moment with ReACT! </p>
+          <p className='sec-p' style={props.online ? {}: {display: 'none'}}> - Access to the online platform of the event on Feb 22nd - 24th </p>
+          <p className='sec-p' style={props.online ? {}: {display: 'none'}}> - Time-limited access to the recorded videos of ReACT 2021 </p>
           <RegisterForm title='registerForm' online={props.online} className=''/>
         </DialogContentText>
       </DialogContent>
