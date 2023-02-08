@@ -19,7 +19,7 @@ const Form = ({online}) => {
     FOI: "entry.1362772143", // field of interest
     lunch: "entry.1201361250", // lunch
   };
-
+  // const [inperson_lunch_state, setLunch]  = useState('None');
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     "entry.720494294": "",  // 1
@@ -36,6 +36,7 @@ const Form = ({online}) => {
     "entry.1201361250": "", // 12
   });
 
+  // let inperson_lunch_state = 'None';
   // let gender = 'Male';
 
   function genderOnChange(gen) {
@@ -46,10 +47,22 @@ const Form = ({online}) => {
   }
   
   function lunchOnChange(state) {
+    // if (state === 'None') {
+    //   setLunch('None');
+    // } else if (state === 'Day1') {
+    //   setLunch('Day 1');
+    // } else if (state === 'Day2') {
+    //   setLunch('Day 2');
+    // } else {
+    //   setLunch('Both');
+    // }
+    // inperson_lunch_state = state;
     setFormData((prevState) => ({
       ...prevState,
       [elementIds.lunch]: state
     }));
+    console.log(state);
+    // console.log(inperson_lunch_state);
   }
 
   // let radios = document.querySelectorAll('input[type=radio][name="gender"]');
@@ -79,12 +92,36 @@ const Form = ({online}) => {
     }));
   };
 
+  function go2payment() {
+    // console.log(inperson_lunch_state);
+    let local_var = 'None';
+    let radios = document.querySelectorAll('input[type=radio][name="lunch"]');
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        console.log(radios[i].value);
+        local_var = radios[i].value;
+      }
+    }
+    // if (submit) {
+      let link = '';
+      if (online) {
+        link = 'https://zarinp.al/477251';
+      } else if (local_var === 'None') {
+        link = 'https://zarinp.al/477250';
+      } else if (local_var === 'Day 1') {
+        link = 'https://zarinp.al/477248';
+      } else if (local_var === 'Day 2') {
+        link = 'https://zarinp.al/477249';
+      } else {
+        link = 'https://zarinp.al/477247';
+      }
+      window.open(link, '_self');
+    // }
+    console.log(local_var);
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
-
-    // if (online) {
-      
-    // }
 
     setSubmit(true);
 
@@ -96,8 +133,6 @@ const Form = ({online}) => {
         "Content-Type": "application/x-www-form-urlencoded"
       }
     });
-
-    window.open('https://www.google.com', '_blank');
   }
 
   return (
@@ -135,13 +170,13 @@ const Form = ({online}) => {
                   style={{display: 'none'}}
               />
               <div className="div-flex-row" style={{gap: '10px'}}>
-                <div className="div-flex-row">
+                <div className="div-flex-row align-items-center">
                   <div className="div-radio-button" onClick={() => genderOnChange('Male')}>
                     <input id='genderMaleRadio' className='radio-input' type="radio" name="gender" value="Male"/>
                   </div>
                   <p className='text-align-center'> Male </p>
                 </div>
-                <div className="div-flex-row">
+                <div className="div-flex-row align-items-center">
                   <div className="div-radio-button" onClick={() => genderOnChange('Female')}>
                     <input id='genderFemaleRadio' className='radio-input' type="radio" name="gender" value="Female"/>
                   </div>
@@ -273,24 +308,25 @@ const Form = ({online}) => {
             <fieldset className="field"  style={online ? {display: 'none'}: {display: 'flex'}}>
               <label htmlFor={elementIds.lunch}>Do You Want Lunch?*:</label>
               <input
+                id='lunchInputId'
                 // required
                 type="text"
                 name={elementIds.lunch}
                 onChange={handleInputData(elementIds.lunch)}
                 value={formData[elementIds.lunch]}
                 autoComplete={false}
-                style={{display: 'none'}}
+                // style={{display: 'none'}}
               />
               {/* <p style={{margin: 0, color: 'red'}}> Only if you participate in the event in-person. </p> */}
               <div className="div-flex-row" style={{gap: '10px'}}>
                 <div className="div-flex-row align-items-center">
-                  <div className="div-radio-button" onClick={() => lunchOnChange('None')}>
+                  <div className="div-radio-button-1" onClick={() => lunchOnChange('None')}>
                     <input className='radio-input' type="radio" name="lunch" value="None"/>
                   </div>
                   <p className='text-align-center'> None </p>
                 </div>
                 <div className="div-flex-row align-items-center">
-                  <div className="div-radio-button" onClick={() => lunchOnChange('Day 1')}>
+                  <div className="div-radio-button-2" onClick={() => lunchOnChange('Day 1')}>
                     <input className='radio-input' type="radio" name="lunch" value="Day 1"/>
                   </div>
                   <p className='text-align-center'> First Day </p>
@@ -298,13 +334,13 @@ const Form = ({online}) => {
               </div>
               <div className="div-flex-row align-items-center" style={{gap: '10px'}}>
                 <div className="div-flex-row">
-                  <div className="div-radio-button" onClick={() => lunchOnChange('Day 2')}>
+                  <div className="div-radio-button-3" onClick={() => lunchOnChange('Day 2')}>
                     <input className='radio-input' type="radio" name="lunch" value="Day 2"/>
                   </div>
                   <p className='text-align-center'> Second Day </p>
                 </div>
                 <div className="div-flex-row align-items-center">
-                  <div className="div-radio-button" onClick={() => lunchOnChange('Both')}>
+                  <div className="div-radio-button-4" onClick={() => lunchOnChange('Both')}>
                     <input className='radio-input' type="radio" name="lunch" value="Both"/>
                   </div>
                   <p className='text-align-center'> Both </p>
@@ -312,7 +348,7 @@ const Form = ({online}) => {
               </div>
             </fieldset>
 
-            <button className="submit-button" type="submit"> Submit </button>
+            <button className="submit-button" type="submit" onClick={go2payment}> Submit </button>
           </form>
         )}
       </div>
