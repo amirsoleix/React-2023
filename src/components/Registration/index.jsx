@@ -50,6 +50,10 @@ function Registration({ title, className: classNameProp }) {
             {/* <img src={calenderIcon} alt='calender'></img>
             <p> From Feb 6-17th 2013 </p> */}
             <p> Join the Event in-person </p>
+            {/* <p> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
+            <p> - Access to the online platform of the event on Feb 22nd - 24th </p>
+            <p> - Time-limited access to the recorded videos of ReACT 2021 </p>
+            <p> - Ability to reserve lunch for the event days </p> */}
           </div>
           <button className='registration__item__button' onClick={() => handleClickOpen('in-person')}> Register Now! </button>
           <Dialog

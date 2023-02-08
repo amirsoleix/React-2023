@@ -1,8 +1,11 @@
+@import '../../styles/main.scss';
+
 .popup-register {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 88vh;
     // overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .first-p {
@@ -44,4 +47,10 @@
 
 .register-button {
     width: 150px;
+}
+
+@include down(sm) {
+    .dialog-content-main {
+        padding: 10px !important;
+    }
 }

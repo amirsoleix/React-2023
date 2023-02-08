@@ -145,7 +145,7 @@ const Form = ({online}) => {
           <form onSubmit={handleSubmit} target="_self">
 
             <fieldset className="field">
-              <label htmlFor={elementIds.name}> Name*: </label>
+              <label htmlFor={elementIds.name}> Full Name*: </label>
               <input
                 required
                 type="text"
@@ -196,7 +196,8 @@ const Form = ({online}) => {
             </fieldset>
 
             <fieldset className="field">
-              <label htmlFor={elementIds.birth}>Birth*:</label>
+              <label htmlFor={elementIds.birth}>Birth Year*:</label>
+              <p style={{margin: 0, color: 'black'}}> for example: 1380 </p>
               <input
                 required
                 type="text"
@@ -231,11 +232,12 @@ const Form = ({online}) => {
               />
             </fieldset>
 
-            <fieldset className="field">
+            <fieldset className="field" style={online ? {display: 'none'}: {}}>
               <label htmlFor={elementIds.nationalId}>National ID*:</label>
-              <p style={{margin: 0, color: 'red'}}> If you are student at Sharif University, Enter your student ID. </p>
+              <p style={{margin: 0, color: 'red'}}> - If you are student at Sharif University, Enter your student ID. </p>
+              <p style={{margin: 0, color: 'black'}}> - Needed for Entering the University. </p>
               <input
-                required
+                required={!online}
                 type="text"
                 name={elementIds.nationalId}
                 onChange={handleInputData(elementIds.nationalId)}
@@ -245,7 +247,7 @@ const Form = ({online}) => {
             </fieldset>
 
             <fieldset className="field">
-              <label htmlFor={elementIds.uni}>Institute/Company*:</label>
+              <label htmlFor={elementIds.uni}>University/Company*:</label>
               <input
                 required
                 type="text"
@@ -270,6 +272,8 @@ const Form = ({online}) => {
 
             <fieldset className="field">
               <label htmlFor={elementIds.degree}>Acadamic Status:</label>
+              <p style={{margin: 0, color: 'black'}}> For example: Bachelor's student, Master, PhD. </p>
+              
               <input
                 // required
                 type="text"
@@ -306,10 +310,10 @@ const Form = ({online}) => {
 
             
             <fieldset className="field"  style={online ? {display: 'none'}: {display: 'flex'}}>
-              <label htmlFor={elementIds.lunch}>Do You Want Lunch?*:</label>
+              <label htmlFor={elementIds.lunch}>Would you link to have lunch on the event days?*:</label>
               <input
                 id='lunchInputId'
-                // required
+                required={!online}
                 type="text"
                 name={elementIds.lunch}
                 onChange={handleInputData(elementIds.lunch)}
@@ -317,36 +321,41 @@ const Form = ({online}) => {
                 autoComplete={false}
                 style={{display: 'none'}}
               />
-              {/* <p style={{margin: 0, color: 'red'}}> Only if you participate in the event in-person. </p> */}
+              <p style={{margin: 0, color: 'black'}}> For your comfortability, some part of lunch price is provided by the event and the total price has been reduced. </p>
               <div className="div-flex-row" style={{gap: '10px'}}>
-                <div className="div-flex-row align-items-center">
-                  <div className="div-radio-button-1" onClick={() => lunchOnChange('None')}>
-                    <input className='radio-input' type="radio" name="lunch" value="None"/>
-                  </div>
-                  <p className='text-align-center'> None </p>
-                </div>
                 <div className="div-flex-row align-items-center">
                   <div className="div-radio-button-2" onClick={() => lunchOnChange('Day 1')}>
                     <input className='radio-input' type="radio" name="lunch" value="Day 1"/>
                   </div>
                   <p className='text-align-center'> First Day </p>
                 </div>
-              </div>
-              <div className="div-flex-row align-items-center" style={{gap: '10px'}}>
                 <div className="div-flex-row">
                   <div className="div-radio-button-3" onClick={() => lunchOnChange('Day 2')}>
                     <input className='radio-input' type="radio" name="lunch" value="Day 2"/>
                   </div>
                   <p className='text-align-center'> Second Day </p>
                 </div>
+              </div>
+              <div className="div-flex-row align-items-center" style={{gap: '10px'}}>
                 <div className="div-flex-row align-items-center">
                   <div className="div-radio-button-4" onClick={() => lunchOnChange('Both')}>
                     <input className='radio-input' type="radio" name="lunch" value="Both"/>
                   </div>
                   <p className='text-align-center'> Both </p>
                 </div>
+                <div className="div-flex-row align-items-center">
+                  <div className="div-radio-button-1" onClick={() => lunchOnChange('None')}>
+                    <input className='radio-input' type="radio" name="lunch" value="None"/>
+                  </div>
+                  <p className='text-align-center'> None </p>
+                </div>
               </div>
             </fieldset>
+
+            <p style={{margin: 0, textAlign: 'justify', padding: '5px'}}> One more step to complete your registration!
+              After clicking on the submit button, you will be redirected to the payment gateway.
+              If the payment gateway confirms your payment, your registration has been completed successfully!
+              Also confirmation email will be sent to the participants in the next few days. </p>
 
             <button className="submit-button" type="submit" onClick={go2payment}> Submit </button>
           </form>
