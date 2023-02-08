@@ -102,7 +102,7 @@ const Form = ({online}) => {
         local_var = radios[i].value;
       }
     }
-    // if (submit) {
+    if (submit) {
       let link = '';
       if (online) {
         link = 'https://zarinp.al/477251';
@@ -116,7 +116,7 @@ const Form = ({online}) => {
         link = 'https://zarinp.al/477247';
       }
       window.open(link, '_self');
-    // }
+    }
     console.log(local_var);
   }
 
