@@ -247,7 +247,7 @@ const Form = ({online}) => {
               <p style={{margin: 0, color: 'red'}}> - If you are student at Sharif University, Enter your student ID. </p>
               <p style={{margin: 0, color: 'black'}}> - Needed for Entering the University. </p>
               <input
-                // required={!online}
+                required={!online}
                 type="text"
                 name={elementIds.nationalId}
                 onChange={handleInputData(elementIds.nationalId)}
@@ -324,7 +324,7 @@ const Form = ({online}) => {
               <label htmlFor={elementIds.lunch}>Would you link to have lunch on the event days?*:</label>
               <input
                 id='lunchInputId'
-                // required={!online}
+                required={!online}
                 type="text"
                 name={elementIds.lunch}
                 onChange={handleInputData(elementIds.lunch)}
