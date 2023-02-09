@@ -2,9 +2,28 @@ import 'src/profiles';
 
 import amirparviz_babak from 'src/assets/speakers2023/amirparviz-babak/profile.jpg';
 
+import alexandre_alahi from 'src/assets/speakers2023/alexandre-alahi/profile.jpg';
+import alireza_khaligh from 'src/assets/speakers2023/alireza-khaligh/profile.jpg';
+import amin_babazadeh from 'src/assets/speakers2023/amin-babazadeh/profile.jpg';
+import hesam_esfandiarpour from 'src/assets/speakers2023/hesam-esfandiarpour/profile.jpg';
+import iman_askarian from 'src/assets/speakers2023/iman-askarian/profile.jpg';
+import jasmin_farshi from 'src/assets/speakers2023/jasmin-farshi/profile.jpg';
+import kousha_kalantari from 'src/assets/speakers2023/kousha-kalantari/profile.jpg';
+import mohammad_akbarpour from 'src/assets/speakers2023/mohammad-akbarpour/profile.jpg';
+import mohammad_alizadeh from 'src/assets/speakers2023/mohammad-alizadeh/profile.jpg';
+import mohammadHossein_nabian from 'src/assets/speakers2023/mohammadHossein-nabian/profile.jpg';
+import mohammadHossein_rohban from 'src/assets/speakers2023/mohammadHossein-rohban/profile.jpg';
+import mohammad_khosravi from 'src/assets/speakers2023/mohammad-khosravi/profile.jpg';
+import mohammad_samizadeh from 'src/assets/speakers2023/mohammad-samizadeh/profile.jpg';
+import mohammad_shahidehpour from 'src/assets/speakers2023/mohammad-shahidehpour/profile.jpg'
+import omeed_momeni from 'src/assets/speakers2023/omeed-momeni/profile.jpg';
+import sanaz_sabzevari from 'src/assets/speakers2023/sanaz-sabzevari/profile.jpg';
+import shiva_amiri from 'src/assets/speakers2023/shiva-amiri/profile.jpg';
+
+
 import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
-// import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
+import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
 import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
 import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
 import mousavi_yasin from 'src/assets/staff/yasin-mousavi.jpg';
@@ -15,12 +34,87 @@ import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
 import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
 import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
 
+const SPEAKERS_NAMES = [
+  'jasmin-farshi',
+  'mohammad-shahidehpour',
+  'alexandre-alahi',
+  'mohammad-samizadeh',
+  'alireza-khaligh',
+  'mohammad-alizadeh',
+  'shiva-amiri',
+  'mohammad-akbarpour',
+  'omeed-momeni',
+  'mohammad-hossein-rohban',
+  'hesam-esfandiarpour',
+  'mohammad-hossein-nabian',
+  'amin-babazadeh',
+  'kousha-kalantari',
+  'sanaz-sabzevari',
+  'iman-askarian',
+  'mohammad-khosravi',
+];
+
+const SPEAKERS_IMAGES = [
+  jasmin_farshi,
+  mohammad_shahidehpour,
+  alexandre_alahi,
+  mohammad_samizadeh,
+  alireza_khaligh,
+  mohammad_alizadeh,
+  shiva_amiri,
+  mohammad_akbarpour,
+  omeed_momeni,
+  mohammadHossein_rohban,
+  hesam_esfandiarpour,
+  mohammadHossein_nabian,
+  amin_babazadeh,
+  kousha_kalantari,
+  sanaz_sabzevari,
+  iman_askarian,
+  mohammad_khosravi,
+];
+
+const SPEAKERS_LOCATIONS = [
+  'Amazon',
+  'Illinois',
+  'EPFL',
+  'ETH ',
+  'MARYLAND',
+  'MIT',
+  'Pivotal Life Sciences',
+  'Stanford',
+  'UC Davis',
+  'Sharif University of Technology',
+  'GNOS',
+  'Tehran University',
+  'University of Vienna',
+  'Amazon',
+  'KTH',
+  'Sharif University of Technology',
+  'Delft',
+];
+
+let FOLDERS2023 = []
+
+for (let i = 0; i < SPEAKERS_NAMES.length; i++) {
+  let obj = {
+    name: SPEAKERS_NAMES[i],
+    figure: SPEAKERS_IMAGES[i],
+    location: SPEAKERS_LOCATIONS[i]
+  };
+  FOLDERS2023.push(obj);
+}
+
 let FOLDERS = [
   {
     name: 'amirparviz-babak',
     figure: amirparviz_babak,
     location: 'Amazon',
-    field: 'Grand Challenge Project',
+  },
+  {
+    name: 'alireza-khaligh',
+    figure: amirparviz_babak,
+    location: 'Amazon',
   },
 ];
 
@@ -35,11 +129,11 @@ let TEAM = [
     imgUrl: asemi_parsa,
     title: 'Event Head',
   },
-  // {
-  //   name: 'shahbazian-hasan',
-  //   imgUrl: shahbazian_mohammadhasan,
-  //   title: 'HR Manager',
-  // },
+  {
+    name: 'shahbazian-hasan',
+    imgUrl: shahbazian_mohammadhasan,
+    title: 'HR Manager',
+  },
   {
     name: 'nourian-ali',
     imgUrl: nourian_ali,
@@ -52,32 +146,32 @@ let TEAM = [
   },
   {
     name: 'mousavi-yasin',
-    img: mousavi_yasin,
+    imgUrl: mousavi_yasin,
     title: 'Sponsoring Manager',
   },
   {
     name: 'eghlimi-amin',
-    img: eghlimi_mohammadamin,
+    imgUrl: eghlimi_mohammadamin,
     title: 'Financial Manager',
   },
   {
     name: 'heidari-mahdi',
-    img: heidari_mahdi,
+    imgUrl: heidari_mahdi,
     title: 'Content Manager',
   },
   {
     name: 'toumari-parisa',
-    img: toumari_parisa,
+    imgUrl: toumari_parisa,
     title: 'Adv. Manager',
   },
   {
     name: 'mehrtash-shervin',
-    img: mehtash_shervin,
+    imgUrl: mehtash_shervin,
     title: 'Relations Manager',
   },
   {
     name: 'taji-mehrshad',
-    img: taji_mehrshad,
+    imgUrl: taji_mehrshad,
     title: 'Dev. Manager',
   },
   {
@@ -108,11 +202,11 @@ let BUTTONS = [
 //   ['Sponsors', 'gift-o', 'default'],
 // ];
 
-let SPEAKERS = FOLDERS.map((speaker) => ({
+let SPEAKERS2023 = FOLDERS2023.map((speaker) => ({
   imgUrl: speaker['figure'],
   title: speaker['name']
     .split('-')
-    .reverse()
+    // .reverse()
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' '),
   topDescription: speaker['field'],
@@ -126,8 +220,8 @@ let STAFF = TEAM.map((staff) => ({
     .reverse()
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' '),
-  imgUrl: staff['imgUrl'],
+  imgUrl: staff.imgUrl,
   subtitle: staff['title'],
 }));
 
-export { BUTTONS, SPEAKERS, STAFF };
+export { BUTTONS, SPEAKERS2023, STAFF };

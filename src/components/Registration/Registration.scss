@@ -30,6 +30,19 @@ $black: #282936;
         justify-items: center;
         flex-direction: row;
         justify-content: space-around;
+        padding: 0 20px;
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+            max-width: 720px;
+            // max-height: 375px;
+
+            p {
+                text-align: justify;
+            }
+        }
     }
 
     &__item {
@@ -63,7 +76,7 @@ $black: #282936;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
         }
-        &__discription {
+        &__description {
             // font-family: cursive;
             margin: 0;
             width: 100%;
@@ -111,6 +124,22 @@ $black: #282936;
         //     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         //     opacity: 0;
         // }
+}
+
+.reverse-flex-row {
+    flex-direction: row-reverse;
+}
+
+.first-description-p {
+    margin: 0;
+    text-align: justify;
+    font-weight: bold;
+    color: black;
+}
+
+.sec-description-p {
+    color: black;
+    margin: 6px 0;
 }
 
 @include down(sm) {

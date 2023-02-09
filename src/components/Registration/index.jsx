@@ -39,6 +39,14 @@ function Registration({ title, className: classNameProp }) {
         <h2>{title}</h2>
       </div>
       <div className='registration__content'>
+        <div className='registration__content__description'>
+          <p className='first-description-p'> ReACT 2023 will be held in-person at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. </p>
+          <p className='sec-description-p'> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
+          <p className='sec-description-p'> - Access to the online platform of the event on Feb 22nd - 24th </p>
+          <p className='sec-description-p'> - Time-limited access to the recorded videos of ReACT 2021 </p>
+          <p className='sec-description-p'> - Ability to reserve lunch for the event days </p>
+          <p className='sec-description-p'> - Related Exhibitions and Panel Discussion </p>
+        </div>
         <div className='registration__item'>
           <img
             className='registration_item__inperson-img'
@@ -46,7 +54,7 @@ function Registration({ title, className: classNameProp }) {
             alt='inperson'
           ></img>
           <h3 className='registration__item__title'> In person </h3>
-          <div className='registration__item__discription'>
+          <div className='registration__item__description'>
             {/* <img src={calenderIcon} alt='calender'></img>
             <p> From Feb 6-17th 2013 </p> */}
             <p> Join the Event in-person </p>
@@ -65,6 +73,14 @@ function Registration({ title, className: classNameProp }) {
             <PopupRegister onClose={handleClose} className={'test'} />
           </Dialog>
         </div>
+      </div>
+      <div className='registration__content reverse-flex-row'>
+      <div className='registration__content__description'>
+          <p className='first-description-p'> ReACT 2023 will be held at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. You can follow the evnet online. </p>
+          <p className='sec-description-p'> Enjoy your moment with ReACT! </p>
+          <p className='sec-description-p'> - Access to the online platform of the event on Feb 22nd - 24th </p>
+          <p className='sec-description-p'> - Time-limited access to the recorded videos of ReACT 2021 </p>
+        </div>
         <div className='registration__item'>
           <img
             className='registration_item__online-img'
@@ -72,7 +88,7 @@ function Registration({ title, className: classNameProp }) {
             alt='online'
           ></img>
           <h3 className='registration__item__title'> Online </h3>
-          <div className='registration__item__discription'>
+          <div className='registration__item__description'>
             {/* <img src={calenderIcon} alt='calender'></img>
             <p> From Feb 6-17th 2013 </p> */}
             <p> Watch the Event Online </p>

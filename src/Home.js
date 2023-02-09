@@ -11,7 +11,7 @@ import ArticlePreview from 'src/components/ArticlePreview';
 import Registration from 'src/components/Registration';
 import History from 'src/components/History';
 
-import { BUTTONS, SPEAKERS, STAFF } from 'src/constants';
+import { BUTTONS, SPEAKERS2023, STAFF } from 'src/constants';
 import 'src/styles/main.scss';
 import './Home.scss';
 import ResponsiveAppBar from 'src/components/Navbar';
@@ -129,7 +129,7 @@ class Home extends React.Component {
             </div>
             <div className='home__content__inside'>
               <div id='speakerPanel'>
-                <SpeakerPanel posts={SPEAKERS} className='speaker__main' />
+                <SpeakerPanel posts={SPEAKERS2023} className='speaker__main' />
               </div>
             </div>
           </div>
