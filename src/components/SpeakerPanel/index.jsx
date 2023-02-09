@@ -3,7 +3,7 @@ import Proptypes from 'prop-types';
 
 import Speaker from '../Speaker';
 
-function SpeakerPanel({ posts, className, title = 'Previous Speakers' }) {
+function SpeakerPanel({ posts, className, title = 'Speakers' }) {
   const renderPosts = () =>
     posts.map((data) => {
       const {

@@ -117,12 +117,14 @@
 
 .submit-button {
     width: 25%;
-    margin-left: 74.5%;
+    align-self: center;
+    // margin-left: 74.5%;
     border: 0;
     border-radius: 5px;
     background-color: #2655a6;
     color: #ffff;
     height: 40px;
+    align-self: flex-end;
 }
 
 .submit-button:hover {
@@ -152,9 +154,26 @@
     align-items: center;
 }
 
+.pay-submit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.pay-submit > p {
+    color: black;
+    font-size: large;
+}
+
 @include down(sm) {
     .submit-button {
         width: 35%;
-        margin-left: 64.5%;
+        align-self: flex-end;
+    //     margin-left: 64.5%;
     }
+
+    // .pay-submit {
+    //     flex-direction: column;
+    // }
 }

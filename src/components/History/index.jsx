@@ -1,8 +1,8 @@
 import React from 'react';
 
 import SpeakerPanel from '../SpeakerPanel';
-import { SPEAKERS } from 'src/constants';
-import { SPEAKERS2020 } from './constants';
+// import { SPEAKERS } from 'src/constants';
+import { SPEAKERS2020, SPEAKERS2021 } from './constants';
 
 import './History.scss';
 
@@ -42,7 +42,7 @@ function History() {
         </p>
       </div>
       <div className='articlePreview__title'>
-        <h2>{'ReACT 2022'}</h2>
+        <h2>{'ReACT 2023'}</h2>
       </div>
       <div className='articlePreview__content'>
         <p>
@@ -61,7 +61,7 @@ function History() {
       </div>
       <div id='speakerPanel'>
         <SpeakerPanel
-          posts={SPEAKERS}
+          posts={SPEAKERS2021}
           title={'Previous Speakers 2021'}
           className='speaker__main'
         />

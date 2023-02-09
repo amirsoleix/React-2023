@@ -20,8 +20,9 @@ const Form = ({online}) => {
     lunch: "entry.1201361250", // lunch
   };
   // const [inperson_lunch_state, setLunch]  = useState('None');
+  // const [total_price, changePrice] = useState('00');
   const [submit, setSubmit] = useState(false);
-  const [counter, count] = useState(0);
+  // const [counter, count] = useState(0);
   const [formData, setFormData] = useState({
     "entry.720494294": "",  // 1
     "entry.2125451900": "",
@@ -46,22 +47,32 @@ const Form = ({online}) => {
       [elementIds.gender]: gen
     }));
   }
+
+  var total_price = '';
+  if (online) {
+    total_price = '79,000';
+  } else {
+    total_price = '109,000';
+  }
   
   function lunchOnChange(state) {
     // if (state === 'None') {
-    //   setLunch('None');
-    // } else if (state === 'Day1') {
-    //   setLunch('Day 1');
-    // } else if (state === 'Day2') {
-    //   setLunch('Day 2');
+    //   total_price = '109,000';
+    // } else if (state === 'Day 1') {
+    //   total_price = '179,000';
+    // } else if (state === 'Day 2') {
+    //   total_price = '179,000';
     // } else {
-    //   setLunch('Both');
+    //   total_price = '249,000';
     // }
+    // document.getElementById('totalPrice').innerText = total_price;
+    // console.log(document.getElementById('totalPrice').innerText);
     // inperson_lunch_state = state;
     setFormData((prevState) => ({
       ...prevState,
       [elementIds.lunch]: state
     }));
+    console.log(total_price);
     console.log(state);
     // console.log(inperson_lunch_state);
   }
@@ -146,7 +157,7 @@ const Form = ({online}) => {
       <div className="formheader"></div>
       <div className="formcontact">
         {submit ? (
-          <div className="afterForm"> Thanks for your registering!... </div>
+          <div className="afterForm"> Waiting for payment... </div>
         ) : (
           <form onSubmit={handleSubmit} target="_self">
 
@@ -321,7 +332,7 @@ const Form = ({online}) => {
 
             
             <fieldset className="field"  style={online ? {display: 'none'}: {display: 'flex'}}>
-              <label htmlFor={elementIds.lunch}>Would you link to have lunch on the event days?*:</label>
+              <label htmlFor={elementIds.lunch}>Would you like to have lunch on the event days?*:</label>
               <input
                 id='lunchInputId'
                 required={!online}
@@ -330,7 +341,7 @@ const Form = ({online}) => {
                 onChange={handleInputData(elementIds.lunch)}
                 value={formData[elementIds.lunch]}
                 autoComplete={false}
-                style={{display: 'none'}}
+                // style={{display: 'none'}}
               />
               <p style={{margin: 0, color: 'black'}}> For your comfortability, some part of lunch price is provided by the event and the total price has been reduced. </p>
               <div className="div-flex-row" style={{gap: '10px'}}>
@@ -367,8 +378,15 @@ const Form = ({online}) => {
               After clicking on the submit button, you will be redirected to the payment gateway.
               If the payment gateway confirms your payment, your registration has been completed successfully!
               Also confirmation email will be sent to the participants in the next few days. </p>
-
-            <button className="submit-button" type="submit"> Submit </button>
+            <div className="pay-submit" className='pay-submit'>
+              <p style={{margin: 0, textAlign: 'justify', padding: '0 5px'}} id='totalPrice'>
+                 Registeration Fee: {total_price} tomans
+              </p>
+              <p style={online ? {display: 'none'}: {margin: 0, textAlign: 'justify', padding: '0 5px'}} id='totalPrice'>
+                 Each Lunch: 70,000 tomans
+              </p>
+              <button className="submit-button" type="submit"> Submit </button>
+            </div>
           </form>
         )}
       </div>
