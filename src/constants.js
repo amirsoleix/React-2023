@@ -1,11 +1,9 @@
 import 'src/profiles';
 
-import amirparviz_babak from 'src/assets/speakers2023/amirparviz-babak/profile.jpg';
-
 import alexandre_alahi from 'src/assets/speakers2023/alexandre-alahi/profile.jpg';
 import alireza_khaligh from 'src/assets/speakers2023/alireza-khaligh/profile.jpg';
 import amin_babazadeh from 'src/assets/speakers2023/amin-babazadeh/profile.jpg';
-import hesam_esfandiarpour from 'src/assets/speakers2023/hesam-esfandiarpour/profile.jpg';
+// import hesaam_esfandyarpour from 'src/assets/speakers2023/hesam-esfandiarpour/profile.jpg';
 import iman_askarian from 'src/assets/speakers2023/iman-askarian/profile.jpg';
 import jasmin_farshi from 'src/assets/speakers2023/jasmin-farshi/profile.jpg';
 import kousha_kalantari from 'src/assets/speakers2023/kousha-kalantari/profile.jpg';
@@ -45,7 +43,7 @@ const SPEAKERS_NAMES = [
   'mohammad-akbarpour',
   'omeed-momeni',
   'mohammad-hossein-rohban',
-  'hesam-esfandiarpour',
+  // 'hesaam-esfandyarpour',
   'mohammad-hossein-nabian',
   'amin-babazadeh',
   'kousha-kalantari',
@@ -65,7 +63,7 @@ const SPEAKERS_IMAGES = [
   mohammad_akbarpour,
   omeed_momeni,
   mohammadHossein_rohban,
-  hesam_esfandiarpour,
+  // hesaam_esfandyarpour,
   mohammadHossein_nabian,
   amin_babazadeh,
   kousha_kalantari,
@@ -85,7 +83,7 @@ const SPEAKERS_LOCATIONS = [
   'Stanford',
   'UC Davis',
   'Sharif University of Technology',
-  'GNOS',
+  // 'GNOS',
   'Tehran University',
   'University of Vienna',
   'Amazon',
@@ -104,19 +102,6 @@ for (let i = 0; i < SPEAKERS_NAMES.length; i++) {
   };
   FOLDERS2023.push(obj);
 }
-
-let FOLDERS = [
-  {
-    name: 'amirparviz-babak',
-    figure: amirparviz_babak,
-    location: 'Amazon',
-  },
-  {
-    name: 'alireza-khaligh',
-    figure: amirparviz_babak,
-    location: 'Amazon',
-  },
-];
 
 let TEAM = [
   {

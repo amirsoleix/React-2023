@@ -161,9 +161,14 @@
     justify-content: space-between;
 }
 
-.pay-submit > p {
+.pay-submit > div > p, .pay-submit > p {
     color: black;
     font-size: large;
+}
+
+.main-fee {
+    text-decoration: line-through;
+    color: red !important;
 }
 
 @include down(sm) {

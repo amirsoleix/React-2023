@@ -40,7 +40,7 @@ function Registration({ title, className: classNameProp }) {
       </div>
       <div className='registration__content'>
         <div className='registration__content__description'>
-          <p className='first-description-p'> ReACT 2023 will be held in-person at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. </p>
+          <p className='first-description-p'> ReACT 2023 In-Person Ticket: </p>
           <p className='sec-description-p'> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
           <p className='sec-description-p'> - Access to the online platform of the event on Feb 22nd - 24th </p>
           <p className='sec-description-p'> - Time-limited access to the recorded videos of ReACT 2021 </p>
@@ -76,7 +76,7 @@ function Registration({ title, className: classNameProp }) {
       </div>
       <div className='registration__content reverse-flex-row'>
       <div className='registration__content__description'>
-          <p className='first-description-p'> ReACT 2023 will be held at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. You can follow the evnet online. </p>
+          <p className='first-description-p'> ReACT 2023 Online Ticket: </p>
           <p className='sec-description-p'> Enjoy your moment with ReACT! </p>
           <p className='sec-description-p'> - Access to the online platform of the event on Feb 22nd - 24th </p>
           <p className='sec-description-p'> - Time-limited access to the recorded videos of ReACT 2021 </p>

@@ -70,7 +70,7 @@ function Speaker({
               <h2>{mainTitle}</h2>
             </div>
             <div className='post-card__detail'>
-              {renderSubtitle(subtitle1)}
+              <div className='hidden-on-phone'>{renderSubtitle(subtitle1)}</div>
               {renderSubtitle(subtitle2)}
               <div className='post-card__footer'></div>
             </div>

@@ -182,7 +182,7 @@
         font-size: 18px;
       }
     }
-    &__detail p:first-child {
+    &__detail > .hidden-on-phone {
       display: none;
     }
   }
