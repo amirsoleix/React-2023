@@ -50,9 +50,9 @@ const Form = ({online}) => {
 
   var total_price = '';
   if (online) {
-    total_price = '79,000';
+    total_price = '89,000';
   } else {
-    total_price = '109,000';
+    total_price = '125,000';
   }
   
   function lunchOnChange(state) {
@@ -379,16 +379,16 @@ const Form = ({online}) => {
               If the payment gateway confirms your payment, your registration has been completed successfully!
               Also confirmation email will be sent to the participants in the next few days. </p>
             <div className="pay-submit" className='pay-submit'>
-              <p style={{margin: 0, textAlign: 'justify', padding: '0 5px'}}>
-                  Registeration Fee:
-                </p>
               <div className="div-flex-row">
-                <p className="main-fee" style={online ? {display: 'none'} : {margin: 0, textAlign: 'justify', padding: '0 5px'}}>
+                {/* <p className="main-fee" style={online ? {display: 'none'} : {margin: 0, textAlign: 'justify', padding: '0 5px'}}>
                   125,000
+                </p> */}
+                <p style={{margin: 0, textAlign: 'justify', padding: '0 5px'}}>
+                  Registration Fee:
                 </p>
-                <p className="main-fee" style={online ? {margin: 0, textAlign: 'justify', padding: '0 5px'} : {display: 'none'}}>
+                {/* <p className="main-fee" style={online ? {margin: 0, textAlign: 'justify', padding: '0 5px'} : {display: 'none'}}>
                   89,000
-                </p>
+                </p> */}
                 <p style={{margin: 0, textAlign: 'justify', padding: '0 5px'}}>
                   {total_price} tomans
                 </p>

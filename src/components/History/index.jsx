@@ -46,7 +46,7 @@ function History() {
       </div>
       <div className='articlePreview__content'>
         <p>
-          ReACT 2022 will be held in person at Sharif University of Technology
+          ReACT 2023 will be held in person at Sharif University of Technology
           while being broadcasted online, with some related workshops and
           exhibitions for interested people from the scientific community and
           many people in top companies and startups both from Iran and the

@@ -42,7 +42,7 @@ function Registration({ title, className: classNameProp }) {
         <div className='registration__content__description'>
           <p className='first-description-p'> ReACT 2023 In-Person Ticket: </p>
           <p className='sec-description-p'> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
-          <p className='sec-description-p'> - Access to the online platform of the event on Feb 22nd - 24th </p>
+          <p className='sec-description-p'> - Access to the online platform of the event on Feb 24th </p>
           <p className='sec-description-p'> - Time-limited access to the recorded videos of ReACT 2021 </p>
           <p className='sec-description-p'> - Ability to reserve lunch for the event days </p>
           <p className='sec-description-p'> - Related Exhibitions and Panel Discussion </p>
