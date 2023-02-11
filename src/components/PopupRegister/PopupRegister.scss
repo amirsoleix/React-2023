@@ -3,7 +3,7 @@
 .popup-register {
     display: flex;
     flex-direction: column;
-    height: 88vh;
+    // height: 88vh;
     // overflow-y: scroll;
     overflow-y: hidden;
 }
@@ -24,6 +24,7 @@
 
 .dialog-title {
     box-shadow: rgb(0 0 0 / 30%) 0px 3px 8px;
+    padding: 12px !important;
 }
 
 .dialog-content-main {
@@ -39,7 +40,7 @@
 
 .dialog-action {
     box-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
-    padding: 15px !important;
+    padding: 10px 10px !important;
 }
 
 .cancel-button {

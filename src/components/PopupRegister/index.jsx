@@ -15,11 +15,17 @@ import './PopupRegister.scss';
 function PopupRegister(props) {
   // console.log(props);
   return (
-    <div className={'popup-register'}>
+    <div className={'popup-register'} style={props.online ? {height: '88vh'} : {height: '52vh'}}>
       <DialogTitle className='dialog-title'>{'Registration'}</DialogTitle>
       <DialogContent className='dialog-content-main'>
         <DialogContentText className='dialog-content'>
-          <p className='first-p' style={props.online ? {display: 'none'}: {margin: '0 0 10px 0'}}> ReACT 2023 will be held in-person at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. </p>
+          <p className='first-p' style={props.online ? {display: 'none'}: {margin: '0 0 10px 0', color: 'red'}}>
+            {/* ReACT 2023 will be held in-person at Sharif University of Technology on Wed. & Thu. Feb 22nd, 23th. */}
+            Unfortunately we have reached the maximum capacity for the in-person tickets and we're sorry that we can't have you in person this year.
+          </p>
+          <p className='first-p' style={props.online ? {display: 'none'}: {margin: '0 0 10px 0'}}>
+            If you didn’t get a chance to get your ticket, join us online.
+          </p>
           
           {/* <p className='sec-p' style={props.online ? {display: 'none'}: {}}> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
           <p className='sec-p' style={props.online ? {display: 'none'}: {}}> - Access to the online platform of the event on Feb 22nd - 24th </p>
@@ -37,7 +43,7 @@ function PopupRegister(props) {
       </DialogContent>
       <DialogActions className='dialog-action'>
         <Button className='cancel-button' onClick={props.onClose} autofocus buttonType='brand'>
-          Cancel
+          {props.online ? <p> Cancel </p> : <p> OK </p>}
         </Button>
         {/* <a
           href='https://docs.google.com/'

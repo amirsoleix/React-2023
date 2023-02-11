@@ -17,7 +17,10 @@ function RegisterForm({
   return (
     <div className={className} id='register-app'>
       {/* <RegisterFormComponent /> */}
-      <Form online={online}/>
+      {online ?
+      <Form online={online}/> : 
+      <div></div>
+      }
     </div>
   );
 }
