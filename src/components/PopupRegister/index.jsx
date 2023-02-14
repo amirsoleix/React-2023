@@ -15,7 +15,7 @@ import './PopupRegister.scss';
 function PopupRegister(props) {
   // console.log(props);
   return (
-    <div className={'popup-register'} style={props.online ? {height: '88vh'} : {height: '52vh'}}>
+    <div className={'popup-register'} style={props.online ? {height: '88vh'} : {height: '88vh'}}>
       <DialogTitle className='dialog-title'>{'Registration'}</DialogTitle>
       <DialogContent className='dialog-content-main'>
         <DialogContentText className='dialog-content'>
