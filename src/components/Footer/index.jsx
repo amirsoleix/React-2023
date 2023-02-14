@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import { getModifiers } from 'src/utils/classname';
 import Icon from 'src/components/Icon';
+import reactIcon from 'src/assets/images/react-logo-black.png'
 // import { VALID_SIZES } from 'src/components/Icon/constants';
 
 import { SOCIAL_LINKS } from './constants';
@@ -33,7 +34,7 @@ function Footer({ hasBottomNav }) {
 
   return (
     <footer className={getClassname()}>
-      <div className='footer__right'>
+      {/* <div className='footer__right'>
         <div className='footer__links'>
           <a href='https://sharif.edu' className='footer__link'>
             About Us
@@ -47,6 +48,38 @@ function Footer({ hasBottomNav }) {
             Resana Association Website
           </a>
         </div>
+      </div> */}
+      <div className='footer__top'>
+        <div className='footer__top__side1'>
+          <div className='footer__top__item'>
+            <img className='footer__top__item__logo' src={reactIcon} alt='react-logo'></img>
+          </div>
+          <div className='footer__top__item'>
+            <h4 className='footer__top__item__item'>
+              Home
+            </h4>
+            <h4 className='footer__top__item__item'>
+              Histoty
+            </h4>
+            <h4 className='footer__top__item__item'>
+              Staff
+            </h4>
+          </div>
+        </div>
+        <div className='footer__top__side2'>
+        <div className='footer__top__item'>
+          <h4 className='footer__top__item__item'>
+            Timeline
+          </h4>
+          <h4 className='footer__top__item__item'>
+            Speakers
+          </h4>
+        </div>
+        <div className='footer__top__item'>
+          <img className='footer__top__item__logo' src={reactIcon} alt='react-logo'></img>
+        </div>
+        </div>
+        
       </div>
       <div>{SOCIAL_LINKS.map(renderSocial)}</div>
     </footer>

@@ -79,6 +79,7 @@ body {
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     gap: 4vw; //$grid-gutter-width;
+    padding-bottom: 30px;
   }
 }
 
