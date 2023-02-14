@@ -341,7 +341,7 @@ const Form = ({online}) => {
                 onChange={handleInputData(elementIds.lunch)}
                 value={formData[elementIds.lunch]}
                 autoComplete={false}
-                // style={{display: 'none'}}
+                style={{display: 'none'}}
               />
               <p style={{margin: 0, color: 'black'}}> For your comfortability, some part of lunch price is provided by the event and the total price has been reduced. </p>
               <div className="div-flex-row" style={{gap: '10px'}}>
