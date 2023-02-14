@@ -91,8 +91,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: space-between !important;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around !important;
     gap: $grid-gutter-width;
   }
 }
@@ -109,21 +108,10 @@ body {
       grid-template-columns: repeat(1, 1fr);
     }
   }
-
-  .staff {
-    &__main {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
 }
 
 @include up(sm) {
   .speaker {
-    &__main {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .staff {
     &__main {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -142,21 +130,20 @@ body {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-
-  .staff {
-    &__main {
-      max-width: 1080px;
-      margin: auto;
-
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
 }
 
 @include up(lg) {
   .speaker {
     &__main {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .staff {
+    &__main {
+      max-width: 1080px;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
