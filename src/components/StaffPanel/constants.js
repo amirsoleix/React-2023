@@ -1,5 +1,5 @@
-import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
-import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
+// import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
+// import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
 import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
 import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
 import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
@@ -54,9 +54,9 @@ let TEAM = [
     title: 'Technical Team',
     list: [
       'Amirmahdi Soleimanifar',
-      'Mohammad Moshtaghi',
+      // 'Mohammad Moshtaghi',
       'Forouzan Iraji',
-      'Ainaz Rafiei',
+      // 'Ainaz Rafiei',
     ],
   },
 
