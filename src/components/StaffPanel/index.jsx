@@ -1,27 +1,39 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-import Staff from '../Staff';
+import NestedGrid from '../Department';
+import { STAFF } from './constants';
 
-function StaffPanel({ posts, className }) {
+import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
+import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
+
+function StaffPanel({ className }) {
   const renderPosts = () =>
-    posts.map((data) => {
-      const { title, imgUrl, subtitle } = data;
+    STAFF.map((data) => {
+      const { title, imgUrl, subtitle, list } = data;
+      console.log('For', title, 'list is', list);
       return (
-        <Staff
-          key={title}
-          mainTitle={title}
-          imgUrl={imgUrl}
-          imgAlt={title}
-          subtitle={subtitle}
+        <NestedGrid
+          headTitle={title}
+          headImgUrl={imgUrl}
+          departmentName={subtitle}
+          staffNames={list}
+          headSub={'Team Leader'}
         />
       );
     });
 
   return (
     <div>
-      <h2>Staff</h2>
-      <div className={className}>{renderPosts()}</div>
+      <div className={className}>
+        <NestedGrid
+          headTitle={['Niloufar Dehghan', 'Parsa Asemi']}
+          headImgUrl={[dehghan_niloufar, asemi_parsa]}
+          departmentName={'Event Head'}
+          headSub={'Team Leader'}
+        />
+        {renderPosts()}
+      </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ import ArticlePreview from 'src/components/ArticlePreview';
 import Registration from 'src/components/Registration';
 import History from 'src/components/History';
 
-import { BUTTONS, SPEAKERS2023, STAFF } from 'src/constants';
+import { BUTTONS, SPEAKERS2023 } from 'src/constants';
 import 'src/styles/main.scss';
 import './Home.scss';
 import ResponsiveAppBar from 'src/components/Navbar';
@@ -149,7 +149,7 @@ class Home extends React.Component {
           <Route path='/' exact element={this.Home()} />
           <Route
             path='/staff'
-            element={<StaffPanel posts={STAFF} className='staff__main' />}
+            element={<StaffPanel className='staff__main' />}
           />
           <Route path='/history' element={<History />} />
         </Routes>

@@ -13,11 +13,10 @@ import mohammadHossein_nabian from 'src/assets/speakers2023/mohammadHossein-nabi
 import mohammadHossein_rohban from 'src/assets/speakers2023/mohammadHossein-rohban/profile.jpg';
 import mohammad_khosravi from 'src/assets/speakers2023/mohammad-khosravi/profile.jpg';
 import mohammad_samizadeh from 'src/assets/speakers2023/mohammad-samizadeh/profile.jpg';
-import mohammad_shahidehpour from 'src/assets/speakers2023/mohammad-shahidehpour/profile.jpg'
+import mohammad_shahidehpour from 'src/assets/speakers2023/mohammad-shahidehpour/profile.jpg';
 import omeed_momeni from 'src/assets/speakers2023/omeed-momeni/profile.jpg';
 import sanaz_sabzevari from 'src/assets/speakers2023/sanaz-sabzevari/profile.jpg';
 import shiva_amiri from 'src/assets/speakers2023/shiva-amiri/profile.jpg';
-
 
 import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
@@ -92,79 +91,16 @@ const SPEAKERS_LOCATIONS = [
   'Delft',
 ];
 
-let FOLDERS2023 = []
+let FOLDERS2023 = [];
 
 for (let i = 0; i < SPEAKERS_NAMES.length; i++) {
   let obj = {
     name: SPEAKERS_NAMES[i],
     figure: SPEAKERS_IMAGES[i],
-    location: SPEAKERS_LOCATIONS[i]
+    location: SPEAKERS_LOCATIONS[i],
   };
   FOLDERS2023.push(obj);
 }
-
-let TEAM = [
-  {
-    name: 'dehghan-niloufar',
-    imgUrl: dehghan_niloufar,
-    title: 'Event Head',
-  },
-  {
-    name: 'asemi-parsa',
-    imgUrl: asemi_parsa,
-    title: 'Event Head',
-  },
-  {
-    name: 'shahbazian-hasan',
-    imgUrl: shahbazian_mohammadhasan,
-    title: 'HR Manager',
-  },
-  {
-    name: 'nourian-ali',
-    imgUrl: nourian_ali,
-    title: 'Tech. Manager',
-  },
-  {
-    name: 'mostaghis-amirali',
-    imgUrl: mostaghis_amirali,
-    title: 'Executive Manager',
-  },
-  {
-    name: 'mousavi-yasin',
-    imgUrl: mousavi_yasin,
-    title: 'Sponsoring Manager',
-  },
-  {
-    name: 'eghlimi-amin',
-    imgUrl: eghlimi_mohammadamin,
-    title: 'Financial Manager',
-  },
-  {
-    name: 'heidari-mahdi',
-    imgUrl: heidari_mahdi,
-    title: 'Content Manager',
-  },
-  {
-    name: 'toumari-parisa',
-    imgUrl: toumari_parisa,
-    title: 'Adv. Manager',
-  },
-  {
-    name: 'mehrtash-shervin',
-    imgUrl: mehtash_shervin,
-    title: 'Relations Manager',
-  },
-  {
-    name: 'taji-mehrshad',
-    imgUrl: taji_mehrshad,
-    title: 'Dev. Manager',
-  },
-  {
-    name: 'soleimanifar-amir',
-    imgUrl: soleimanifar_amir,
-    title: 'Web Developer',
-  },
-];
 
 // For each folder import the profile picture
 
@@ -199,14 +135,4 @@ let SPEAKERS2023 = FOLDERS2023.map((speaker) => ({
   redText: 'More info',
 }));
 
-let STAFF = TEAM.map((staff) => ({
-  title: staff['name']
-    .split('-')
-    .reverse()
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' '),
-  imgUrl: staff.imgUrl,
-  subtitle: staff['title'],
-}));
-
-export { BUTTONS, SPEAKERS2023, STAFF };
+export { BUTTONS, SPEAKERS2023 };
