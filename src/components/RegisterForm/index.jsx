@@ -17,11 +17,11 @@ function RegisterForm({
   return (
     <div className={className} id='register-app'>
       {/* <RegisterFormComponent /> */}
-      {/* {online ?
+      {online ?
       <Form online={online}/> : 
       <div></div>
-      } */}
-      <Form online={online}/>
+      }
+      {/* <Form online={online}/> */}
     </div>
   );
 }
