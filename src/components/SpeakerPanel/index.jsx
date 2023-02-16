@@ -4,10 +4,6 @@ import Proptypes from 'prop-types';
 import Speaker from '../Speaker';
 
 function SpeakerPanel({ posts, className, title = 'Speakers' }) {
-  function handleClick() {
-    console.log('Speaker clicked');
-  }
-
   const renderPosts = () =>
     posts.map((data) => {
       const {
@@ -28,7 +24,6 @@ function SpeakerPanel({ posts, className, title = 'Speakers' }) {
           subtitle2={bottomDescription}
           captionRed={redText}
           chat={hasChat}
-          onClick={handleClick}
         />
       );
     });

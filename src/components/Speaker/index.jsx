@@ -17,7 +17,6 @@ function Speaker({
   caption,
   status,
   statusColor,
-  onClick,
   className: classNameProp,
 }) {
   // const renderImage = () => {
@@ -59,7 +58,6 @@ function Speaker({
       style={{
         backgroundImage: `url(${imgUrl})`,
       }}
-      onClick={onClick}
     >
       <div className='post-card__shadow'>
         <div className='post-card__container'>
