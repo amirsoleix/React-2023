@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import { getModifiers } from 'src/utils/classname';
 import Icon from 'src/components/Icon';
 import reactIcon from 'src/assets/images/react-logo-black.png'
-import yektanetLogo from 'src/assets/images/yektanet.png'
-import tabdilLogo from 'src/assets/images/tabdil.png'
+import yektanetLogo from 'src/assets/images/yektanet-logo.png'
+import tabdilLogo from 'src/assets/images/tabdeal.png'
 // import { VALID_SIZES } from 'src/components/Icon/constants';
 
 import { SOCIAL_LINKS } from './constants';
@@ -78,7 +78,7 @@ function Footer({ hasBottomNav }) {
             </h4>
           </div>
           <div className='footer__top__item' style={{gap: '20px'}}>
-            <img className='footer__top__item__logo' src={yektanetLogo} alt='yektanet-logo' style={{width: '50%'}}></img>
+            <img className='footer__top__item__logo' src={yektanetLogo} alt='yektanet-logo'></img>
             <img className='footer__top__item__logo' src={tabdilLogo} alt='tabdil-logo'></img>
           </div>
         </div>

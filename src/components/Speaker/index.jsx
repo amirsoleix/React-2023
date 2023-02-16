@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Dialog from '@mui/material/Dialog';
 
 // import placeholder from 'src/assets/images/placeholder.png';
 
@@ -56,13 +57,32 @@ function Speaker({
 
   const className = classNames('post-card', classNameProp);
 
+  const [openPoster, setOpenPoster] = React.useState(false);
+
+  const handleClick = () => {
+    setOpenPoster(true);
+  };
+
+  const handleClose = () => {
+    setOpenPoster(false);
+  };
+
   return (
     <div
       className={className}
       style={{
         backgroundImage: `url(${imgUrl})`,
       }}
+      onClick={() => handleClick()}
     >
+      <Dialog
+        open={openPoster}
+        onClose={handleClose}
+        aria-labelledby='alert-dialog-title'
+        aria-describedby='alert-dialog-description'
+      >
+        <div> Hello </div>
+      </Dialog>
       <div className='post-card__shadow'>
         <div className='post-card__container'>
           <div className='post-card__content'>
