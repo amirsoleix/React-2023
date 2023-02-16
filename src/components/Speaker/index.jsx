@@ -18,6 +18,7 @@ function Speaker({
   caption,
   status,
   statusColor,
+  onClick,
   className: classNameProp,
 }) {
   // const renderImage = () => {
@@ -51,17 +52,12 @@ function Speaker({
     return subtitle && <p className='post-card__subtitle'>{subtitle}</p>;
   }
 
+  function handleClick(event) {
+    console.log(mainTitle);
+    onClick(mainTitle);
+  }
+
   const className = classNames('post-card', classNameProp);
-
-  const [openPoster, setOpenPoster] = React.useState(false);
-
-  const handleClick = () => {
-    setOpenPoster(true);
-  };
-
-  const handleClose = () => {
-    setOpenPoster(false);
-  };
 
   return (
     <div
@@ -71,14 +67,6 @@ function Speaker({
       }}
       onClick={() => handleClick()}
     >
-      <Dialog
-        open={openPoster}
-        onClose={handleClose}
-        aria-labelledby='alert-dialog-title'
-        aria-describedby='alert-dialog-description'
-      >
-        <div> Hello </div>
-      </Dialog>
       <div className='post-card__shadow'>
         <div className='post-card__container'>
           <div className='post-card__content'>
