@@ -1,5 +1,3 @@
-// import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
-// import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
 import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
 import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
 import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
@@ -9,29 +7,109 @@ import heidari_mahdi from 'src/assets/staff/mahdi-heidari.jpg';
 import toumari_parisa from 'src/assets/staff/parisa-toumari.jpg';
 import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
 import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
+import soltani_ali from 'src/assets/images/placeholder.png';
+import rajabi_melika from 'src/assets/images/placeholder.png';
+import velae_amirreza from 'src/assets/staff/amirreza-velae.jpg';
+import masoumizadeh_masoud from 'src/assets/staff/masoud-masoumizadeh.jpg';
+import hadi_amirabbas from 'src/assets/images/placeholder.png';
+import memari_taha from 'src/assets/images/placeholder.png';
+import alikhani_mohammadali from 'src/assets/staff/mohammadali-alikhani.jpeg';
+import mansouri_ali from 'src/assets/images/placeholder.png';
+import kaveai_roham from 'src/assets/images/placeholder.png';
+import hatami_hanieh from 'src/assets/staff/hanieh-hatami.jpg';
+import lotafalikhani_arman from 'src/assets/images/placeholder.png';
+import safaei_artin from 'src/assets/images/placeholder.png';
+import shirvani_fatemeh from 'src/assets/images/placeholder.png';
+import rahmati_zahra from 'src/assets/images/placeholder.png';
+import amiri_atousa from 'src/assets/images/placeholder.png';
+import rafiei_ainaz from 'src/assets/images/placeholder.png';
+import karimi_sara from 'src/assets/images/placeholder.png';
+import chitsaz_amirhossein from 'src/assets/images/placeholder.png';
+import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
+import alizade_mahdi from 'src/assets/staff/mahdi-alizade.jpg';
+import moshtaghi_mohammad from 'src/assets/images/placeholder.png';
+import iraji_forouzan from 'src/assets/images/placeholder.png';
+import erfan_narges from 'src/assets/images/placeholder.png';
+import charkas_soraia from 'src/assets/images/placeholder.png';
+import akbari_ali from 'src/assets/staff/ali-akbari.jpg';
+import khodabandeh_borna from 'src/assets/images/placeholder.png';
+import kalantarian_mineh from 'src/assets/images/placeholder.png';
+import razi_amirali from 'src/assets/images/placeholder.png';
+import mobasheri_amirhossein from 'src/assets/images/placeholder.png';
+import ayati_danial from 'src/assets/staff/danial-ayati.jpg';
+import gargoorimotlagh_alireza from 'src/assets/staff/alireza-gargoori.jpg';
+import abbasbeygi_mohammadali from 'src/assets/images/placeholder.png';
+import shahbipour_mahdieh from 'src/assets/images/placeholder.png';
+import moradi_mahshad from 'src/assets/images/placeholder.png';
+import maherolnnaghsh_mohammadjavad from 'src/assets/staff/mohammadjavad-maheronnaghsh.jpg';
+import babaei_mohammadhosein from 'src/assets/images/placeholder.png';
+import shirvand_iliya from 'src/assets/staff/iliya-shirvand.jpeg';
 
 let TEAM = [
   {
     name: 'shahbazian-hasan',
     imgUrl: shahbazian_mohammadhasan,
     title: 'Human Resources',
-    list: ['Ali Soltani', 'Melika Rajabi', 'Amir Reza Velaei'],
+    list: [
+      {
+        name: 'soltani-ali',
+        imageUrl: soltani_ali,
+      },
+      {
+        name: 'rajabi-melika',
+        imageUrl: rajabi_melika,
+      },
+      {
+        name: 'velae-amirreza',
+        imageUrl: velae_amirreza,
+      },
+    ],
   },
   {
     name: 'heidari-mahdi',
     imgUrl: heidari_mahdi,
     title: 'Content Creation',
     list: [
-      'Masoud Masoumizadeh',
-      'Amirabbas Hadi',
-      'Taha Memari',
-      'Mohammad Ali Alikhani',
-      'Ali Mansouri',
-      'Roham Kaveai',
-      'Hanieh Hatami',
-      'Arman Lotafali Khani',
-      'Artin Safaei',
-      'Fatemeh Shirvani',
+      {
+        name: 'masoumizadeh-masoud',
+        imageUrl: masoumizadeh_masoud,
+      },
+      {
+        name: 'hadi-amirabbas',
+        imageUrl: hadi_amirabbas,
+      },
+      {
+        name: 'memari-taha',
+        imageUrl: memari_taha,
+      },
+      {
+        name: 'alikhani-mohammadali',
+        imageUrl: alikhani_mohammadali,
+      },
+      {
+        name: 'mansouri-ali',
+        imageUrl: mansouri_ali,
+      },
+      {
+        name: 'kaveai-roham',
+        imageUrl: kaveai_roham,
+      },
+      {
+        name: 'hatami-hanieh',
+        imageUrl: hatami_hanieh,
+      },
+      {
+        name: 'lotafalikhani-arman',
+        imageUrl: lotafalikhani_arman,
+      },
+      {
+        name: 'safaei-artin',
+        imageUrl: safaei_artin,
+      },
+      {
+        name: 'shirvani-fatemeh',
+        imageUrl: shirvani_fatemeh,
+      },
     ],
   },
   {
@@ -39,13 +117,34 @@ let TEAM = [
     imgUrl: mousavi_yasin,
     title: 'Sponsoring Team',
     list: [
-      'Zahra Rahmati',
-      'Atousa Amiri',
-      'Ainaz Rafiei',
-      'Sara Karimi',
-      'Amirhossein Chitsaz',
-      'Amirmahdi Soleimanifar',
-      'Mahdi Alizadeh',
+      {
+        name: 'rahamati-zahra',
+        imageUrl: rahmati_zahra,
+      },
+      {
+        name: 'amiri-atousa',
+        imageUrl: amiri_atousa,
+      },
+      {
+        name: 'rafiei-ainaz',
+        imageUrl: rafiei_ainaz,
+      },
+      {
+        name: 'karimi-sara',
+        imageUrl: karimi_sara,
+      },
+      {
+        name: 'chitsaz-amirhossein',
+        imageUrl: chitsaz_amirhossein,
+      },
+      {
+        name: 'soleimanifar-amir',
+        imageUrl: soleimanifar_amir,
+      },
+      {
+        name: 'alizade-mahdi',
+        imageUrl: alizade_mahdi,
+      },
     ],
   },
   {
@@ -53,10 +152,14 @@ let TEAM = [
     imgUrl: nourian_ali,
     title: 'Technical Team',
     list: [
-      'Amirmahdi Soleimanifar',
-      // 'Mohammad Moshtaghi',
-      'Forouzan Iraji',
-      // 'Ainaz Rafiei',
+      {
+        name: 'soleimanifar-amir',
+        imageUrl: soleimanifar_amir,
+      },
+      {
+        name: 'iraji-forouzan',
+        imageUrl: iraji_forouzan,
+      },
     ],
   },
 
@@ -65,11 +168,26 @@ let TEAM = [
     imgUrl: toumari_parisa,
     title: 'Advertisement Team',
     list: [
-      'Narges Erfan',
-      'Soraia Charkas',
-      'Ali Akbari',
-      'Borna Khodabandeh',
-      'Mineh Kalantarian',
+      {
+        name: 'erfan-narges',
+        imageUrl: erfan_narges,
+      },
+      {
+        name: 'charkas-soraia',
+        imageUrl: charkas_soraia,
+      },
+      {
+        name: 'akbari-ali',
+        imageUrl: akbari_ali,
+      },
+      {
+        name: 'khodabandeh-borna',
+        imageUrl: khodabandeh_borna,
+      },
+      {
+        name: 'kalantarian-mineh',
+        imageUrl: kalantarian_mineh,
+      },
     ],
   },
 
@@ -78,25 +196,61 @@ let TEAM = [
     imgUrl: taji_mehrshad,
     title: 'Development Team',
     list: [
-      'Amirali Razi',
-      'Amirhossein Mobasheri',
-      'Danial Ayati',
-      'Alireza Gargoori Motlagh',
-      'Mohammad Ali Abbasbeygi',
-      'Mahdieh Shahbipour',
+      {
+        name: 'razi-amirali',
+        imageUrl: razi_amirali,
+      },
+      {
+        name: 'mobasheri-amirhossein',
+        imageUrl: mobasheri_amirhossein,
+      },
+      {
+        name: 'ayati-danial',
+        imageUrl: ayati_danial,
+      },
+      {
+        name: 'gargoorimotlagh-alireza',
+        imageUrl: gargoorimotlagh_alireza,
+      },
+      {
+        name: 'abbasbeygi-mohammadali',
+        imageUrl: abbasbeygi_mohammadali,
+      },
+      {
+        name: 'shahbipour-mahdieh',
+        imageUrl: shahbipour_mahdieh,
+      },
     ],
   },
   {
     name: 'mehrtash-shervin',
     imgUrl: mehtash_shervin,
     title: 'Public Relations',
-    list: ['Mahshad Moradi', 'Mohammad Javad Maherolnaghsh'],
+    list: [
+      {
+        name: 'moradi-mahshad',
+        imageUrl: moradi_mahshad,
+      },
+      {
+        name: 'maheronnaghsh-mohammadjavad',
+        imageUrl: maherolnnaghsh_mohammadjavad,
+      },
+    ],
   },
   {
     name: 'mostaghis-amirali',
     imgUrl: mostaghis_amirali,
     title: 'Executive Team',
-    list: ['Mohammad Hossein Babaei', 'Ilia Shirvand'],
+    list: [
+      {
+        name: 'babaei-mohammadhossein',
+        imageUrl: babaei_mohammadhosein,
+      },
+      {
+        name: 'shirvand-iliya',
+        imageUrl: shirvand_iliya,
+      },
+    ],
   },
   {
     name: 'eghlimi-amin',
@@ -114,7 +268,14 @@ let STAFF = TEAM.map((staff) => ({
     .join(' '),
   imgUrl: staff.imgUrl,
   subtitle: staff['title'],
-  list: staff.list,
+  list: staff.list.map((member) => ({
+    name: member['name']
+      .split('-')
+      .reverse()
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' '),
+    imageUrl: member['name'].replace('-', '_'),
+  })),
 }));
 
 export { STAFF };
