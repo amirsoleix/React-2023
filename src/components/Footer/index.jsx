@@ -78,8 +78,24 @@ function Footer({ hasBottomNav }) {
             </h4>
           </div>
           <div className='footer__top__item' style={{gap: '20px'}}>
-            <img className='footer__top__item__logo' src={yektanetLogo} alt='yektanet-logo'></img>
-            <img className='footer__top__item__logo' src={tabdilLogo} alt='tabdil-logo'></img>
+            <a href='https://yektanet.com/' target="_blank" rel="noreferrer">
+            <img
+              className='footer__top__item__logo'
+              src={yektanetLogo} alt='yektanet-logo'
+              // onClick={window.open('https://yektanet.com/', '_blank')}
+              style={{cursor: 'pointer'}}
+            >
+            </img>
+            </a>
+            <a href='https://tabdeal.org/' target="_blank" rel="noreferrer">
+            <img
+              className='footer__top__item__logo'
+              src={tabdilLogo} alt='tabdil-logo'
+              // onClick={window.open('https://tabdeal.org/', '_blank')}
+              style={{cursor: 'pointer'}}
+            >
+            </img>
+            </a>
           </div>
         </div>
         
