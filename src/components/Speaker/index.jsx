@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Dialog from '@mui/material/Dialog';
 
 // import placeholder from 'src/assets/images/placeholder.png';
 
@@ -52,8 +51,7 @@ function Speaker({
     return subtitle && <p className='post-card__subtitle'>{subtitle}</p>;
   }
 
-  function handleClick(event) {
-    console.log(mainTitle);
+  function handleClick() {
     onClick(mainTitle);
   }
 
@@ -65,7 +63,7 @@ function Speaker({
       style={{
         backgroundImage: `url(${imgUrl})`,
       }}
-      onClick={() => handleClick()}
+      onClick={handleClick}
     >
       <div className='post-card__shadow'>
         <div className='post-card__container'>
