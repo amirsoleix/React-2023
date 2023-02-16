@@ -17,6 +17,7 @@ function Speaker({
   caption,
   status,
   statusColor,
+  onClick,
   className: classNameProp,
 }) {
   // const renderImage = () => {
@@ -47,11 +48,7 @@ function Speaker({
   // };
 
   function renderSubtitle(subtitle) {
-    return (
-      subtitle && (
-        <p className='post-card__subtitle'>{subtitle}</p>
-      )
-    );
+    return subtitle && <p className='post-card__subtitle'>{subtitle}</p>;
   }
 
   const className = classNames('post-card', classNameProp);
@@ -62,6 +59,7 @@ function Speaker({
       style={{
         backgroundImage: `url(${imgUrl})`,
       }}
+      onClick={onClick}
     >
       <div className='post-card__shadow'>
         <div className='post-card__container'>

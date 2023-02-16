@@ -1,7 +1,13 @@
+@use 'sass:math';
+
+@import 'src/styles/_variables';
+@import 'src/styles/_mixins.scss';
+
 .department {
   display: grid;
   grid-gap: 1rem;
   column-gap: 2rem;
+  margin: auto;
 
   &__title {
     grid-column-start: 1;
@@ -17,4 +23,29 @@
 
 .lightBlack {
   color: rgba($color: #000000, $alpha: 0.65);
+}
+
+.department {
+  &__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@include up(md) {
+  .department {
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+}
+
+@include up(lg) {
+  .department {
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+  }
 }
