@@ -27,7 +27,7 @@ import karimi_sara from 'src/assets/images/placeholder.png';
 import chitsaz_amirhossein from 'src/assets/images/placeholder.png';
 import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
 import alizade_mahdi from 'src/assets/staff/mahdi-alizade.jpg';
-import moshtaghi_mohammad from 'src/assets/images/placeholder.png';
+// import moshtaghi_mohammad from 'src/assets/images/placeholder.png';
 import iraji_forouzan from 'src/assets/images/placeholder.png';
 import erfan_narges from 'src/assets/images/placeholder.png';
 import charkas_soraia from 'src/assets/images/placeholder.png';

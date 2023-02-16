@@ -1,5 +1,5 @@
 // Import react
-import { head } from 'lodash';
+// import { head } from 'lodash';
 import * as React from 'react';
 import Staff from 'src/components/Staff';
 import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
