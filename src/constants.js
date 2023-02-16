@@ -18,18 +18,18 @@ import omeed_momeni from 'src/assets/speakers2023/omeed-momeni/profile.jpg';
 import sanaz_sabzevari from 'src/assets/speakers2023/sanaz-sabzevari/profile.jpg';
 import shiva_amiri from 'src/assets/speakers2023/shiva-amiri/profile.jpg';
 
-import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
-import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
-import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
-import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
-import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
-import mousavi_yasin from 'src/assets/staff/yasin-mousavi.jpg';
-import eghlimi_mohammadamin from 'src/assets/staff/mohammadamin-eghlimi.jpg';
-import heidari_mahdi from 'src/assets/staff/mahdi-heidari.jpg';
-import toumari_parisa from 'src/assets/staff/parisa-toumari.jpg';
-import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
-import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
-import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
+// import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
+// import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
+// import shahbazian_mohammadhasan from 'src/assets/staff/hasan-shahbazian.jpg';
+// import nourian_ali from 'src/assets/staff/ali-nourian.jpg';
+// import mostaghis_amirali from 'src/assets/staff/amirali-mostaghis.jpg';
+// import mousavi_yasin from 'src/assets/staff/yasin-mousavi.jpg';
+// import eghlimi_mohammadamin from 'src/assets/staff/mohammadamin-eghlimi.jpg';
+// import heidari_mahdi from 'src/assets/staff/mahdi-heidari.jpg';
+// import toumari_parisa from 'src/assets/staff/parisa-toumari.jpg';
+// import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
+// import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
+// import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
 
 const SPEAKERS_NAMES = [
   'jasmin-farshi',

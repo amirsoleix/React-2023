@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import { getModifiers } from 'src/utils/classname';
 import Icon from 'src/components/Icon';
 import reactIcon from 'src/assets/images/react-logo-black.png'
+import yektanetLogo from 'src/assets/images/yektanet-logo.png'
+import tabdilLogo from 'src/assets/images/tabdeal.png'
 // import { VALID_SIZES } from 'src/components/Icon/constants';
 
 import { SOCIAL_LINKS } from './constants';
@@ -67,17 +69,34 @@ function Footer({ hasBottomNav }) {
           </div>
         </div>
         <div className='footer__top__side2'>
-        <div className='footer__top__item'>
-          <h4 className='footer__top__item__item'>
-            Timeline
-          </h4>
-          <h4 className='footer__top__item__item'>
-            Speakers
-          </h4>
-        </div>
-        <div className='footer__top__item'>
-          <img className='footer__top__item__logo' src={reactIcon} alt='react-logo'></img>
-        </div>
+          <div className='footer__top__item'>
+            <h4 className='footer__top__item__item'>
+              Timeline
+            </h4>
+            <h4 className='footer__top__item__item'>
+              Speakers
+            </h4>
+          </div>
+          <div className='footer__top__item' style={{gap: '20px'}}>
+            <a href='https://yektanet.com/' target="_blank" rel="noreferrer">
+            <img
+              className='footer__top__item__logo'
+              src={yektanetLogo} alt='yektanet-logo'
+              // onClick={window.open('https://yektanet.com/', '_blank')}
+              style={{cursor: 'pointer'}}
+            >
+            </img>
+            </a>
+            <a href='https://tabdeal.org/' target="_blank" rel="noreferrer">
+            <img
+              className='footer__top__item__logo'
+              src={tabdilLogo} alt='tabdil-logo'
+              // onClick={window.open('https://tabdeal.org/', '_blank')}
+              style={{cursor: 'pointer'}}
+            >
+            </img>
+            </a>
+          </div>
         </div>
         
       </div>

@@ -43,6 +43,7 @@ function PopupRegister(props) {
       </DialogContent>
       <DialogActions className='dialog-action'>
         <Button className='cancel-button' onClick={props.onClose} autofocus buttonType='brand'>
+          {/* <p> Cancel </p> */}
           {props.online ? <p> Cancel </p> : <p> OK </p>}
         </Button>
         {/* <a

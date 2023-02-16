@@ -103,7 +103,11 @@
 
 @include down(md) {
   .footer__top {
+    margin: 15px;
     flex-direction: column;
+    &__item {
+      align-self: center;
+    }
     &__side1 {
       width: 100%;
     }

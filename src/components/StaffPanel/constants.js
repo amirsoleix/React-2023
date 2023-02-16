@@ -157,16 +157,8 @@ let TEAM = [
         imageUrl: soleimanifar_amir,
       },
       {
-        name: 'moshtagi-mohammd',
-        imageUrl: moshtaghi_mohammad,
-      },
-      {
         name: 'iraji-forouzan',
         imageUrl: iraji_forouzan,
-      },
-      {
-        name: 'rafiei-ainaz',
-        imageUrl: rafiei_ainaz,
       },
     ],
   },
