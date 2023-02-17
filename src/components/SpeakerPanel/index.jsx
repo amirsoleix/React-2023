@@ -6,12 +6,30 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { grey } from '@mui/material/colors';
 // import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
+// import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Proptypes from 'prop-types';
 
 import Speaker from '../Speaker';
+import './SpeakerPanel.scss';
+
+// import babazadeh from 'src/assets/information/babazadeh.jpg';
+// import kalantari from 'src/assets/information/kalantari.jpg';
+
+// import farshi from 'src/assets/information/Farshi.jpg';
+// import khaligh from 'src/assets/information/Khaligh.jpg';
+// import khosravi from 'src/assets/information/Khosravi.jpg';
+// import momeni from 'src/assets/information/Momeni.jpg';
+// import rohban from 'src/assets/information/Rohban.jpg';
+// import sabzevari from 'src/assets/information/Sabzevari.jpg';
+// import shahidehpour from 'src/assets/information/shahidehpour.jpg';
+// import alahi from 'src/assets/information/Alahi.jpg';
+
+const infoHash = {
+  // 'Amin Babazadeh': babazadeh,
+  // 'Kousha Kalantari': kalantari,
+};
 
 const drawerBleeding = 56;
 
@@ -39,11 +57,26 @@ const Puller = styled(Box)(({ theme }) => ({
 
 function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
   const [open, setOpen] = React.useState(false);
+  const [pic, setPic] = React.useState(undefined);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
     if (newOpen === false) {
-      // Set display of element with id swipeable to none
+      setTimeout(() => {
+        // Set display of swipeable to none
+        document.getElementById('swipeable').style.display = 'none';
+      }, 500);
+    }
+  };
+
+  const handleClick = (mainTitle) => {
+    if (infoHash[mainTitle]) {
+      setPic(infoHash[mainTitle]);
+      // Set display of swipeable to block
+      document.getElementById('swipeable').style.display = 'block';
+      setOpen(true);
+    } else {
+      setPic(undefined);
     }
   };
 
@@ -71,7 +104,7 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
           subtitle2={bottomDescription}
           captionRed={redText}
           chat={hasChat}
-          onClick={toggleDrawer(true)}
+          onClick={(mainTitle) => handleClick(mainTitle)}
         />
       );
     });
@@ -85,7 +118,10 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
           <Global
             styles={{
               '.MuiDrawer-root > .MuiPaper-root': {
-                height: `calc(50% - ${drawerBleeding}px)`,
+                maxHeight: '75%',
+                height: `min(75vh, fitcontent)`,
+                maxWidth: '1080px',
+                margin: 'auto',
                 overflow: 'visible',
               },
             }}
@@ -131,7 +167,7 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
                 overflow: 'auto',
               }}
             >
-              <Skeleton variant='rectangular' height='100%' />
+              <img src={pic} className='moreInfo' alt='pic'/>
             </StyledBox>
           </SwipeableDrawer>
         </Root>

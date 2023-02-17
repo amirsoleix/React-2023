@@ -8,7 +8,7 @@ import Dialog from '@mui/material/Dialog';
 
 import './Registration.scss';
 
-import inpersonImage from 'src/assets/images/inperson.jpg';
+// import inpersonImage from 'src/assets/images/inperson.jpg';
 import onlineImage from 'src/assets/images/online.jpg';
 // import calenderIcon from 'src/assets/images/calender-icon.png';
 import PopupRegister from 'src/components/PopupRegister';
@@ -38,6 +38,7 @@ function Registration({ title, className: classNameProp }) {
       <div className='registration__title'>
         <h2>{title}</h2>
       </div>
+{/*       
       <div className='registration__content'>
         <div className='registration__content__description'>
           <p className='first-description-p'> ReACT 2023 In-Person Ticket: </p>
@@ -55,13 +56,7 @@ function Registration({ title, className: classNameProp }) {
           ></img>
           <h3 className='registration__item__title'> In person </h3>
           <div className='registration__item__description'>
-            {/* <img src={calenderIcon} alt='calender'></img>
-            <p> From Feb 6-17th 2013 </p> */}
             <p> Join the Event in-person </p>
-            {/* <p> - Participating in the event in-person at Sharif University of Technology on Feb 22nd & 23rd </p>
-            <p> - Access to the online platform of the event on Feb 22nd - 24th </p>
-            <p> - Time-limited access to the recorded videos of ReACT 2021 </p>
-            <p> - Ability to reserve lunch for the event days </p> */}
           </div>
           <button className='registration__item__button' onClick={() => handleClickOpen('in-person')}> Register Now! </button>
           <Dialog
@@ -73,7 +68,8 @@ function Registration({ title, className: classNameProp }) {
             <PopupRegister onClose={handleClose} className={'test'} />
           </Dialog>
         </div>
-      </div>
+      </div> */}
+
       <div className='registration__content reverse-flex-row'>
       <div className='registration__content__description'>
           <p className='first-description-p'> ReACT 2023 Online Ticket: </p>
