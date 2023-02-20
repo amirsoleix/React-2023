@@ -4,6 +4,8 @@ import 'react-slideshow-image/dist/styles.css';
 
 import './Showroom.scss';
 
+import imgs from 'src/assets/slideshow/img-ss.jpg';
+import img0 from 'src/assets/slideshow/img-00.jpg';
 import img1 from 'src/assets/slideshow/img-01.jpg';
 import img2 from 'src/assets/slideshow/img-02.jpg';
 import img3 from 'src/assets/slideshow/img-03.jpg';
@@ -24,6 +26,16 @@ const properties = {
 };
 
 const slideImages = [
+  {
+    url: imgs,
+    alt: 'imgs',
+    caption: 'Image s',
+  },
+  {
+    url: img0,
+    alt: 'img0',
+    caption: 'Image 0',
+  },
   {
     url: img1,
     alt: 'img1',
