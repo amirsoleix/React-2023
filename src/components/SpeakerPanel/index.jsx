@@ -14,21 +14,39 @@ import Proptypes from 'prop-types';
 import Speaker from '../Speaker';
 import './SpeakerPanel.scss';
 
-// import babazadeh from 'src/assets/information/babazadeh.jpg';
-// import kalantari from 'src/assets/information/kalantari.jpg';
+import babazadeh from 'src/assets/information/Babazadeh.jpg';
+import kalantari from 'src/assets/information/Kalantari.jpg';
+import farshi from 'src/assets/information/Farshi.jpg';
+import khaligh from 'src/assets/information/Khaligh.jpg';
+import khosravi from 'src/assets/information/Khosravi.jpg';
+import momeni from 'src/assets/information/Momeni.jpg';
+import rohban from 'src/assets/information/Rohban.jpg';
+import sabzevari from 'src/assets/information/Sabzevari.jpg';
+import shahidehpour from 'src/assets/information/shahidehpour.jpg';
+import alahi from 'src/assets/information/Alahi.jpg';
+import askarian from 'src/assets/information/Askarian.jpg';
+import amiri from 'src/assets/information/Amiri.jpg';
+import akbarpour from 'src/assets/information/Akbarpour.jpg';
+import nabian from 'src/assets/information/Nabian.jpg';
+import samizadeh from 'src/assets/information/Samizadeh.jpg';
 
-// import farshi from 'src/assets/information/Farshi.jpg';
-// import khaligh from 'src/assets/information/Khaligh.jpg';
-// import khosravi from 'src/assets/information/Khosravi.jpg';
-// import momeni from 'src/assets/information/Momeni.jpg';
-// import rohban from 'src/assets/information/Rohban.jpg';
-// import sabzevari from 'src/assets/information/Sabzevari.jpg';
-// import shahidehpour from 'src/assets/information/shahidehpour.jpg';
-// import alahi from 'src/assets/information/Alahi.jpg';
 
 const infoHash = {
-  // 'Amin Babazadeh': babazadeh,
-  // 'Kousha Kalantari': kalantari,
+  'Amin Babazadeh': babazadeh,
+  'Kousha Kalantari': kalantari,
+  'Jasmin Farshi': farshi,
+  'Alireza Khaligh': khaligh,
+  'Mohammad Khosravi': khosravi,
+  'Omeed Momeni': momeni,
+  'Mohammad Hossein Rohban': rohban,
+  'Sanaz Sabzevari': sabzevari,
+  'Mohammad Shahidehpour': shahidehpour,
+  'Alexandre Alahi': alahi,
+  'Iman Askarian': askarian,
+  'Shiva Amiri': amiri,
+  'Mohammad Akbarpour': akbarpour,
+  'Mohammad Hossein Nabian': nabian,
+  'Mohammad Samizadeh': samizadeh
 };
 
 const drawerBleeding = 56;
