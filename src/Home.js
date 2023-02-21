@@ -24,7 +24,6 @@ class Home extends React.Component {
   handleClick(i) {
     for (let j = 0; j < BUTTONS.length; j++) {
       if (i === 'registration') {
-        console.log('hi');
         let url = window.location.href.replace(/^(?:\/\/|[^\/]+)*\//, '/');
         if (url === '/') {
           window.scroll({

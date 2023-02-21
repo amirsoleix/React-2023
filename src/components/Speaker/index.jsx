@@ -77,7 +77,7 @@ function Speaker({
               {captionRed === undefined ? (
                 ''
               ) : (
-                <p class='time__caption'>{captionRed}</p>
+                <p className='time__caption'>{captionRed}</p>
               )}
               <div className='post-card__footer'></div>
             </div>

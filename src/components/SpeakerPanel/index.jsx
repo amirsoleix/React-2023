@@ -133,7 +133,6 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
       );
     });
 
-  console.log(posts);
   return (
     <div>
       <h2>{title}</h2>
