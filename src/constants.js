@@ -43,6 +43,7 @@ const SPEAKERS_NAMES = [
   'mohammad-alizadeh',
   'shiva-amiri',
   'mohammad-akbarpour',
+  'mehran-ahmadlou',
   'omid-momeni',
   'mohammad-hossein-rohban',
   // 'hesaam-esfandyarpour',
@@ -54,7 +55,6 @@ const SPEAKERS_NAMES = [
   'mohammad-khosravi',
   'mohammad-fakharzadeh',
   'masoud-malekmohammadi',
-  'mehran-ahmadlou',
 ];
 
 const SPEAKER_TIMES = [
