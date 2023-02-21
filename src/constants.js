@@ -17,6 +17,9 @@ import mohammad_shahidehpour from 'src/assets/speakers2023/mohammad-shahidehpour
 import omeed_momeni from 'src/assets/speakers2023/omeed-momeni/profile.jpg';
 import sanaz_sabzevari from 'src/assets/speakers2023/sanaz-sabzevari/profile.jpg';
 import shiva_amiri from 'src/assets/speakers2023/shiva-amiri/profile.jpg';
+import mohammad_fakharzadeh from 'src/assets/speakers2023/mohammad-fakharzadeh/profile.jpg';
+import masoud_malekmohammadi from 'src/assets/speakers2023/masoud-malekmohammadi/profile.jpg';
+import mehran_ahmadlou from 'src/assets/speakers2023/mehran-ahmadlou/profile.jpg';
 
 // import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 // import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
@@ -49,6 +52,9 @@ const SPEAKERS_NAMES = [
   'sanaz-sabzevari',
   'iman-askarian',
   'mohammad-khosravi',
+  'mohammad-fakharzadeh',
+  'masoud-malekmohammadi',
+  'mehran-ahmadlou',
 ];
 
 const SPEAKERS_IMAGES = [
@@ -69,6 +75,9 @@ const SPEAKERS_IMAGES = [
   sanaz_sabzevari,
   iman_askarian,
   mohammad_khosravi,
+  mohammad_fakharzadeh,
+  masoud_malekmohammadi,
+  mehran_ahmadlou,
 ];
 
 const SPEAKERS_LOCATIONS = [
@@ -89,6 +98,9 @@ const SPEAKERS_LOCATIONS = [
   'KTH',
   'Sharif University of Technology',
   'Delft',
+  'Sharif University of Technology',
+  'Tabdeal',
+  'Netherlands Institute of Neuroscience',
 ];
 
 let FOLDERS2023 = [];

@@ -22,14 +22,15 @@ import khosravi from 'src/assets/information/Khosravi.jpg';
 import momeni from 'src/assets/information/Momeni.jpg';
 import rohban from 'src/assets/information/Rohban.jpg';
 import sabzevari from 'src/assets/information/Sabzevari.jpg';
-import shahidehpour from 'src/assets/information/shahidehpour.jpg';
+import shahidehpour from 'src/assets/information/Shahidehpour.jpg';
 import alahi from 'src/assets/information/Alahi.jpg';
 import askarian from 'src/assets/information/Askarian.jpg';
 import amiri from 'src/assets/information/Amiri.jpg';
 import akbarpour from 'src/assets/information/Akbarpour.jpg';
 import nabian from 'src/assets/information/Nabian.jpg';
 import samizadeh from 'src/assets/information/Samizadeh.jpg';
-
+import fakharzadeh from 'src/assets/information/Fakharzadeh.jpg';
+import malekmohammadi from 'src/assets/information/Malekmohammadi.jpg';
 
 const infoHash = {
   'Amin Babazadeh': babazadeh,
@@ -46,7 +47,9 @@ const infoHash = {
   'Shiva Amiri': amiri,
   'Mohammad Akbarpour': akbarpour,
   'Mohammad Hossein Nabian': nabian,
-  'Mohammad Samizadeh': samizadeh
+  'Mohammad Samizadeh': samizadeh,
+  'Mohammad Fakharzadeh': fakharzadeh,
+  'Masoud Malekmohammadi': malekmohammadi,
 };
 
 const drawerBleeding = 56;
@@ -77,13 +80,15 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
   const [open, setOpen] = React.useState(false);
   const [pic, setPic] = React.useState(undefined);
 
+  // After all components mounted, set display of swipeable to none
+
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
     if (newOpen === false) {
       setTimeout(() => {
         // Set display of swipeable to none
         document.getElementById('swipeable').style.display = 'none';
-      }, 500);
+      }, 400);
     }
   };
 
@@ -149,10 +154,11 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
           </Box>
           <SwipeableDrawer
             id='swipeable'
-            class='drawer'
+            className='drawer'
             container={container}
             anchor='bottom'
             open={open}
+            style={{ display: 'none' }}
             onClose={toggleDrawer(false)}
             onOpen={toggleDrawer(true)}
             swipeAreaWidth={drawerBleeding}
@@ -185,7 +191,7 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
                 overflow: 'auto',
               }}
             >
-              <img src={pic} className='moreInfo' alt='pic'/>
+              <img src={pic} className='moreInfo' alt='pic' />
             </StyledBox>
           </SwipeableDrawer>
         </Root>

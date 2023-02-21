@@ -25,7 +25,21 @@ const properties = {
   arrows: true,
 };
 
-const slideImages = [
+const url =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vSRhgUyj8ThQWdkZLV8NQWC8m7sFYw1ygWGVDTa9par32ilU-at8epdU6pR5Ol5xSIyQlaQnc6XCujx/pub?output=csv';
+
+const downloadFile = async (url) => {
+  const response = await fetch(url);
+  const data = await response.text();
+
+  // Remove the first line
+  const rows = data.split('\n').slice(1);
+  // For each row only keep what's after ,
+  const newData = rows.map((row) => row.split(',')[1]);
+  return newData;
+};
+
+let slideImages = [
   {
     url: imgs,
     alt: 'imgs',
@@ -41,42 +55,56 @@ const slideImages = [
     alt: 'img1',
     caption: 'Image 1',
   },
-  {
-    url: img2,
-    alt: 'img2',
-    caption: 'Image 2',
-  },
-  {
-    url: img3,
-    alt: 'img3',
-    caption: 'Image 3',
-  },
-  {
-    url: img4,
-    alt: 'img4',
-    caption: 'Image 4',
-  },
-  {
-    url: img5,
-    alt: 'img5',
-    caption: 'Image 5',
-  },
-  {
-    url: img6,
-    alt: 'img6',
-    caption: 'Image 6',
-  },
-  {
-    url: img7,
-    alt: 'img7',
-    caption: 'Image 7',
-  },
-  {
-    url: img8,
-    alt: 'img8',
-    caption: 'Image 8',
-  },
+  // {
+  //   url: img2,
+  //   alt: 'img2',
+  //   caption: 'Image 2',
+  // },
+  // {
+  //   url: img3,
+  //   alt: 'img3',
+  //   caption: 'Image 3',
+  // },
+  // {
+  //   url: img4,
+  //   alt: 'img4',
+  //   caption: 'Image 4',
+  // },
+  // {
+  //   url: img5,
+  //   alt: 'img5',
+  //   caption: 'Image 5',
+  // },
+  // {
+  //   url: img6,
+  //   alt: 'img6',
+  //   caption: 'Image 6',
+  // },
+  // {
+  //   url: img7,
+  //   alt: 'img7',
+  //   caption: 'Image 7',
+  // },
+  // {
+  //   url: img8,
+  //   alt: 'img8',
+  //   caption: 'Image 8',
+  // },
 ];
+
+downloadFile(url).then((data) => {
+  // For each url in data, download the image using Google drive API
+  data.forEach((url, index) => {
+    // Get the file id from the url
+    let fileId = url.split('=')[1];
+    let picUrl = `http://drive.google.com/uc?id=${fileId}`;
+    slideImages.push({
+      url: picUrl,
+      alt: `img${index}`,
+      caption: `Image ${index}`,
+    });
+  });
+});
 
 class Showroom extends React.Component {
   // Set now time to state
@@ -152,7 +180,11 @@ class Showroom extends React.Component {
               ))}
             </Slide>
             <div className='showroom__content__inside'>
-              <img className='showroom__title' src={reactLogo} alt='react-logo'></img>
+              <img
+                className='showroom__title'
+                src={reactLogo}
+                alt='react-logo'
+              ></img>
               <p className='showroom__title_discription'></p>
               {this.countdown()}
             </div>

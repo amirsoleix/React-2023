@@ -142,18 +142,20 @@ class Home extends React.Component {
     return (
       <Router>
         <ResponsiveAppBar
+          key={'ResponsiveAppBar'}
           buttons={BUTTONS}
           onClick={(i) => this.handleClick(i)}
         />
-        <Routes>
-          <Route path='/' exact element={this.Home()} />
+        <Routes key={'Routes'}>
+          <Route key={0} path='/' exact element={this.Home()} />
           <Route
+            key={1}
             path='/staff'
             element={<StaffPanel className='staff__main' />}
           />
-          <Route path='/history' element={<History />} />
+          <Route key={2} path='/history' element={<History />} />
         </Routes>
-        <Footer hasBottomNav />
+        <Footer hasBottomNav key={'Footer'} />
       </Router>
     );
   }
