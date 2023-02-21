@@ -121,32 +121,15 @@ let TEAM = [
     title: 'Sponsoring Team',
     list: [
       {
-        name: 'rahamati-zahra',
-        imageUrl: rahmati_zahra,
-      },
-      {
-        name: 'amiri-atousa',
-        imageUrl: amiri_atousa,
-      },
-      {
-        name: 'rafiei-ainaz',
-        imageUrl: rafiei_ainaz,
-      },
-      {
-        name: 'karimi-sara',
-        imageUrl: karimi_sara,
-      },
-      {
-        name: 'chitsaz-amirhossein',
-        imageUrl: chitsaz_amirhossein,
-      },
-      {
-        name: 'soleimanifar-amir',
-        imageUrl: soleimanifar_amir,
+        name: 'mohammadamin-eghlimi',
       },
       {
         name: 'alizade-mahdi',
         imageUrl: alizade_mahdi,
+      },
+      {
+        name: 'ayati-danial',
+        imageUrl: ayati_danial,
       },
     ],
   },
@@ -162,6 +145,9 @@ let TEAM = [
       {
         name: 'iraji-forouzan',
         imageUrl: iraji_forouzan,
+      },
+      {
+        name: 'imani-amirreza',
       },
     ],
   },
@@ -203,10 +189,7 @@ let TEAM = [
         name: 'mobasheri-amirhossein',
         imageUrl: mobasheri_amirhossein,
       },
-      {
-        name: 'ayati-danial',
-        imageUrl: ayati_danial,
-      },
+
       {
         name: 'gargoorimotlagh-alireza',
         imageUrl: gargoorimotlagh_alireza,
@@ -237,13 +220,13 @@ let TEAM = [
     ],
   },
   {
-    name: 'mostaghis-amirali',
-    imgUrl: mostaghis_amirali,
+    name: 'babaei-mohammadhossein',
+    imgUrl: babaei_mohammadhosein,
     title: 'Executive Team',
     list: [
       {
-        name: 'babaei-mohammadhossein',
-        imageUrl: babaei_mohammadhosein,
+        name: 'mostaghis-amirali',
+        imageUrl: mostaghis_amirali,
       },
       {
         name: 'shirvand-iliya',

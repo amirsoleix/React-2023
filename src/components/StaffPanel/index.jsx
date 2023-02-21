@@ -6,6 +6,8 @@ import { STAFF } from './constants';
 
 import dehghan_niloufar from 'src/assets/staff/niloufar-dehghan.jpg';
 import asemi_parsa from 'src/assets/staff/parsa-asemi.jpg';
+import makkyian_moein from 'src/assets/staff/moein-makkyian.jpg';
+import ayati_danial from 'src/assets/staff/danial-ayati.jpg';
 
 function StaffPanel({ className }) {
   const renderPosts = () =>
@@ -27,8 +29,18 @@ function StaffPanel({ className }) {
     <div>
       <div className={className}>
         <NestedGrid
-          headTitle={['Niloufar Dehghan', 'Parsa Asemi']}
-          headImgUrl={[dehghan_niloufar, asemi_parsa]}
+          headTitle={[
+            'Niloufar Dehghan',
+            'Parsa Asemi',
+            'Moein Makkyian',
+            'Danial Ayati',
+          ]}
+          headImgUrl={[
+            dehghan_niloufar,
+            asemi_parsa,
+            makkyian_moein,
+            ayati_danial,
+          ]}
           departmentName={'Event Head'}
           headSub={'Team Leader'}
         />

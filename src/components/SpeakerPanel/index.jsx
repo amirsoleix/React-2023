@@ -38,7 +38,7 @@ const infoHash = {
   'Jasmin Farshi': farshi,
   'Alireza Khaligh': khaligh,
   'Mohammad Khosravi': khosravi,
-  'Omeed Momeni': momeni,
+  'omid Momeni': momeni,
   'Mohammad Hossein Rohban': rohban,
   'Sanaz Sabzevari': sabzevari,
   'Mohammad Shahidehpour': shahidehpour,
@@ -115,6 +115,7 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
         imgUrl,
         redText,
         title,
+        subtitle,
         topDescription,
       } = data;
       return (
@@ -125,13 +126,14 @@ function SpeakerPanel({ posts, className, title = 'Speakers', window }) {
           imgAlt={title}
           subtitle1={topDescription}
           subtitle2={bottomDescription}
-          captionRed={redText}
+          captionRed={subtitle}
           chat={hasChat}
           onClick={(mainTitle) => handleClick(mainTitle)}
         />
       );
     });
 
+  console.log(posts);
   return (
     <div>
       <h2>{title}</h2>

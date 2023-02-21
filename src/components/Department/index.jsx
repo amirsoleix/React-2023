@@ -123,6 +123,18 @@ export default function NestedGrid(props) {
             imgAlt={headTitle[1]}
             subtitle={'Co-director of Event'}
           />
+          <Staff
+            mainTitle={headTitle[2]}
+            imgUrl={headImgUrl[2]}
+            imgAlt={headTitle[2]}
+            subtitle={'Director of Resana'}
+          />
+          <Staff
+            mainTitle={headTitle[3]}
+            imgUrl={headImgUrl[3]}
+            imgAlt={headTitle[3]}
+            subtitle={'Scientific Head of Resana'}
+          />
         </div>
       );
     } else {

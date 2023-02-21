@@ -14,7 +14,7 @@ import mohammadHossein_rohban from 'src/assets/speakers2023/mohammadHossein-rohb
 import mohammad_khosravi from 'src/assets/speakers2023/mohammad-khosravi/profile.jpg';
 import mohammad_samizadeh from 'src/assets/speakers2023/mohammad-samizadeh/profile.jpg';
 import mohammad_shahidehpour from 'src/assets/speakers2023/mohammad-shahidehpour/profile.jpg';
-import omeed_momeni from 'src/assets/speakers2023/omeed-momeni/profile.jpg';
+import omid_momeni from 'src/assets/speakers2023/omid-momeni/profile.jpg';
 import sanaz_sabzevari from 'src/assets/speakers2023/sanaz-sabzevari/profile.jpg';
 import shiva_amiri from 'src/assets/speakers2023/shiva-amiri/profile.jpg';
 import mohammad_fakharzadeh from 'src/assets/speakers2023/mohammad-fakharzadeh/profile.jpg';
@@ -43,7 +43,7 @@ const SPEAKERS_NAMES = [
   'mohammad-alizadeh',
   'shiva-amiri',
   'mohammad-akbarpour',
-  'omeed-momeni',
+  'omid-momeni',
   'mohammad-hossein-rohban',
   // 'hesaam-esfandyarpour',
   'mohammad-hossein-nabian',
@@ -57,6 +57,28 @@ const SPEAKERS_NAMES = [
   'mehran-ahmadlou',
 ];
 
+const SPEAKER_TIMES = [
+  'Feb 24, 8:00 - 9:00',
+  'Feb 23, 18:00 - 19:00',
+  'Feb 22, 12:50 - 13:40',
+  'Feb 24, 10:00 - 11:00',
+  'Feb 24, 10:00 - 10:50',
+  'Feb 24, 17:00 - 17:50',
+  'Feb 23, 9:00 - 10:00',
+  'Feb 23, 10:00 - 11:00',
+  'Feb 24, 11:00 - 12:00',
+  'Feb 24, 20:00 - 20:50',
+  'Feb 23, 11:00 - 12:00',
+  'Feb 22, 11:50 - 12:40',
+  'Feb 22, 16:30 - 17:40',
+  'Feb 22, 10:15 - 11:00',
+  'Feb 24, 18:00 - 18:50',
+  'Feb 22, 17:50 - 18:50',
+  'Feb 23, 15:40 - 16:30',
+  'Feb 22, 9:15 - 10:00',
+  'Feb 23, 17:00 - 18:00',
+];
+
 const SPEAKERS_IMAGES = [
   jasmin_farshi,
   mohammad_shahidehpour,
@@ -66,7 +88,8 @@ const SPEAKERS_IMAGES = [
   mohammad_alizadeh,
   shiva_amiri,
   mohammad_akbarpour,
-  omeed_momeni,
+  mehran_ahmadlou,
+  omid_momeni,
   mohammadHossein_rohban,
   // hesaam_esfandyarpour,
   mohammadHossein_nabian,
@@ -77,7 +100,6 @@ const SPEAKERS_IMAGES = [
   mohammad_khosravi,
   mohammad_fakharzadeh,
   masoud_malekmohammadi,
-  mehran_ahmadlou,
 ];
 
 const SPEAKERS_LOCATIONS = [
@@ -89,6 +111,7 @@ const SPEAKERS_LOCATIONS = [
   'MIT',
   'Pivotal Life Sciences',
   'Stanford',
+  'University College London',
   'UC Davis',
   'Sharif University of Technology',
   // 'GNOS',
@@ -100,7 +123,6 @@ const SPEAKERS_LOCATIONS = [
   'Delft',
   'Sharif University of Technology',
   'Tabdeal',
-  'University College London',
 ];
 
 let FOLDERS2023 = [];
@@ -110,6 +132,7 @@ for (let i = 0; i < SPEAKERS_NAMES.length; i++) {
     name: SPEAKERS_NAMES[i],
     figure: SPEAKERS_IMAGES[i],
     location: SPEAKERS_LOCATIONS[i],
+    time: SPEAKER_TIMES[i],
   };
   FOLDERS2023.push(obj);
 }
@@ -144,6 +167,7 @@ let SPEAKERS2023 = FOLDERS2023.map((speaker) => ({
     .join(' '),
   topDescription: speaker['field'],
   bottomDescription: speaker['location'],
+  subtitle: speaker['time'],
   redText: 'More info',
 }));
 

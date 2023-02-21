@@ -74,6 +74,11 @@ function Speaker({
             <div className='post-card__detail'>
               <div className='hidden-on-phone'>{renderSubtitle(subtitle1)}</div>
               {renderSubtitle(subtitle2)}
+              {captionRed === undefined ? (
+                ''
+              ) : (
+                <p class='time__caption'>{captionRed}</p>
+              )}
               <div className='post-card__footer'></div>
             </div>
           </div>
