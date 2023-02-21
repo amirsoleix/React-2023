@@ -125,7 +125,7 @@ class Showroom extends React.Component {
   }
 
   countdown() {
-    const countDownDate = new Date('February 22, 2023 15:00:00').getTime();
+    const countDownDate = new Date('February 22, 2023 8:45:00').getTime();
     const now = this.state.now;
     const distance = countDownDate - now;
 

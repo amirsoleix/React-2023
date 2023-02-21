@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 48px 10px;
+  padding: 16px 10px;
   // margin-top: 30px;
   gap: 8px;
   background-color: gainsboro;
@@ -13,11 +13,6 @@
   // &--nav {
   //   padding: 16px 0 64px;
   // }
-
-  &__right {
-    display: flex;
-    align-items: center;
-  }
 
   &__links {
     display: flex;
@@ -64,6 +59,10 @@
     gap: 10%;
     padding: 0 15px;
 
+    align-items: center;
+    justify-content: center;
+    // Set distance between flex items to 0
+
     &__side1 {
       display: flex;
       // flex-direction: column;
@@ -103,8 +102,7 @@
 
 @include down(md) {
   .footer__top {
-    margin: 15px;
-    flex-direction: column;
+    display: grid;
     &__item {
       align-self: center;
     }
@@ -115,6 +113,42 @@
       width: 100%;
       flex-direction: row-reverse;
     }
+
+    margin-bottom: 3rem;
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
+
+  .footer__divider {
+    display: none;
+  }
+
+  .footer__link {
+    margin-bottom: 5px;
+  }
+
+  // Select element with reactLogo id
+  #reactLogo {
+    // Set grid colum and row
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #yektanetLogo {
+    grid-column: 1 /2;
+    grid-row: 2 / 3;
+  }
+
+  #tabdealLogo {
+    grid-column: 1 /2;
+    grid-row: 3 /4;
+  }
+
+  #academyLogo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
   }
 }
 

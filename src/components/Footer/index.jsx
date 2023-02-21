@@ -4,9 +4,10 @@ import classNames from 'classnames';
 
 import { getModifiers } from 'src/utils/classname';
 import Icon from 'src/components/Icon';
-import reactIcon from 'src/assets/images/react-logo-black.png'
-import yektanetLogo from 'src/assets/images/yektanet-logo.png'
-import tabdilLogo from 'src/assets/images/tabdeal.png'
+import reactIcon from 'src/assets/images/react-logo-black.png';
+import yektanetLogo from 'src/assets/images/yektanet-logo.png';
+import tabdilLogo from 'src/assets/images/tabdeal.png';
+import academyLogo from 'src/assets/images/academy.png';
 // import { VALID_SIZES } from 'src/components/Icon/constants';
 
 import { SOCIAL_LINKS } from './constants';
@@ -36,7 +37,56 @@ function Footer({ hasBottomNav }) {
 
   return (
     <footer className={getClassname()}>
-      {/* <div className='footer__right'>
+      <div className='footer__container'>
+        <div className='footer__top'>
+          <a id='reactLogo' href='/' rel='noreferrer'>
+            <img src={reactIcon} alt='react-logo' width={'150px'}></img>
+          </a>
+          <a
+            id='yektanetLogo'
+            href='https://yektanet.com/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img
+              width={'150px'}
+              src={yektanetLogo}
+              alt='yektanet-logo'
+              // onClick={window.open('https://yektanet.com/', '_blank')}
+              style={{ cursor: 'pointer' }}
+            ></img>
+          </a>
+
+          <a
+            id='tabdealLogo'
+            href='https://tabdeal.org/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img
+              width={'150px'}
+              src={tabdilLogo}
+              alt='tabdil-logo'
+              // onClick={window.open('https://tabdeal.org/', '_blank')}
+              style={{ cursor: 'pointer' }}
+            ></img>
+          </a>
+          <a
+            id='academyLogo'
+            href='https://hamrah.academy/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img
+              height={'150px'}
+              src={academyLogo}
+              alt='academy-logo'
+              style={{ cursor: 'pointer' }}
+            ></img>
+          </a>
+        </div>
+      </div>
+      <div className='footer__right'>
         <div className='footer__links'>
           <a href='https://sharif.edu' className='footer__link'>
             About Us
@@ -50,55 +100,6 @@ function Footer({ hasBottomNav }) {
             Resana Association Website
           </a>
         </div>
-      </div> */}
-      <div className='footer__top'>
-        <div className='footer__top__side1'>
-          <div className='footer__top__item'>
-            <img className='footer__top__item__logo' src={reactIcon} alt='react-logo'></img>
-          </div>
-          <div className='footer__top__item'>
-            <h4 className='footer__top__item__item'>
-              Home
-            </h4>
-            <h4 className='footer__top__item__item'>
-              Histoty
-            </h4>
-            <h4 className='footer__top__item__item'>
-              Staff
-            </h4>
-          </div>
-        </div>
-        <div className='footer__top__side2'>
-          <div className='footer__top__item'>
-            <h4 className='footer__top__item__item'>
-              Timeline
-            </h4>
-            <h4 className='footer__top__item__item'>
-              Speakers
-            </h4>
-          </div>
-          <div className='footer__top__item' style={{gap: '20px'}}>
-            <a href='https://yektanet.com/' target="_blank" rel="noreferrer">
-            <img
-              className='footer__top__item__logo'
-              src={yektanetLogo} alt='yektanet-logo'
-              // onClick={window.open('https://yektanet.com/', '_blank')}
-              style={{cursor: 'pointer'}}
-            >
-            </img>
-            </a>
-            <a href='https://tabdeal.org/' target="_blank" rel="noreferrer">
-            <img
-              className='footer__top__item__logo'
-              src={tabdilLogo} alt='tabdil-logo'
-              // onClick={window.open('https://tabdeal.org/', '_blank')}
-              style={{cursor: 'pointer'}}
-            >
-            </img>
-            </a>
-          </div>
-        </div>
-        
       </div>
       <div>{SOCIAL_LINKS.map(renderSocial)}</div>
     </footer>

@@ -75,6 +75,9 @@ let TEAM = [
         imageUrl: masoumizadeh_masoud,
       },
       {
+        name: 'memarzadeh-emad',
+      },
+      {
         name: 'hadi-amirabbas',
         imageUrl: hadi_amirabbas,
       },
@@ -197,10 +200,6 @@ let TEAM = [
     title: 'Development Team',
     list: [
       {
-        name: 'razi-amirali',
-        imageUrl: razi_amirali,
-      },
-      {
         name: 'mobasheri-amirhossein',
         imageUrl: mobasheri_amirhossein,
       },
@@ -249,6 +248,9 @@ let TEAM = [
       {
         name: 'shirvand-iliya',
         imageUrl: shirvand_iliya,
+      },
+      {
+        name: 'zahedifar-zahra',
       },
     ],
   },

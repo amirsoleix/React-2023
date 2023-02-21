@@ -100,7 +100,7 @@ const SPEAKERS_LOCATIONS = [
   'Delft',
   'Sharif University of Technology',
   'Tabdeal',
-  'Netherlands Institute of Neuroscience',
+  'University College London',
 ];
 
 let FOLDERS2023 = [];

@@ -11,17 +11,17 @@ import heidari_mahdi from 'src/assets/staff/mahdi-heidari.jpg';
 import toumari_parisa from 'src/assets/staff/parisa-toumari.jpg';
 import mehtash_shervin from 'src/assets/staff/shervin-mehrtash.jpg';
 import taji_mehrshad from 'src/assets/staff/mehrshad-taji.jpg';
-import soltani_ali from 'src/assets/images/placeholder.png';
+import soltani_ali from 'src/assets/staff/ali-soltani.jpg';
 import rajabi_melika from 'src/assets/images/placeholder.png';
 import velae_amirreza from 'src/assets/staff/amirreza-velae.jpg';
 import masoumizadeh_masoud from 'src/assets/staff/masoud-masoumizadeh.jpg';
 import hadi_amirabbas from 'src/assets/images/placeholder.png';
-import memari_taha from 'src/assets/images/placeholder.png';
+import memari_taha from 'src/assets/staff/taha-memari.jpeg';
 import alikhani_mohammadali from 'src/assets/staff/mohammadali-alikhani.jpeg';
-import mansouri_ali from 'src/assets/images/placeholder.png';
-import kaveai_roham from 'src/assets/images/placeholder.png';
+import mansouri_ali from 'src/assets/staff/ali-mansouri.jpg';
+import kaveai_roham from 'src/assets/staff/roham-kaveie.jpg';
 import hatami_hanieh from 'src/assets/staff/hanieh-hatami.jpg';
-import lotafalikhani_arman from 'src/assets/images/placeholder.png';
+import lotafalikhani_arman from 'src/assets/staff/arman-lotfalikhani.jpg';
 import safaei_artin from 'src/assets/images/placeholder.png';
 import shirvani_fatemeh from 'src/assets/images/placeholder.png';
 import rahmati_zahra from 'src/assets/images/placeholder.png';
@@ -33,27 +33,31 @@ import soleimanifar_amir from 'src/assets/staff/amir-soleimanifar.jpg';
 import alizade_mahdi from 'src/assets/staff/mahdi-alizade.jpg';
 import moshtaghi_mohammad from 'src/assets/images/placeholder.png';
 import iraji_forouzan from 'src/assets/images/placeholder.png';
-import erfan_narges from 'src/assets/images/placeholder.png';
+import erfan_narges from 'src/assets/staff/narges-erfan.jpeg';
 import charkas_soraia from 'src/assets/images/placeholder.png';
 import akbari_ali from 'src/assets/staff/ali-akbari.jpg';
-import khodabandeh_borna from 'src/assets/images/placeholder.png';
-import kalantarian_mineh from 'src/assets/images/placeholder.png';
 import razi_amirali from 'src/assets/images/placeholder.png';
-import mobasheri_amirhossein from 'src/assets/images/placeholder.png';
+import mobasheri_amirhossein from 'src/assets/staff/amirhossein-mobasheri.jfif';
 import ayati_danial from 'src/assets/staff/danial-ayati.jpg';
 import gargoorimotlagh_alireza from 'src/assets/staff/alireza-gargoori.jpg';
 import abbasbeygi_mohammadali from 'src/assets/images/placeholder.png';
-import shahbipour_mahdieh from 'src/assets/images/placeholder.png';
+import shahbipour_mahdieh from 'src/assets/staff/mahdieh-shahbi.jpg';
 import moradi_mahshad from 'src/assets/images/placeholder.png';
 import maheronnaghsh_mohammadjavad from 'src/assets/staff/mohammadjavad-maheronnaghsh.jpg';
-import babaei_mohammadhosein from 'src/assets/images/placeholder.png';
+import babaei_mohammadhosein from 'src/assets/staff/mohammadhosein-babaei.jpg';
 import shirvand_iliya from 'src/assets/staff/iliya-shirvand.jpeg';
+import khodabandeh_borna from 'src/assets/staff/borna-khodabandeh.jpeg';
+import kalantarian_mineh from 'src/assets/staff/mineh-kalantarian.jpeg';
+import memarzadeh_emad from 'src/assets/staff/emad-memarzadeh.jpg';
+import zahedifar_zahra from 'src/assets/staff/zahra-zahedifar.jpg';
 
 import './Department.scss';
 
 const hash = {
+  zahedifar_zahra: zahedifar_zahra,
   shahbazian_mohammadhasan: shahbazian_mohammadhasan,
   nourian_ali: nourian_ali,
+  memarzadeh_emad: memarzadeh_emad,
   mostaghis_amirali: mostaghis_amirali,
   mousavi_yasin: mousavi_yasin,
   eghlimi_mohammadamin: eghlimi_mohammadamin,
@@ -106,18 +110,18 @@ export default function NestedGrid(props) {
     if (departmentName === 'Event Head') {
       return (
         <div className='department'>
-          <h2 className='department__title'>{'Event Heads'}</h2>
+          <h2 className='department__title'>{'Event Directors'}</h2>
           <Staff
             mainTitle={headTitle[0]}
             imgUrl={headImgUrl[0]}
             imgAlt={headTitle[0]}
-            subtitle={'Co-head of Event'}
+            subtitle={'Co-director of Event'}
           />
           <Staff
             mainTitle={headTitle[1]}
             imgUrl={headImgUrl[1]}
             imgAlt={headTitle[1]}
-            subtitle={'Co-head of Event'}
+            subtitle={'Co-director of Event'}
           />
         </div>
       );
