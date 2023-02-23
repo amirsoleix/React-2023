@@ -5,7 +5,6 @@ import 'react-slideshow-image/dist/styles.css';
 import './Showroom.scss';
 
 import imgs from 'src/assets/slideshow/img-ss.jpg';
-import img0 from 'src/assets/slideshow/img-00.jpg';
 import img1 from 'src/assets/slideshow/img-01.jpg';
 import img2 from 'src/assets/slideshow/img-02.jpg';
 import img3 from 'src/assets/slideshow/img-03.jpg';
@@ -45,11 +44,7 @@ let slideImages = [
     alt: 'imgs',
     caption: 'Image s',
   },
-  {
-    url: img0,
-    alt: 'img0',
-    caption: 'Image 0',
-  },
+
   {
     url: img1,
     alt: 'img1',
@@ -141,19 +136,19 @@ class Showroom extends React.Component {
         <div className='countdown__container'>
           <div className='countdown__content'>
             <div className='countdown__content__item'>
-              <div>{days}</div>
+              <div>{0}</div>
               <div>{'Days'}</div>
             </div>
             <div className='countdown__content__item'>
-              <div>{hours}</div>
+              <div>{0}</div>
               <div>{'Hours'}</div>
             </div>
             <div className='countdown__content__item'>
-              <div>{minutes}</div>
+              <div>{0}</div>
               <div>{'Minutes'}</div>
             </div>
             <div className='countdown__content__item'>
-              <div>{seconds}</div>
+              <div>{0}</div>
               <div>{'Seconds'}</div>
             </div>
           </div>
